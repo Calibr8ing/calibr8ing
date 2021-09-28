@@ -90,30 +90,19 @@
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">Instruments</h1>
+                        <h1 class="mt-4">Manage Users</h1>
                         <ol class="breadcrumb mb-4">
-                            <li class="breadcrumb-item active">My Instruments</li>
+                            <li class="breadcrumb-item active">My Users</li>
                         </ol>
-                        <div class="row">
-                            <div class="col-xl-3 col-md-6">
-                                <div class="card bg-new-order text-white mb-4">
-                                    <div class="card-body">Start New Order</div>
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">Check the boxes below for a quicker start on your order</a>
-                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-md-6">
+                        <div class="col-xl-3 col-md-6">
                                 <div class="card bg-new-instrument text-white mb-4">
-                                    <div class="card-body">Add Instrument</div>
+                                    <div class="card-body">Add User</div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">If an instrument does not appear add it here</a>
+                                        <a class="small text-white stretched-link" href="#">Add a User to your system</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
                         <div class="card mb-4">
                             <div class="card-header">
                                 <i class="fas fa-table me-1"></i>
@@ -123,71 +112,64 @@
                                 <table id="datatablesSimple">
                                     <thead>
                                         <tr>
-                                            <th><input type="checkbox" name="select_all" value="1" id="example-select-all"></th>
-                                            <th>Instrument Name</th>
-                                            <th>Model Number</th>
-                                            <th>Serial Number</th>
-                                            <th>Service Date</th>
-                                            <th>Certificate Link</th>
+                                            <th>Name</th>
                                             <th>Location</th>
+                                            <th>Position</th>
+                                            <th>Permission Level</th>
+                                            <th>Username</th>
+                                            <th>Password</th>
                                         </tr>
                                     </thead>
                                     <tfoot>
                                         <tr>
-                                            <th><input type="checkbox" name="select_all" value="1" id="example-select-all"></th>
-                                            <th>Instrument Name</th>
-                                            <th>Model Number</th>
-                                            <th>Serial Number</th>
-                                            <th>Service Date</th>
-                                            <th>Certificate Link</th>
+                                            <th>Name</th>
                                             <th>Location</th>
+                                            <th>Position</th>
+                                            <th>Permission Level</th>
+                                            <th>Username</th>
+                                            <th>Password</th>
                                         </tr>
                                     </tfoot>
                                     <tbody>
                                         <tr>
-                                            <td><input type="checkbox" name="select_all" value="1" id="example-select-all"></td>
-                                            <td>Haas_CNC_1</td>
-                                            <td>VF-1</td>
-                                            <td>100658</td>
-                                            <td>Jan 05 2021</td>
-                                            <td>Certificate_Haas_CNC_1.PNG</td>
-                                            <td>Site_A</td>
+                                            <td>Tiger Nixon</td>
+                                            <td>Site A</td>
+                                            <td>Regional Manager</td>
+                                            <td>1</td>
+                                            <td>tinix01</td>
+                                            <td>**********</td>
                                         </tr>
                                         <tr>
-                                            <td><input type="checkbox" name="select_all" value="1" id="example-select-all"></td>
-                                            <td>Haas_CNC_2</td>
-                                            <td>VF-1</td>
-                                            <td>101255</td>
-                                            <td>Mar 10 2021</td>
-                                            <td>Certificate_Haas_CNC_2.PNG</td>
-                                            <td>Site_A</td>
+                                            <td>Garrett Winters</td>
+                                            <td>Site A</td>
+                                            <td>IT Manager</td>
+                                            <td>2</td>
+                                            <td>gawin02</td>
+                                            <td>**********</td>
                                         </tr>
                                         <tr>
-                                            <td><input type="checkbox" name="select_all" value="1" id="example-select-all"></td>
-                                            <td>Haas_lathe_1</td>
-                                            <td>ST-28</td>
-                                            <td>103548</td>
-                                            <td>Sept 21 2021</td>
-                                            <td>Certificate_Haas_lathe_1.PNG</td>
-                                            <td>Site_B</td>
+                                            <td>Ashton Cox</td>
+                                            <td>Site A</td>
+                                            <td>Production Manager</td>
+                                            <td>3</td>
+                                            <td>ascox03</td>
+                                            <td>**********</td>
                                         </tr>
                                         <tr>
-                                            <td><input type="checkbox" name="select_all" value="1" id="example-select-all"></td>
-                                            <td>Halter_robot_arm_CNC_1</td>
-                                            <td>UNIVERSAL_COMPACT_12</td>
-                                            <td>100254</td>
-                                            <td>Jan 05 2021</td>
-                                            <td>Certificate_Halter_robot_arm_1.PNG</td>
-                                            <td>Site_A</td>
+                                            <td>Cedric Kelly</td>
+                                            <td>Site B</td>
+                                            <td>Production Manager 1</td>
+                                            <td>3</td>
+                                            <td>cekel04</td>
+                                            <td>**********</td>
                                         </tr>
                                         <tr>
-                                            <td><input type="checkbox" name="select_all" value="1" id="example-select-all"></td>
-                                            <td>Halter_robot_arm_lathe_1</td>
-                                            <td>TURNSTACKER_PREMIUM_20/35</td>
-                                            <td>100102</td>
-                                            <td>Sept 21 2021</td>
-                                            <td>Certificate_Halter_robot_arm_lathe_1.PNG</td>
-                                            <td>Site_B</td>
+                                            <td>Airi Satou</td>
+                                            <td>Site B</td>
+                                            <td>Production Manager 2</td>
+                                            <td>3</td>
+                                            <td>aisat05</td>
+                                            <td>**********</td>
                                         </tr>
 
 
