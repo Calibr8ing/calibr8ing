@@ -10,11 +10,16 @@
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
         <link href="css/styles.css" rel="stylesheet" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
+    <style>
+        #orderStatusTable {
+            border-spacing: 10px;
+            table-layout: fixed;
+        }
+    </style>
     </head>
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
-            <!-- Navbar Brand
-            this is a test-->
+            <!-- Navbar Brand-->
             <a class="navbar-brand ps-3" href="index.html" ><img src="bootstrapTemplate/assets/img/Pullman+social+logo-1920w.png" alt="Pullman Logo"></img></a>
             <!-- Sidebar Toggle-->
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
@@ -79,6 +84,7 @@
                                 Settings
                                 
                             </a>
+
                         </div>
                     </div>
                     <div class="sb-sidenav-footer">
@@ -90,91 +96,27 @@
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">Manage Users</h1>
+                        <h1 class="mt-4">Start New Order</h1>
                         <ol class="breadcrumb mb-4">
-                            <li class="breadcrumb-item active">My Users</li>
+                            <li class="breadcrumb-item active">Place an order</li>
                         </ol>
-                        <div class="col-xl-3 col-md-6">
-                                <div class="card bg-new-instrument text-white mb-4">
-                                    <div class="card-body">Add User</div>
+                         <div class="row">
+                            <!-- <div class="col-xl-3 col-md-6">
+                                <div class="card bg-primary text-white mb-4">
+                                    <div class="card-body">Primary Card</div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">Add a User to your system</a>
+                                        <a class="small text-white stretched-link" href="#">View Details</a>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
                                 </div>
-                            </div>
-                        <div class="card mb-4">
-                            <div class="card-header">
-                                <i class="fas fa-table me-1"></i>
-                                DataTable Example
-                            </div>
-                            <div class="card-body">
-                                <table id="datatablesSimple">
-                                    <thead>
-                                        <tr>
-                                            <th>Name</th>
-                                            <th>Location</th>
-                                            <th>Position</th>
-                                            <th>Permission Level</th>
-                                            <th>Username</th>
-                                            <th>Password</th>
-                                        </tr>
-                                    </thead>
-                                    <tfoot>
-                                        <tr>
-                                            <th>Name</th>
-                                            <th>Location</th>
-                                            <th>Position</th>
-                                            <th>Permission Level</th>
-                                            <th>Username</th>
-                                            <th>Password</th>
-                                        </tr>
-                                    </tfoot>
-                                    <tbody>
-                                        <tr>
-                                            <td>Tiger Nixon</td>
-                                            <td>Site A</td>
-                                            <td>Regional Manager</td>
-                                            <td>1</td>
-                                            <td>tinix01</td>
-                                            <td>**********</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Garrett Winters</td>
-                                            <td>Site A</td>
-                                            <td>IT Manager</td>
-                                            <td>2</td>
-                                            <td>gawin02</td>
-                                            <td>**********</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Ashton Cox</td>
-                                            <td>Site A</td>
-                                            <td>Production Manager</td>
-                                            <td>3</td>
-                                            <td>ascox03</td>
-                                            <td>**********</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Cedric Kelly</td>
-                                            <td>Site B</td>
-                                            <td>Production Manager 1</td>
-                                            <td>3</td>
-                                            <td>cekel04</td>
-                                            <td>**********</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Airi Satou</td>
-                                            <td>Site B</td>
-                                            <td>Production Manager 2</td>
-                                            <td>3</td>
-                                            <td>aisat05</td>
-                                            <td>**********</td>
-                                        </tr>
-
-
-                                    </tbody>
-                                </table>
+                            </div> -->
+                            <div class="col-sm-3 col-md-6 col-lg-4 col-xl-4">
+                                <div class="card bg-danger text-white mb-4">
+                                    <div class="card-body">Company Alerts</div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" >News Promotions, Hours of operation</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
