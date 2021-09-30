@@ -6,11 +6,28 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Dashboard - SB Admin</title>
+        <title>Order Review</title>
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
         <link href="css/styles.css" rel="stylesheet" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
-       
+         <!-- Bootstrap Date-Picker Plugin -->
+         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+         <!--  jQuery -->
+         <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+         <script>
+             $(document).ready(function(){
+               var date_input=$('input[name="date"]'); //our date input has the name "date"
+               var container=$('.bootstrap-iso form').length>0 ? $('.bootstrap-iso form').parent() : "body";
+               var options={
+                 format: 'mm/dd/yyyy',
+                 container: container,
+                 todayHighlight: true,
+                 autoclose: true,
+               };
+               date_input.datepicker(options);
+             })
+         </script>
     <style>
         #orderStatusTable {
             border-spacing: 10px;
@@ -86,106 +103,77 @@
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">Start New Order</h1>
+                        <h1 class="mt-4">Schedule Service</h1>
                         <ol class="breadcrumb mb-4">
-                            <li class="breadcrumb-item active">Place an order</li>
+                            <li class="breadcrumb-item active">Select Date and Location of Service</li>
                         </ol>
                         <div class="card mb-4">
                             <div class="card-header">
                                 <i class="fas fa-table me-1"></i>
-                                Select Instruments to Service
-                            </div>
-                            <div class="card-body">
-                                <table id="datatablesSimple">
-                                    <thead>
-                                        <tr>
-                                            <th><input type="checkbox" name="select_all" value="1" id="example-select-all"></th>
-                                            <th>Instrument Name</th>
-                                            <th>Model Number</th>
-                                            <th>Serial Number</th>
-                                            <th>Service Date</th>
-                                            <th>Certificate Link</th>
-                                            <th>Location</th>
-                                        </tr>
-                                    </thead>
-                                    <tfoot>
-                                        <tr>
-                                            <th><input type="checkbox" name="select_all" value="1" id="example-select-all"></th>
-                                            <th>Instrument Name</th>
-                                            <th>Model Number</th>
-                                            <th>Serial Number</th>
-                                            <th>Service Date</th>
-                                            <th>Certificate Link</th>
-                                            <th>Location</th>
-                                        </tr>
-                                    </tfoot>
-                                    <tbody>
-                                        <tr>
-                                            <td><input type="checkbox" name="select_all" value="1" id="example-select-all" checked></td>
-                                            <td>Haas_CNC_1</td>
-                                            <td>VF-1</td>
-                                            <td>100658</td>
-                                            <td>Jan 05 2021</td>
-                                            <td>Certificate_Haas_CNC_1.PNG</td>
-                                            <td>Site_A</td>
-                                        </tr>
-                                        <tr>
-                                            <td><input type="checkbox" name="select_all" value="1" id="example-select-all" checked></td>
-                                            <td>Haas_CNC_2</td>
-                                            <td>VF-1</td>
-                                            <td>101255</td>
-                                            <td>Mar 10 2021</td>
-                                            <td>Certificate_Haas_CNC_2.PNG</td>
-                                            <td>Site_A</td>
-                                        </tr>
-                                        <tr>
-                                            <td><input type="checkbox" name="select_all" value="1" id="example-select-all" checked></td>
-                                            <td>Haas_lathe_1</td>
-                                            <td>ST-28</td>
-                                            <td>103548</td>
-                                            <td>Sept 21 2021</td>
-                                            <td>Certificate_Haas_lathe_1.PNG</td>
-                                            <td>Site_B</td>
-                                        </tr>
-                                        <tr>
-                                            <td><input type="checkbox" name="select_all" value="1" id="example-select-all"></td>
-                                            <td>Halter_robot_arm_CNC_1</td>
-                                            <td>UNIVERSAL_COMPACT_12</td>
-                                            <td>100254</td>
-                                            <td>Jan 05 2021</td>
-                                            <td>Certificate_Halter_robot_arm_1.PNG</td>
-                                            <td>Site_A</td>
-                                        </tr>
-                                        <tr>
-                                            <td><input type="checkbox" name="select_all" value="1" id="example-select-all"></td>
-                                            <td>Halter_robot_arm_lathe_1</td>
-                                            <td>TURNSTACKER_PREMIUM_20/35</td>
-                                            <td>100102</td>
-                                            <td>Sept 21 2021</td>
-                                            <td>Certificate_Halter_robot_arm_lathe_1.PNG</td>
-                                            <td>Site_B</td>
-                                        </tr>
-
-
-                                    </tbody>
-                                </table>
+                                <label class="control-label " for="date">
+                                    Select Date for Service
+                                   </label>
+                                   <input class="form-control" id="date" name="date" placeholder="MM/DD/YYYY" type="text"/>
                             </div>
                         </div>
                          <div class="row">
-                            <!-- <div class="col-xl-3 col-md-6">
-                                <div class="card bg-primary text-white mb-4">
-                                    <div class="card-body">Primary Card</div>
+                            <div >
+                                <!-- <div class="card text-red mb-4"> -->
+                                    
+                                    <div class="card-body">
+                                        <h5 class="card-title">SERVICE LOCATION</h5>
+                                    </div>
+                                    
+                                    <!-- <div class="card-body d-flex align-items-center justify-content-between"> </div> -->
+                                    <!-- <div class="card-footer d-flex align-items-center justify-content-between"> -->
+                                        
+                                    <!-- </div> -->
+                                <!-- </div> -->
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div >
+                                <div class="card text-red mb-4">
+                                    
+                                    <div class="card-body"> 
+                                        <input type="checkbox" name="select_all" value="1" id="example-select-all">     On Site Service</div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
-                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                        <div>
+                                            <label for="address">Address:  </label>
+                                            <input type="text" id="address" name="address" style="width:100%;"><br><br>
+                                        </div>
+                                        
                                     </div>
                                 </div>
-                            </div> -->
-                            <div class="col-sm-9 col-md-8 col-lg-10 col-xl-10"></div>
-                            <div class="col-sm-3 col-md-4 col-lg-2 col-xl-2">
-                                <a href="start_order_schedule_service.html">
-                                    <button type="button" class="btn btn-danger" style="margin-bottom:30px">Start New Order</button>
-                                </a>
+                            </div>
+                            
+                        </div>
+                        <div class="row">
+                            <div >
+                                <div class="card text-red mb-4">
+                                
+                                    <div class="card-body"> 
+                                        <input type="checkbox" name="select_all" value="1" id="example-select-all">     Pickup Service</div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <div>
+                                            <label for="address">Address:  </label>
+                                            <input type="text" id="address" name="address" style="width:100%;"><br><br>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-9 col-md-8 col-lg-10 col-xl-10"></div>
+                                <div class="col-sm-3 col-md-4 col-lg-2 col-xl-2 bg-light text-right">
+                                    <a href="start_order_add_review_accessories.html">
+                                        <button type="button" class="btn btn-danger" style="margin-bottom:30px">Add Accessories to Order</button>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -193,7 +181,7 @@
                 <footer class="py-4 bg-light mt-auto">
                     <div class="container-fluid px-4">
                         <div class="d-flex align-items-center justify-content-between small">
-                            <div class="text-muted">Copyright &copy; Your Website 2021</div>
+                            <div class="text-muted">Copyright &copy;  2021</div>
                             <div>
                                 <a href="#">Privacy Policy</a>
                                 &middot;
