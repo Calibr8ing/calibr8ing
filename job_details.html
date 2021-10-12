@@ -6,16 +6,21 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Dashboard - SB Admin</title>
+        <title>Job Details</title>
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
         <link href="css/styles.css" rel="stylesheet" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
+    <style>
+        #orderStatusTable {
+            border-spacing: 10px;
+            table-layout: fixed;
+        }
+    </style>
     </head>
     <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
-            <!-- Navbar Brand
-            this is a test-->
-            <a class="navbar-brand ps-3" href="index.html" ><img src="assets/img/Pullman+dark+background-60w.png" ></img></a>
+            <!-- Navbar Brand-->
+            <a class="navbar-brand ps-3" href="index.html" ><img src="assets/img/Pullman+dark+background-60w.png"></img></a>
             <!-- Sidebar Toggle-->
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
             <!-- Navbar Search-->
@@ -130,93 +135,28 @@
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">Order History</h1>
+                        <h1 class="mt-4">Job Details</h1>
                         <ol class="breadcrumb mb-4">
-                            <li class="breadcrumb-item active">My Orders</li>
+                            <li class="breadcrumb-item active">All details related to each job</li>
                         </ol>
-                        <div class="col-xl-3 col-md-6">
-                            <button type="button" class="btn btn-danger" style="margin-bottom:30px">Start New Order</button>
-                            </div>
-                        <div class="card mb-4">
-                            <div class="card-header">
-                                <i class="fas fa-table me-1"></i>
-                                Order History
-                            </div>
-                            <div class="card-body">
-                                <table id="datatablesSimple">
-                                    <thead>
-                                        <tr>
-                                            <th>Order Number</th>
-                                            <th>Instrument Name</th>
-                                            <th>Procedure</th>
-                                            <th>Company</th>
-                                            <th>Date requested</th>
-                                            <th>Date Completed</th>
-                                            <th>Price</th>
-                                        </tr>
-                                    </thead>
-                                    <tfoot>
-                                        <tr>
-                                            <th>Order Number</th>
-                                            <th>Instrument Name</th>
-                                            <th>Procedure</th>
-                                            <th>Company</th>
-                                            <th>Date requested</th>
-                                            <th>Date Completed</th>
-                                            <th>Price</th>
-                                        </tr>
-                                    </tfoot>
-                                    <tbody>
-                                        <tr>
-                                            <td>531</td>
-                                            <td>Haas_CNC_1</td>
-                                            <td>Calibration</td>
-                                            <th>Customer 1</th>
-                                            <td>9/19/21</td>
-                                            <td>9/23/2021</td>
-                                            <td>xxxx.xx</td>
-                                        </tr>
-                                        <tr>
-                                            <td>531</td>
-                                            <td>Haas_CNC_2</td>
-                                            <td>Calibration</td>
-                                            <th>Customer 1</th>
-                                            <td>9/19/21</td>
-                                            <td>9/23/2021</td>
-                                            <td>xxxx.xx</td>
-                                        </tr>
-                                        <tr>
-                                            <td>531</td>
-                                            <td>Halter_robot_arm_CNC_1</td>
-                                            <td>Calibration</td>
-                                            <th>Customer 1</th>
-                                            <td>9/19/21</td>
-                                            <td>9/23/2021</td>
-                                            <td>xxxx.xx</td>
-                                        </tr>
-                                        <tr>
-                                            <td>3460</td>
-                                            <td>Haas_lathe_1</td>
-                                            <td>Installation</td>
-                                            <th>Customer 1</th>
-                                            <td>9/21/21</td>
-                                            <td>In Progress</td>
-                                            <td>xxxx.xx</td>
-                                        </tr>
-                                        <tr>
-                                            <td>3460</td>
-                                            <td>Halter_robot_arm_lathe_1</td>
-                                            <td>Installation</td>
-                                            <th>Customer 1</th>
-                                            <td>9/21/21</td>
-                                            <td>In Progress</td>
-                                            <td>xxxx.xx</td>
-                                        </tr>
-
-
-                                    </tbody>
-                                </table>
-                            </div>
+                         <div class="row">
+                            <!-- <div class="col-xl-3 col-md-6">
+                                <div class="card bg-primary text-white mb-4">
+                                    <div class="card-body">Primary Card</div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" href="#">View Details</a>
+                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                                    </div>
+                                </div>
+                            </div> -->
+                            <!-- <div class="col-sm-3 col-md-6 col-lg-4 col-xl-4">
+                                <div class="card bg-danger text-white mb-4">
+                                    <div class="card-body">Company Alerts</div>
+                                    <div class="card-footer d-flex align-items-center justify-content-between">
+                                        <a class="small text-white stretched-link" >News Promotions, Hours of operation</a>
+                                    </div>
+                                </div>
+                            </div> -->
                         </div>
                     </div>
                 </main>
