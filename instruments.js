@@ -17,7 +17,7 @@ var instruments = {
     }
   ]
 }
-// Customer Dashboard
+
 function processInstruments() {
     var instrument0 = instruments['instruments'][0];
     var instrument1 = instruments['instruments'][1];
@@ -33,7 +33,7 @@ function processInstruments() {
     document.getElementById("instrument2Model").innerHTML = instrument2['model'];
     document.getElementById("instrument2Type").innerHTML = instrument0['type'];
 }
-
+// Customer Dashboard
 var customerInstruments = {
   "instruments": [
     {
@@ -87,7 +87,7 @@ function processMyJobs() {
   
 }
 
-// Not currently working - not removing checkbox (not implemented) leaves blank dropdown 
+// 10/14/21 Not currently working completely - not removing checkbox (not implemented) leaves blank dropdown 
 // for status and leaves driver in assignedTo
 function resetMyJobs() {
   var data = jobs['jobs'][0];
@@ -101,3 +101,38 @@ function resetMyJobs() {
   document.getElementById("jobCompany").innerHTML = "";
   document.getElementById("jobDateRequested").innerHTML = "";
 }
+
+//Delivery Dashboard
+var jobs = {
+  "jobs": [
+    {
+     
+      "orderNumber": "051672",
+      "jobNumber": "01",
+      "instrument": "Fluke 114 Multimeter",
+      "procedure": "123-abc",
+      "company": "ABC Electric",
+      "dateRequested": "11/15/2021",
+      "assignedTo": "Driver",
+      "status": "Schedule"
+    }
+  ]
+ }
+function getPickupsToday() {
+  var data = jobs['jobs'][0];
+  document.getElementById("jobOrderNumber").innerHTML = data['orderNumber'];
+  document.getElementById("jobNumber").innerHTML = data['jobNumber'];
+  document.getElementById("jobInstrument").innerHTML = data['instrument'];
+  document.getElementById("jobProcedure").innerHTML = data['procedure'];
+  document.getElementById("jobCompany").innerHTML = data['company'];
+  document.getElementById("jobDateRequested").innerHTML = data['dateRequested'];
+}
+
+function getMyJobs() {
+
+}
+function processDeliveryJobs() {
+  getPickupsToday();
+  getMyJobs();
+}
+
