@@ -10,8 +10,9 @@
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
         <link href="css/styles.css" rel="stylesheet" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
+        <script src="instruments.js"></script>
     </head>
-    <body class="sb-nav-fixed">
+    <body onload="processCustomerInstrumentList()"class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <!-- Navbar Brand-->
             <a class="navbar-brand ps-3" href="index.html"><img src="assets/img/Pullman+dark+background-60w.png"></a>
@@ -24,6 +25,23 @@
                     <button class="btn btn-danger" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
                 </div>
             </form>
+            <!--Nav bar-->
+            <!-- <div class="fas fa-bell" id="bell"> </div>
+                    <div class="notifications" id="box">
+                        <h2>Notifications - <span>2</span></h2>
+                        <div class="notifications-item"> <img src="https://i.imgur.com/uIgDDDd.jpg" alt="img">
+                            <div class="text">
+                                <h4>Samso aliao</h4>
+                                <p>Samso Nagaro Like your home work</p>
+                            </div>
+                        </div>
+                        <div class="notifications-item"> <img src="https://img.icons8.com/flat_round/64/000000/vote-badge.png" alt="img">
+                            <div class="text">
+                                <h4>John Silvester</h4>
+                                <p>+20 vista badge earned</p>
+                            </div>
+                        </div>
+                    </div> -->
             <!-- Navbar-->
             <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
                 <li class="nav-item dropdown">
@@ -202,7 +220,7 @@
                                             <th>Serial Number</th>
                                             <th>Certified</th>
                                             <th>Certificate</th>
-                                            <th>Location</th>
+                                            
                                         </tr>
                                     </thead>
                                     <tfoot>
@@ -211,57 +229,22 @@
                                             <th>Instrument Name</th>
                                             <th>Model Number</th>
                                             <th>Serial Number</th>
-                                            <th>Service Date</th>
+                                            <th>Date Certified</th>
                                             <th>Certificate Link</th>
-                                            <th>Location</th>
+                                            
                                         </tr>
                                     </tfoot>
                                     <tbody>
                                         <tr>
-                                            <td><input type="checkbox" name="select_all" value="1" id="example-select-all" checked></td>
-                                            <td>Haas_CNC_1</td>
-                                            <td>VF-1</td>
-                                            <td>100658</td>
-                                            <td>9/23/2021</td>
-                                            <td >Certificate_Haas_CNC_1.PNG   <i class="fas fa-file-pdf"></i></td>
-                                            <td>Site_A</td>
+                                            <td><input type="checkbox" name="select_all" value="1" id="example-select-all" ></td>
+                                            <td><span id="instrument0Name"></span></td>
+                                            <td><span id="instrument0Model"></span></td>
+                                            <td><span id="instrument0Serial"></span></td>
+                                            <td><span id="instrument0DateCertified"></span></td>
+                                            <td ><span id="instrument0Certificate"></span><i class="fas fa-file-pdf"></i></td>
+                                            
                                         </tr>
-                                        <tr>
-                                            <td><input type="checkbox" name="select_all" value="1" id="example-select-all" checked></td>
-                                            <td>Haas_CNC_2</td>
-                                            <td>VF-1</td>
-                                            <td>101255</td>
-                                            <td>9/23/2021</td>
-                                            <td>Certificate_Haas_CNC_2.PNG    <i class="fas fa-file-pdf"></i></td>
-                                            <td>Site_A</td>
-                                        </tr>
-                                        <tr>
-                                            <td><input type="checkbox" name="select_all" value="1" id="example-select-all" checked></td>
-                                            <td>Haas_lathe_1</td>
-                                            <td>ST-28</td>
-                                            <td>103548</td>
-                                            <td>9/27/2021</td>
-                                            <td>Certificate_Haas_lathe_1.PNG    <i class="fas fa-file-pdf"></i></td>
-                                            <td>Site_B</td>
-                                        </tr>
-                                        <tr>
-                                            <td><input type="checkbox" name="select_all" value="1" id="example-select-all"></td>
-                                            <td>Halter_robot_arm_CNC_1</td>
-                                            <td>UNIVERSAL_COMPACT_12</td>
-                                            <td>100254</td>
-                                            <td>9/30/2021</td>
-                                            <td>Certificate_Halter_robot_arm_1.PNG    <i class="fas fa-file-pdf"></i></td>
-                                            <td>Site_A</td>
-                                        </tr>
-                                        <tr>
-                                            <td><input type="checkbox" name="select_all" value="1" id="example-select-all"></td>
-                                            <td>Halter_robot_arm_lathe_1</td>
-                                            <td>TURNSTACKER_PREMIUM_20/35</td>
-                                            <td>100102</td>
-                                            <td>10/2/2021</td>
-                                            <td>Certificate_Halter_robot_arm_lathe_1.PNG    <i class="fas fa-file-pdf"></i></td>
-                                            <td>Site_B</td>
-                                        </tr>
+                                        
 
 
                                     </tbody>
