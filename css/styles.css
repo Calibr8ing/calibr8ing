@@ -34,13 +34,8 @@
   --bs-gray-800: #343a40;
   --bs-gray-900: #212529;
   --bs-primary: #0d6efd;
-<<<<<<< HEAD
-  --bs-New_Order: #0d6efd;
-  --bs-New_Instrument: #14b860;
-=======
   --bs-new-order: #dc3545;
   --bs-new-instrument: #dc3545;
->>>>>>> 3314d77a3a39bcdc06be0a3cf2425914cbf94cdf
   --bs-secondary: #6c757d;
   --bs-success: #198754;
   --bs-info: #0dcaf0;
@@ -49,13 +44,8 @@
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
   --bs-primary-rgb: 13, 110, 253;
-<<<<<<< HEAD
-  --bs-New_Order-rgb: 13, 110, 253;
-  --bs-New_Instrument-rgb: 20, 184, 96;
-=======
   --bs-new-order-rgb: 220, 53, 69;
   --bs-new-instrument-rgb: 220, 53, 69;
->>>>>>> 3314d77a3a39bcdc06be0a3cf2425914cbf94cdf
   --bs-secondary-rgb: 108, 117, 125;
   --bs-success-rgb: 25, 135, 84;
   --bs-info-rgb: 13, 202, 240;
@@ -11739,4 +11729,14 @@ body {
   width: 20px !important;
   font-size: 0.75rem;
   border-radius: 0.25rem !important;
+}
+
+/* Additions for basic table data minimal styling */
+.basicTable {
+  width: 100% ;
+}
+.basicTable th, td {
+  padding-left: 15px;
+  padding-right: 15px;
+  text-align: left;
 }
