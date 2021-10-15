@@ -14,7 +14,7 @@
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
+        <script src="instruments.js"></script>
     <style>
         #orderStatusTable {
             border-spacing: 10px;
@@ -22,7 +22,7 @@
         }
     </style>
     </head>
-    <body class="sb-nav-fixed">
+    <body onload="getJobDetails()" class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <!-- Navbar Brand-->
             <a class="navbar-brand ps-3" href="index.html" ><img src="assets/img/Pullman+dark+background-60w.png"></img></a>
@@ -149,20 +149,20 @@
                                             <tbody>
                                                 <tr>
                                                     <td>Job Number: </td>
-                                                    <td><span id="jobNumber"></span></td>
+                                                    <td><span id="summaryJobNumber"></span></td>
                                                     <td>Instrument: </td>
-                                                    <td><span id="instrumentManAndModel"></span></td>
+                                                    <td><span id="summaryInstrumentManAndModel"></span></td>
                                                 <tr>
                                                     <td>Date Received: </span></td>
-                                                    <td><span id="jobDateReceived"></span></td>
+                                                    <td><span id="summaryJobDateReceived"></span></td>
                                                     <td>Instrument Owner: </td>
-                                                    <td><span id="instrumentOwner"></span></td>
+                                                    <td><span id="summaryInstrumentOwner"></span></td>
                                                 </tr>
                                                 <tr>
                                                     <td>Assigned To: </td>
-                                                    <td><span id="userName"></span></td>
+                                                    <td><span id="summaryUserName"></span></td>
                                                     <td>Current Status:</td>
-                                                    <td><span id="jobStatus"></span></td>
+                                                    <td><span id="summaryJobStatus"></span></td>
                                                     
                                                 </tr>
                                                 
@@ -195,45 +195,151 @@
                             <div class="tab-pane fade show active" id="jobDetails" role="tabpanel" >
                                 <div class="card mb-4 ">
                                     <div class="card-body">
-                                        <table class="basicTable">
-                                            <tbody>
-                                                <tr>
-                                                    <td>Job Number: </td>
-                                                    <td><span id="jobNumber"></span></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Order Number: </td>
-                                                    <td><span id="instrumentManAndModel"></span></td>
-                                                <tr>
-                                                    <td>Date Received: </span></td>
-                                                    <td><span id="jobDateReceived"></span></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Instrument Owner: </td>
-                                                    <td><span id="instrumentOwner"></span></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Assigned To: </td>
-                                                    <td><span id="userName"></span></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Current Status:</td>
-                                                    <td><span id="jobStatus"></span></td>
-                                                    
-                                                </tr>
-                                                
-                                            </tbody>
-                                        </table>
+                                        <form>
+                                            <div class="form-group row">
+                                              <label for="infoJobNumber" class="col-sm-2 col-form-label">Job Number</label>
+                                              <div class="col-sm-3">
+                                                <input type="text" class="form-control" id="infoJobNumber" >
+                                              </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="infoDateReceived" class="col-sm-2 col-form-label">Date Received</label>
+                                                <div class="col-sm-3">
+                                                  <input type="text" class="form-control" id="infoDateReceived" >
+                                                </div>
+                                              </div>
+                                              <div class="form-group row">
+                                                <label for="infoOrderNumber" class="col-sm-2 col-form-label">Order Number</label>
+                                                <div class="col-sm-3">
+                                                  <input type="text" class="form-control" id="infoOrderNumber" >
+                                                </div>
+                                              </div>
+                                              <div class="form-group row">
+                                                <label for="infoInvoiceNumber" class="col-sm-2 col-form-label">Invoice Number</label>
+                                                <div class="col-sm-3">
+                                                  <input type="text" class="form-control" id="infoInvoiceNumber" >
+                                                </div>
+                                              </div>
+                                              <div class="form-group row">
+                                                <label for="infoDispatchDate" class="col-sm-2 col-form-label">Dispatch Date</label>
+                                                <div class="col-sm-3">
+                                                  <input type="text" class="form-control" id="infoDispatchDate" >
+                                                </div>
+                                              </div>
+                                              <div class="form-group row">
+                                                <label for="infoCalibrationDate" class="col-sm-2 col-form-label">Calibration Date</label>
+                                                <div class="col-sm-3">
+                                                  <input type="text" class="form-control" id="infoCalibrationDate" >
+                                                </div>
+                                              </div>
+                                            <div class="form-group row">
+                                                <label for="staticCalibrationDue" class="col-sm-2 col-form-label">Calibration Due</label>
+                                                <div class="col-sm-3">
+                                                  <input style="color:red" type="text" readonly class="form-control-plaintext" id="staticCalibrationDue" >
+                                                </div>
+                                              </div>
+                                              <div class="form-group row">
+                                                <label for="staticCertificateNum" class="col-sm-2 col-form-label">Certificate No.</label>
+                                                <div class="col-sm-3">
+                                                  <input style="color:red" type="text" readonly class="form-control-plaintext" id="staticCertificateNum" >
+                                                </div>
+                                              </div>
+                                          </form>
                                     </div>
                                 </div>
                             </div>
                             <!-- Instruments Details Contents-->
                             <div class="tab-pane fade" id="instrumentDetails" role="tabpanel" aria-labelledby="instrumentDetails-tab">
-
+                                <div class="card mb-4 ">
+                                    <div class="card-body">
+                                        <form>
+                                            <div class="form-group row">
+                                                <label for="description" class="col-sm-2 col-form-label">Description</label>
+                                                <div class="col-sm-3">
+                                                  <input type="text" class="form-control" id="description" >
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="manufacturer" class="col-sm-2 col-form-label">Manufacturer</label>
+                                                <div class="col-sm-3">
+                                                  <input type="text" class="form-control" id="manufacturer" >
+                                                </div>
+                                            </div>
+                                              <div class="form-group row">
+                                                <label for="modelNumber" class="col-sm-2 col-form-label">Model Number</label>
+                                                <div class="col-sm-3">
+                                                  <input type="text" class="form-control" id="modelNumber" >
+                                                </div>
+                                              </div>
+                                              <div class="form-group row">
+                                                <label for="serialNumber" class="col-sm-2 col-form-label">Serial Number</label>
+                                                <div class="col-sm-3">
+                                                  <input type="text" class="form-control" id="serialNumber" >
+                                                </div>
+                                              </div>
+                                              <div class="form-group row">
+                                                <label for="procedureNum" class="col-sm-2 col-form-label">Procedure No.</label>
+                                                <div class="col-sm-3">
+                                                  <input type="text" class="form-control" id="procedureNum" >
+                                                </div>
+                                              </div>
+                                          </form>
+                                    </div>
+                                </div>
                             </div>
                             <!-- Test Details Contents-->
                             <div class="tab-pane fade" id="testDetails" role="tabpanel" aria-labelledby="testDetails-tab">
+                                <!--Test Table-->
+                                <div class="card mb-4">
+                                    <div class="card-header">
+                                        <i class="fas fa-table me-1"></i>
+                                        Tests
+                                    </div>
+                                    <div class="card-body">
+                                        <table id="datatablesSimple">
+                                            <thead>
+                                                <tr>
+                                                    <th>Test Title</th>
+                                                    <th>Test Type</th>
+                                                    <th>Test Range Start</th>
+                                                    <th>Test Range End</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><span id="testTitle"></span></td>
+                                                    <td><span id="testType"></span></td>
+                                                    <td><span id="testRangeStart"></span></td>
+                                                    <td><span id="testRangeEnd"></span></td>
 
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <!--Test Inputs-->
+                                <form>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-4">
+                                          <label for="testInput1">Test Input 1</label>
+                                          <input type="text" class="form-control" id="testInput1">
+                                        </div>
+                                        <div class="form-group col-md-4">
+                                          <label for="testInput2">Test Input 2</label>
+                                          <input type="text" class="form-control" id="testInput2">
+                                        </div>
+                                    </div>
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                          <label for="testInput3">Test Input 3</label>
+                                          <input type="text" class="form-control" id="testInput3">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                          <label for="testInput3">Test Input 3</label>
+                                          <input type="text" class="form-control" id="testInput3">
+                                        </div>
+                                    </div>
+                                </form>
                             </div>
                             <!-- Certificate Details Contents-->
                             <div class="tab-pane fade" id="certificateDetails" role="tabpanel" aria-labelledby="certificateDetails-tab">
