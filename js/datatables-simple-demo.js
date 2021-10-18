@@ -6,4 +6,8 @@ window.addEventListener('DOMContentLoaded', event => {
     if (datatablesSimple) {
         new simpleDatatables.DataTable(datatablesSimple);
     }
+    const datatablesSimpleTwo = document.getElementById('datatablesSimpleTwo');
+    if (datatablesSimpleTwo) {
+        new simpleDatatables.DataTable(datatablesSimpleTwo);
+    }
 });

@@ -119,7 +119,7 @@ var jobDetails = {
        "procedurePrice": "39.50",
        "contactName": "Jeff Anderson",
        "company": "Harigate Electric",
-       "Address": "",
+       "address": "",
        "calibrationLocation": "Harigate"
      },
      {
@@ -142,7 +142,7 @@ var jobDetails = {
        "procedurePrice": "69.50",
        "contactName": "Jeff Anderson",
        "company": "Harigate Electric",
-       "Address": "",
+       "address": "",
        "calibrationLocation": "Harigate"
      },
      {
@@ -165,7 +165,7 @@ var jobDetails = {
       "procedurePrice": "89.50",
       "contactName": "Sue Christiansen",
        "company": "Hindley Engineering",
-       "Address": "",
+       "address": "",
        "calibrationLocation": "Wigan"
     },
     {
@@ -188,7 +188,7 @@ var jobDetails = {
      "procedurePrice": "29.50",
      "contactName": "Robert Bailey",
       "company": "XYZ Electric",
-      "Address": "",
+      "address": "",
       "calibrationLocation": "Weston-super-Mare"
    },
    {
@@ -211,7 +211,7 @@ var jobDetails = {
     "procedurePrice": "29.50",
     "contactName": "Robert Bailey",
      "company": "XYZ Electric",
-     "Address": "",
+     "address": "",
      "calibrationLocation": "Weston-super-Mare"
   }
    ]
@@ -295,12 +295,24 @@ var jobDetails = {
    document.getElementById("jobOrderNumber").innerHTML = data.orderNumber;
    document.getElementById("jobNumber").innerHTML = data.jobNumber;
    document.getElementById("jobInstrument").innerHTML = data.man +" "+ model +" "+ category;
-   document.getElementById("jobProcedure").innerHTML = data.procedure;
    document.getElementById("jobCompany").innerHTML = data.company;
-   document.getElementById("jobDateRequested").innerHTML = data.dateRequested;
+   document.getElementById("jobDateRequested").innerHTML = data.dateReceived;
+   document.getElementById("jobCompanyAddress").innerHTML = data.address;
  }
  
  function getMyJobs() {
+    var data = jobDetails['job'][0];
+
+    var man = jobDetails['job'][0].instrumentManufacturer;
+    var model = jobDetails['job'][0].instrumentModelNumber;
+    var category = jobDetails['job'][0].instrumentCategory;
+
+   document.getElementById("myJobOrderNumber").innerHTML = data.orderNumber;
+   document.getElementById("myJobNumber").innerHTML = data.jobNumber;
+   document.getElementById("myJobInstrument").innerHTML = data.man +" "+ model +" "+ category;
+   document.getElementById("myJobCompany").innerHTML = data.company;
+   document.getElementById("myJobDateRequested").innerHTML = data.dateReceived;
+   document.getElementById("myJobCompanyAddress").innerHTML = data.address;
  
  }
  function processDeliveryJobs() {
@@ -314,18 +326,17 @@ var jobDetails = {
     getMyJobs();
     getCurrentJobs();
  }
- function getMyJobs() {
-   var data = jobDetails['job'][0];
-   
-   
-   document.getElementById("jobOrderNumber").innerHTML = data.orderNumber;
-   document.getElementById("jobNumber").innerHTML = data.jobNumber;
-   document.getElementById("jobInstrument").innerHTML = data.instrumentCategory;
-   document.getElementById("jobProcedure").innerHTML = data.instrumentProcedureNumber;
-   document.getElementById("jobCompany").innerHTML = data.company;
-   document.getElementById("jobDateRequested").innerHTML = data.dateReceived;
-   
- }
+ // function getMyJobs() {
+ //   var data = jobDetails['job'][0];
+ //
+ //
+ //   document.getElementById("jobOrderNumber").innerHTML = data.orderNumber;
+ //   document.getElementById("jobNumber").innerHTML = data.jobNumber;
+ //   document.getElementById("jobInstrument").innerHTML = data.instrumentCategory;
+ //   document.getElementById("jobCompany").innerHTML = data.company;
+ //   document.getElementById("jobDateRequested").innerHTML = data.dateReceived;
+ //
+ // }
  function getCurrentJobs(){
   var data0 = jobDetails['job'][0];
   var data1 = jobDetails['job'][1];
