@@ -178,6 +178,7 @@ var jobDetails = {
   ],
   "instrumentDetails": [
     {
+      "description": "Fluke 114 MultiMeter (up to 4 digits)",
       "category": "MultiMeter (up to 4 digits)",
       "manufacturer": "Fluke",
       "modelNumber": "114",

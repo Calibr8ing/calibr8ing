@@ -11,7 +11,7 @@
         <link href="css/styles.css" rel="stylesheet" />
         <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" type="text/javascript"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
-        <script src="instruments.js"></script>
+        <script src="jsonData.js"></script>
     <style>
         #orderStatusTable {
             border-spacing: 10px;
@@ -19,7 +19,7 @@
         }
     </style>
     </head>
-    <body onload="processMyJobs()" class="sb-nav-fixed">
+    <body onload="processAdminDashboard()" class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <!-- Navbar Brand-->
             <a class="navbar-brand ps-3" href="index.html" ><img src="assets/img/Pullman+dark+background-60w.png"></img></a>
@@ -188,20 +188,6 @@
                                             <th>Date requested</th>
                                         </tr>
                                     </thead>
-                                    <tfoot>
-                                        <tr>
-                                            <th>Select</th>
-                                            <th>Status</th>
-                                            <th>Assigned To</th>
-                                            <th>Order Number</th>
-                                            <th>Job Number</th>
-                                            <th>Instrument</th>
-                                            <th>Procedure</th>
-                                            <th>Company</th>
-                                            <th>Date requested</th>
-                    
-                                        </tr>
-                                    </tfoot>
                                     <tbody>
                                         <tr>
                                             <td><input type="checkbox" name="select_all" value="1" id="example-select-all"></td>
@@ -215,7 +201,7 @@
                                                 <option value="certificateRequested">Certificate Requested</option>
                                                 </select></td>
                                             <td><select name="employee" >
-                                                <option value="" id="unassigned"></option>
+                                                <option value="" id="unassigned0"></option>
                                                 <option value="Admin" selected>Admin</option>
                                                 <option value="Driver">Driver</option>
                                                 <option value="LabTech">LabTech</option>
@@ -226,14 +212,10 @@
                                             <td><span id="jobProcedure"></span></td>
                                             <td><span id="jobCompany"></span></td>
                                             <td><span id="jobDateRequested"></span></td>
-                                            
                                         </tr>
-                                        
                                     </tbody>
                                 </table>
                             </div>
-
-
                         </div>
                         <div class="container">
                             <div class="row">
@@ -289,34 +271,37 @@
                                     </tfoot>
                                     <tbody>
                                         <tr>
-                                            <td><a href="#">531</a></td>
-                                            <td>Haas_CNC_1</td>
-                                            <td>Calibration</td>
-                                            <td>In Progress</td>
-                                            <td>Customer 1</td>
-                                            <td>9/19/21</td>
-                                            <td>9/23/2021</td>
-                                            <td>xxxx.xx</td>
+                                            <!-- <td><span id="jobOrderNumber0"></span></td> -->
+                                            <td><span id="jobNumber0"></span></td>
+                                            <td><span id="instrumentName0"></span></td>
+                                            <td><span id="procedure0"></span></td>
+                                            <td><span id="status0"></span></td>
+                                            <td><span id="company0"></span></td>
+                                            <td><span id="dateRequested0"></span></td>
+                                            <td><span id="dateCompleted0"></span></td>
+                                            <td><span id="price0"></span></td>
                                         </tr>
                                         <tr>
-                                            <td><a href="#">531</a></td>
-                                            <td>Haas_CNC_2</td>
-                                            <td>Calibration</td>
-                                            <td>In Transit to Customer</td>
-                                            <td>Customer 1</td>
-                                            <td>9/19/21</td>
-                                            <td>9/23/2021</td>
-                                            <td>xxxx.xx</td>
+                                            <!-- <td><span id="jobOrderNumber1"></span></td> -->
+                                            <td><span id="jobNumber1"></span></td>
+                                            <td><span id="instrumentName1"></span></td>
+                                            <td><span id="procedure1"></span></td>
+                                            <td><span id="status1"></span></td>
+                                            <td><span id="company1"></span></td>
+                                            <td><span id="dateRequested1"></span></td>
+                                            <td><span id="dateCompleted1"></span></td>
+                                            <td><span id="price1"></span></td>
                                         </tr>
                                         <tr>
-                                            <td><a href="#">531</a></td>
-                                            <td>Halter_robot_arm_CNC_1</td>
-                                            <td>Calibration</td>
-                                            <td>Certification Complete</td>
-                                            <td>Customer 1</td>
-                                            <td>9/19/21</td>
-                                            <td>9/23/2021</td>
-                                            <td>xxxx.xx</td>
+                                            <!-- <td><span id="jobOrderNumber2"></span></td> -->
+                                            <td><span id="jobNumber2"></span></td>
+                                            <td><span id="instrumentName2"></span></td>
+                                            <td><span id="procedure2"></span></td>
+                                            <td><span id="status2"></span></td>
+                                            <td><span id="company2"></span></td>
+                                            <td><span id="dateRequested2"></span></td>
+                                            <td><span id="dateCompleted2"></span></td>
+                                            <td><span id="price2"></span></td>
                                         </tr>
                                    </tbody>
                                 </table>
