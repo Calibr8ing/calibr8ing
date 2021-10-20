@@ -10,14 +10,9 @@
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
         <link href="css/styles.css" rel="stylesheet" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
-    <style>
-        #orderStatusTable {
-            border-spacing: 10px;
-            table-layout: fixed;
-        }
-    </style>
+        <script src="jsonData.js"></script>
     </head>
-    <body class="sb-nav-fixed">
+    <body onload="processEngineerMyJobs()" class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <!-- Navbar Brand-->
             <a class="navbar-brand ps-3" href="index.html" ><img src="assets/img/Pullman+dark+background-60w.png"></img></a>
@@ -135,9 +130,9 @@
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">Engineer Dashboard</h1>
+                        <h1 class="mt-4">Dashboard</h1>
                         <ol class="breadcrumb mb-4">
-                            <li class="breadcrumb-item active">My Assigned Jobs And Job History</li>
+                            <li class="breadcrumb-item active">Engineering</li>
                         </ol>
                         <div class="card mb-4">
                             <div class="card-header">
@@ -155,8 +150,8 @@
                                                 <th>Procedure</th>
                                                 <th>Status</th>
                                                 <th>Company</th>
-                                                <th>Date requested</th>
-                                                <th>Date Completed</th>
+                                                <th>Date Received</th>
+
                                                 <th>Price</th>
                                             </tr>
                                         </thead>
@@ -168,44 +163,55 @@
                                                 <th>Procedure</th>
                                                 <th>Status</th>
                                                 <th>Company</th>
-                                                <th>Date requested</th>
-                                                <th>Date Completed</th>
+                                                <th>Date Received</th>
+                                               
                                                 <th>Price</th>
                                             </tr>
                                         </tfoot>
                                         <tbody>
                                             <tr>
-                                                <td><a href="#">531</a></td>
-                                                <td><a href="#">235</a></td>
-                                                <td>Haas_CNC_1</td>
-                                                <td>Calibration</td>
-                                                <td>In Progress</td>
-                                                <td>Customer 1</td>
-                                                <td>9/19/21</td>
-                                                <td>9/23/2021</td>
-                                                <td>xxxx.xx</td>
+                                                <td><span id="jobOrderNumber0"></span></td>
+                                                <td><a href="job_details_0151672.html"><span id="jobNumber0"></span></a></td>
+                                                <td><span id="jobInstrument0"></span></td>
+                                                <td><span id="jobProcedure0"></span></td>
+                                                <td><span id="jobStatus0"></span></td>
+                                                <td><span id="jobCompany0"></span></td>
+                                                <td><span id="jobDateRequested0"></span></td>
+                                                
+                                                <td><span id="jobPrice0"></span></td>
                                             </tr>
                                             <tr>
-                                                <td><a href="#">531</a></td>
-                                                <td><a href="#">324</a></td>
-                                                <td>Haas_CNC_2</td>
-                                                <td>Calibration</td>
-                                                <td>In Transit to Customer</td>
-                                                <td>Customer 1</td>
-                                                <td>9/19/21</td>
-                                                <td>9/23/2021</td>
-                                                <td>xxxx.xx</td>
+                                                <td><span id="jobOrderNumber6"></span></td>
+                                                <td><a href=""><span id="jobNumber6"></span></a></td>
+                                                <td><span id="jobInstrument6"></span></td>
+                                                <td><span id="jobProcedure6"></span></td>
+                                                <td><span id="jobStatus6"></span></td>
+                                                <td><span id="jobCompany6"></span></td>
+                                                <td><span id="jobDateRequested6"></span></td>
+                                                
+                                                <td><span id="jobPrice6"></span></td>
                                             </tr>
                                             <tr>
-                                                <td><a href="#">531</a></td>
-                                                <td><a href="#">221</a></td>
-                                                <td>Halter_robot_arm_CNC_1</td>
-                                                <td>Calibration</td>
-                                                <td>Certification Complete</td>
-                                                <td>Customer 1</td>
-                                                <td>9/19/21</td>
-                                                <td>9/23/2021</td>
-                                                <td>xxxx.xx</td>
+                                                <td><span id="jobOrderNumber7"></span></td>
+                                                <td><a href=""><span id="jobNumber7"></span></a></td>
+                                                <td><span id="jobInstrument7"></span></td>
+                                                <td><span id="jobProcedure7"></span></td>
+                                                <td><span id="jobStatus7"></span></td>
+                                                <td><span id="jobCompany7"></span></td>
+                                                <td><span id="jobDateRequested7"></span></td>
+                                                
+                                                <td><span id="jobPrice7"></span></td>
+                                            </tr>
+                                            <tr>
+                                                <td><span id="jobOrderNumber8"></span></td>
+                                                <td><a href=""><span id="jobNumber8"></span></a></td>
+                                                <td><span id="jobInstrument8"></span></td>
+                                                <td><span id="jobProcedure8"></span></td>
+                                                <td><span id="jobStatus8"></span></td>
+                                                <td><span id="jobCompany8"></span></td>
+                                                <td><span id="jobDateRequested8"></span></td>
+                                                
+                                                <td><span id="jobPrice8"></span></td>
                                             </tr>
                                     </tbody>
                                     </table>
