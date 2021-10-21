@@ -202,7 +202,7 @@ var jobDetails = {
     {
       // #4
      "jobNumber": "051674-01",
-     "dateReceived": "11/19/2021",
+     "dateReceived": "",
      "dateCompleted": "",
      "orderNumber": "051674",
      "invoiceNumber": "456125",
@@ -226,7 +226,7 @@ var jobDetails = {
    {
      //#5
     "jobNumber": "051674-02",
-    "dateReceived": "11/19/2021",
+    "dateReceived": "",
     "dateCompleted": "",
     "orderNumber": "051674",
     "invoiceNumber": "456125",
@@ -428,98 +428,50 @@ var jobDetails = {
  //Admin Dashboard - Pullman
 
  function processAdminDashboard(){
-    getMyJobsAdmin();
+    getMyJobs();
     getCurrentJobs();
  }
- function processAdminDashboard2(){
-
-    getCurrentJobs();
- }
- function getMyJobsAdmin() {
-   var data = jobDetails['job'][0];
-
-
-   document.getElementById("jobOrderNumber").innerHTML = data.orderNumber;
-   document.getElementById("jobNumber").innerHTML = data.jobNumber;
-   document.getElementById("jobInstrument").innerHTML = data.instrumentCategory;
-   document.getElementById("jobCompany").innerHTML = data.company;
-   document.getElementById("jobDateRequested").innerHTML = data.dateReceived;
-   document.getElementById("jobProcedure").innerHTML = data.instrumentProcedureNumber;
-
-  }
+ // function getMyJobs() {
+ //   var data = jobDetails['job'][0];
+ //
+ //
+ //   document.getElementById("jobOrderNumber").innerHTML = data.orderNumber;
+ //   document.getElementById("jobNumber").innerHTML = data.jobNumber;
+ //   document.getElementById("jobInstrument").innerHTML = data.instrumentCategory;
+ //   document.getElementById("jobCompany").innerHTML = data.company;
+ //   document.getElementById("jobDateRequested").innerHTML = data.dateReceived;
+ //
+ // }
  function getCurrentJobs(){
   var data0 = jobDetails['job'][0];
   var data1 = jobDetails['job'][1];
   var data2 = jobDetails['job'][2];
-  var data3 = jobDetails['job'][3];
-  var data4 = jobDetails['job'][4];
-  var data5 = jobDetails['job'][5];
    
   console.log(data0);
+   
+  // document.getElementById("jobOrderNumber0").innerHTML = data0.orderNumber;
+  document.getElementById("jobNumber0").innerHTML = data0.jobNumber;
+  document.getElementById("instrumentName0").innerHTML = data0.instrumentCategory;
+  document.getElementById("procedure0").innerHTML = data0.instrumentProcedure;
+  document.getElementById("status0").innerHTML = data0.status;
+  document.getElementById("company0").innerHTML = data0.company;
+  document.getElementById("dateRequested0").innerHTML = data0.dateReceived;
+  document.getElementById("dateCompleted0").innerHTML = data0.company;
+  document.getElementById("price0").innerHTML = data0.procedurePrice;
 
-   document.getElementById("jobOrderNumber0").innerHTML = data0.orderNumber;
-   document.getElementById("jobNumber0").innerHTML = data0.jobNumber;
-   document.getElementById("jobInstrument0").innerHTML = data0.instrumentCategory;
-   document.getElementById("jobCompany0").innerHTML = data0.company;
-   document.getElementById("jobDateRequested0").innerHTML = data0.dateReceived;
-   document.getElementById("jobProcedure0").innerHTML = data0.instrumentProcedureNumber;
-   document.getElementById("status0").innerHTML = data0.status;
-   document.getElementById("assignedTo0").innerHTML = data0.assignedTo;
-   document.getElementById("jobSite0").innerHTML = data0.calibrationLocation;
+  // document.getElementById("jobOrderNumber1").innerHTML = data1.orderNumber;
+  document.getElementById("jobNumber1").innerHTML = data1.jobNumber;
+  document.getElementById("jobInstrument1").innerHTML = data1.instrumentCategory;
+  document.getElementById("jobProcedure1").innerHTML = data1.instrumentProcedure;
+  document.getElementById("jobCompany1").innerHTML = data1.company;
+  document.getElementById("jobDateRequested1").innerHTML = data1.dateReceived;
 
-   document.getElementById("jobOrderNumber1").innerHTML = data1.orderNumber;
-   document.getElementById("jobNumber1").innerHTML = data1.jobNumber;
-   document.getElementById("jobInstrument1").innerHTML = data1.instrumentCategory;
-   document.getElementById("jobCompany1").innerHTML = data1.company;
-   document.getElementById("jobDateRequested1").innerHTML = data1.dateReceived;
-   document.getElementById("jobProcedure1").innerHTML = data1.instrumentProcedureNumber;
-   document.getElementById("status1").innerHTML = data1.status;
-   document.getElementById("assignedTo1").innerHTML = data1.assignedTo;
-   document.getElementById("jobSite1").innerHTML = data1.calibrationLocation;
-
-   document.getElementById("jobOrderNumber2").innerHTML = data2.orderNumber;
-   document.getElementById("jobNumber2").innerHTML = data2.jobNumber;
-   document.getElementById("jobInstrument2").innerHTML = data2.instrumentCategory;
-   document.getElementById("jobCompany2").innerHTML = data2.company;
-   document.getElementById("jobDateRequested2").innerHTML = data2.dateReceived;
-   document.getElementById("jobProcedure2").innerHTML = data2.instrumentProcedureNumber;
-   document.getElementById("status2").innerHTML = data2.status;
-   document.getElementById("assignedTo2").innerHTML = data2.assignedTo;
-   document.getElementById("jobSite2").innerHTML = data2.calibrationLocation;
-
-   document.getElementById("jobOrderNumber3").innerHTML = data3.orderNumber;
-   document.getElementById("jobNumber3").innerHTML = data3.jobNumber;
-   document.getElementById("jobInstrument3").innerHTML = data3.instrumentCategory;
-   document.getElementById("jobCompany3").innerHTML = data3.company;
-   document.getElementById("jobDateRequested3").innerHTML = data3.dateReceived;
-   document.getElementById("jobProcedure3").innerHTML = data3.instrumentProcedureNumber;
-   document.getElementById("status3").innerHTML = data3.status;
-   document.getElementById("assignedTo3").innerHTML = data3.assignedTo;
-   document.getElementById("jobSite3").innerHTML = data3.calibrationLocation;
-
-   document.getElementById("jobOrderNumber4").innerHTML = data4.orderNumber;
-   document.getElementById("jobNumber4").innerHTML = data4.jobNumber;
-   document.getElementById("jobInstrument4").innerHTML = data4.instrumentCategory;
-   document.getElementById("jobCompany4").innerHTML = data4.company;
-   document.getElementById("jobDateRequested4").innerHTML = data4.dateReceived;
-   document.getElementById("jobProcedure4").innerHTML = data4.instrumentProcedureNumber;
-   document.getElementById("status4").innerHTML = data4.status;
-   document.getElementById("assignedTo4").innerHTML = data4.assignedTo;
-   document.getElementById("jobSite4").innerHTML = data4.calibrationLocation;
-
-   document.getElementById("jobOrderNumber5").innerHTML = data5.orderNumber;
-   document.getElementById("jobNumber5").innerHTML = data5.jobNumber;
-   document.getElementById("jobInstrument5").innerHTML = data5.instrumentCategory;
-   document.getElementById("jobCompany5").innerHTML = data5.company;
-   document.getElementById("jobDateRequested5").innerHTML = data5.dateReceived;
-   document.getElementById("jobProcedure5").innerHTML = data5.instrumentProcedureNumber;
-   document.getElementById("status5").innerHTML = data5.status;
-   document.getElementById("assignedTo5").innerHTML = data5.assignedTo;
-   document.getElementById("jobSite5").innerHTML = data5.calibrationLocation;
-
-
-
-
+  // document.getElementById("jobOrderNumber2").innerHTML = data2.orderNumber;
+  document.getElementById("jobNumber2").innerHTML = data2.jobNumber;
+  document.getElementById("jobInstrument2").innerHTML = data2.instrumentCategory;
+  document.getElementById("jobProcedure2").innerHTML = data2.instrumentProcedure;
+  document.getElementById("jobCompany2").innerHTML = data2.company;
+  document.getElementById("jobDateRequested2").innerHTML = data2.dateReceived;
  }
  
  // 10/14/21 Not currently working completely - not removing checkbox (not implemented) leaves blank dropdown 
@@ -552,7 +504,6 @@ var jobDetails = {
    
  }
 
-<<<<<<< Updated upstream
  //Engineer Dashboard
  function processEngineerMyJobs() {
   var data0 = jobDetails['job'][0];
@@ -676,35 +627,5 @@ var jobDetails = {
   document.getElementById("actualDisplay").innerHTML = data6.actualDisplay;
   document.getElementById("passFail").innerHTML = data6.passFail;
   document.getElementById("comments").innerHTML = data6.comments;
-=======
- function processCertificationExpiration() {
-     var data0 = jobDetails['job'][0];
-     var data1 = jobDetails['job'][1];
-     var data2 = jobDetails['job'][2];
-
-   document.getElementById("company0").innerHTML = data0.company;
-   document.getElementById("contactName0").innerHTML = data0.contactName;
-   document.getElementById("instrumentName0").innerHTML = data0.instrumentCategory;
-   document.getElementById("procedure0").innerHTML = data0.instrumentProcedureNumber;
-   document.getElementById("price0").innerHTML = data0.procedurePrice;
-   document.getElementById("phone0").innerHTML = "00000 000000";
-   document.getElementById("email0").innerHTML = "abcElectric@email.com";
-
-   document.getElementById("company1").innerHTML = data1.company;
-   document.getElementById("contactName1").innerHTML = data1.contactName;
-   document.getElementById("instrumentName1").innerHTML = data1.instrumentCategory;
-   document.getElementById("procedure1").innerHTML = data1.instrumentProcedureNumber;
-   document.getElementById("price1").innerHTML = data1.procedurePrice;
-   document.getElementById("phone1").innerHTML = "00000 000000";
-   document.getElementById("email1").innerHTML = "harigateElectric@email.com";
-
-   document.getElementById("company2").innerHTML = "123 Electric";
-   document.getElementById("contactName2").innerHTML = "John Smith";
-   document.getElementById("instrumentName2").innerHTML = data2.instrumentCategory;
-   document.getElementById("procedure2").innerHTML = data2.instrumentProcedureNumber;
-   document.getElementById("price2").innerHTML = data2.procedurePrice;
-   document.getElementById("phone2").innerHTML = "00000 000000";
-   document.getElementById("email2").innerHTML = "123Electric@email.com";
->>>>>>> Stashed changes
 
  }
