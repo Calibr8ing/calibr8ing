@@ -198,128 +198,168 @@ var jobDetails = {
        "company": "Hindley Engineering",
        "address": "",
        "calibrationLocation": "Wigan"
+      },
+      {
+        // #4
+      "jobNumber": "051674-01",
+      "dateReceived": "",
+      "dateCompleted": "",
+      "orderNumber": "051674",
+      "invoiceNumber": "456125",
+      "dispatchDate": "",
+      "calibrationDate": "",
+      "calibrationDue": "11/16/2021",
+      "certificateNum": "1234575",
+      "assignedTo": "Admin",
+      "status": "New Pickup",
+      "instrumentCategory": "Clampmeter",
+      "instrumentManufacturer": "FlexiClamp",
+      "instrumentModelNumber": "A54X",
+      "instrumentSerialNumber": "12453424",
+      "instrumentProcedureNumber": "453-clp",
+      "procedurePrice": "29.50",
+      "contactName": "Robert Bailey",
+        "company": "XYZ Electric",
+        "address": "",
+        "calibrationLocation": "Weston-super-Mare"
     },
     {
-      // #4
-     "jobNumber": "051674-01",
-     "dateReceived": "11/19/2021",
-     "dateCompleted": "",
-     "orderNumber": "051674",
-     "invoiceNumber": "456125",
-     "dispatchDate": "",
-     "calibrationDate": "",
-     "calibrationDue": "11/16/2021",
-     "certificateNum": "1234575",
-     "assignedTo": "Admin",
-     "status": "New Pickup",
-     "instrumentCategory": "Clampmeter",
-     "instrumentManufacturer": "FlexiClamp",
-     "instrumentModelNumber": "A54X",
-     "instrumentSerialNumber": "12453424",
-     "instrumentProcedureNumber": "453-clp",
-     "procedurePrice": "29.50",
-     "contactName": "Robert Bailey",
+      //#5
+      "jobNumber": "051674-02",
+      "dateReceived": "",
+      "dateCompleted": "",
+      "orderNumber": "051674",
+      "invoiceNumber": "456125",
+      "dispatchDate": "",
+      "calibrationDate": "",
+      "calibrationDue": "11/16/2021",
+      "certificateNum": "1234576",
+      "assignedTo": "Admin",
+      "status": "New Pickup",
+      "instrumentCategory": "Clampmeter",
+      "instrumentManufacturer": "FlexiClamp",
+      "instrumentModelNumber": "A56X",
+      "instrumentSerialNumber": "12453564",
+      "instrumentProcedureNumber": "453-clp",
+      "procedurePrice": "29.50",
+      "contactName": "Robert Bailey",
       "company": "XYZ Electric",
       "address": "",
       "calibrationLocation": "Weston-super-Mare"
-   },
-   {
-     //#5
-    "jobNumber": "051674-02",
-    "dateReceived": "11/19/2021",
-    "dateCompleted": "",
-    "orderNumber": "051674",
-    "invoiceNumber": "456125",
-    "dispatchDate": "",
-    "calibrationDate": "",
-    "calibrationDue": "11/16/2021",
-    "certificateNum": "1234576",
-    "assignedTo": "Admin",
-    "status": "New Pickup",
-    "instrumentCategory": "Clampmeter",
-    "instrumentManufacturer": "FlexiClamp",
-    "instrumentModelNumber": "A56X",
-    "instrumentSerialNumber": "12453564",
-    "instrumentProcedureNumber": "453-clp",
-    "procedurePrice": "29.50",
-    "contactName": "Robert Bailey",
-     "company": "XYZ Electric",
-     "address": "",
-     "calibrationLocation": "Weston-super-Mare"
-  },
-  //jobs for engineer my jobs
-  {
-    //#6
-    "jobNumber": "051676-01",
-    "dateReceived": "11/16/2021",
-    "dateCompleted": "",
-    "orderNumber": "051678",
-    "invoiceNumber": "456155",
-    "dispatchDate": "",
-    "calibrationDate": "",
-    "calibrationDue": "11/16/2021",
-    "certificateNum": "",
-    "assignedTo": "LabTech",
-    "status": "Booked In",
-    "instrumentCategory": "Megohmmeter",
-    "instrumentManufacturer": "3M",
-    "instrumentModelNumber": "701",
-    "instrumentSerialNumber": "84156254",
-    "instrumentProcedureNumber": "987-mgh",
-    "procedurePrice": "89.50",
-    "contactName": "Robert Bailey",
-     "company": "XYZ Electric",
-     "address": "",
-     "calibrationLocation": "Central"
-  },
-  {
-    //#7
-    "jobNumber": "051677-01",
-    "dateReceived": "11/16/2021",
-    "dateCompleted": "",
-    "orderNumber": "051677",
-    "invoiceNumber": "456145",
-    "dispatchDate": "",
-    "calibrationDate": "",
-    "calibrationDue": "11/16/2021",
-    "certificateNum": "",
-    "assignedTo": "LabTech",
-    "status": "Booked In",
-    "instrumentCategory": "Clampmeter",
-    "instrumentManufacturer": "FlexiClamp",
-    "instrumentModelNumber": "A56X",
-    "instrumentSerialNumber": "12453564",
-    "instrumentProcedureNumber": "453-clp",
-    "procedurePrice": "29.50",
-    "contactName": "Robert Bailey",
-     "company": "XYZ Electric",
-     "address": "",
-     "calibrationLocation": "Central"
-  },
-  {
-    //#8
-    "jobNumber": "051677-02",
-    "dateReceived": "11/16/2021",
-    "dateCompleted": "",
-    "orderNumber": "051677",
-    "invoiceNumber": "456145",
-    "dispatchDate": "",
-    "calibrationDate": "",
-    "calibrationDue": "11/16/2021",
-    "certificateNum": "",
-    "assignedTo": "Admin",
-    "status": "Booked In",
-    "instrumentCategory": "Clampmeter",
-    "instrumentManufacturer": "FlexiClamp",
-    "instrumentModelNumber": "A56X",
-    "instrumentSerialNumber": "12453564",
-    "instrumentProcedureNumber": "453-clp",
-    "procedurePrice": "29.50",
-    "contactName": "Robert Bailey",
-     "company": "XYZ Electric",
-     "address": "",
-     "calibrationLocation": "Central"
-  }
+    },
+    //jobs for engineer my jobs
+    {
+      //#6
+      "jobNumber": "051676-01",
+      "dateReceived": "11/16/2021",
+      "dateCompleted": "",
+      "orderNumber": "051678",
+      "invoiceNumber": "456155",
+      "dispatchDate": "",
+      "calibrationDate": "",
+      "calibrationDue": "11/16/2021",
+      "certificateNum": "",
+      "assignedTo": "LabTech",
+      "status": "Booked In",
+      "instrumentCategory": "Megohmmeter",
+      "instrumentManufacturer": "3M",
+      "instrumentModelNumber": "701",
+      "instrumentSerialNumber": "84156254",
+      "instrumentProcedureNumber": "987-mgh",
+      "procedurePrice": "89.50",
+      "contactName": "Robert Bailey",
+      "company": "XYZ Electric",
+      "address": "",
+      "calibrationLocation": "Central"
+    },
+    {
+      //#7
+      "jobNumber": "051677-01",
+      "dateReceived": "11/16/2021",
+      "dateCompleted": "",
+      "orderNumber": "051677",
+      "invoiceNumber": "456145",
+      "dispatchDate": "",
+      "calibrationDate": "",
+      "calibrationDue": "11/16/2021",
+      "certificateNum": "",
+      "assignedTo": "LabTech",
+      "status": "Booked In",
+      "instrumentCategory": "Clampmeter",
+      "instrumentManufacturer": "FlexiClamp",
+      "instrumentModelNumber": "A56X",
+      "instrumentSerialNumber": "12453564",
+      "instrumentProcedureNumber": "453-clp",
+      "procedurePrice": "29.50",
+      "contactName": "Robert Bailey",
+      "company": "XYZ Electric",
+      "address": "",
+      "calibrationLocation": "Central"
+    },
+    {
+      //#8
+      "jobNumber": "051677-02",
+      "dateReceived": "11/16/2021",
+      "dateCompleted": "",
+      "orderNumber": "051677",
+      "invoiceNumber": "456145",
+      "dispatchDate": "",
+      "calibrationDate": "",
+      "calibrationDue": "11/16/2021",
+      "certificateNum": "",
+      "assignedTo": "Admin",
+      "status": "Booked In",
+      "instrumentCategory": "Clampmeter",
+      "instrumentManufacturer": "FlexiClamp",
+      "instrumentModelNumber": "A56X",
+      "instrumentSerialNumber": "12453564",
+      "instrumentProcedureNumber": "453-clp",
+      "procedurePrice": "29.50",
+      "contactName": "Robert Bailey",
+      "company": "XYZ Electric",
+      "address": "",
+      "calibrationLocation": "Central"
+    }
+   ],
+   "parts":[
+     {
+       "stockNumber": "8236-463",
+       "category": "Batteries",
+       "part": "AAA",
+       "qty": "",
+       "cost": "1.12",
+       "price": "1.25",
+       "total": "0"
+     },
+     {
+      "stockNumber": "8236-463",
+      "category": "Batteries",
+      "part": "AA",
+      "qty": "",
+      "cost": "1.15",
+      "price": "1.30",
+      "totalCost": "6.90",
+      "totalPrice": "7.80",
+
+    },
+    {
+      "stockNumber": "8236-463",
+      "category": "Batteries",
+      "part": "9v",
+      "qty": "",
+      "cost": "2.20",
+      "price": "2.45",
+      "total": ""
+    },
+    {
+      "stockNumber": "1006-454",
+      "category": "Lead - Test",
+      "part": "Megger TL#-C9v",
+      "qty": "",
+      "cost": "7.20",
+      "price": "8.45",
+      "total": ""
+    }
    ]
  }
  
@@ -350,7 +390,7 @@ var jobDetails = {
    document.getElementById("infoJobNumber").value = data.jobNumber;
    document.getElementById("infoDateReceived").value = data.dateReceived;
    document.getElementById("infoOrderNumber").value = data.orderNumber;
-   document.getElementById("infoInvoiceNumber").value = data.invoiceNumber;
+  //  document.getElementById("infoInvoiceNumber").value = data.invoiceNumber;
    document.getElementById("infoDispatchDate").value = data.dispatchDate;
    document.getElementById("infoCalibrationDate").value = data.calibrationDate;
    document.getElementById("staticCalibrationDue").value = data.calibrationDue;
@@ -602,6 +642,7 @@ var jobDetails = {
   getJobInfo();
   getInstrumentDetails();
   getTestDetailsByJobNumber();
+  getParts()
  }
 
  function getTestDetailsByJobNumber(){
@@ -610,6 +651,9 @@ var jobDetails = {
   var data1 = jobDetails.job[0].testDetails[1];
   var data2 = jobDetails.job[0].testDetails[2];
   var data3 = jobDetails.job[0].testDetails[3];
+  var data4 = jobDetails.job[0].testDetails[4];
+  var data5 = jobDetails.job[0].testDetails[5];
+  var data6 = jobDetails.job[0].testDetails[6];
 
   console.log(data1);
   console.log(data2);
@@ -619,8 +663,8 @@ var jobDetails = {
   document.getElementById("testType0").innerHTML = data0.testType;
   document.getElementById("testRangeStart0").innerHTML = data0.testRangeStart;
   document.getElementById("expectedDisplay0").innerHTML = data0.display;
-  document.getElementById("actualDisplay0").innerHTML = data0.actualDisplay;
-  document.getElementById("passFail0").innerHTML = data0.passFail;
+  // document.getElementById("actualDisplay0").innerHTML = data0.actualDisplay;
+  // document.getElementById("passFail0").innerHTML = data0.passFail;
   document.getElementById("comments0").innerHTML = data0.comments;
 
   document.getElementById("testTitle1").innerHTML = data1.testTitle;
@@ -628,8 +672,8 @@ var jobDetails = {
   document.getElementById("testType1").innerHTML = data1.testType;
   document.getElementById("testRangeStart1").innerHTML = data1.testRangeStart;
   document.getElementById("expectedDisplay1").innerHTML = data1.display;
-  document.getElementById("actualDisplay1").innerHTML = data1.actualDisplay;
-  document.getElementById("passFail1").innerHTML = data1.passFail;
+  // document.getElementById("actualDisplay1").innerHTML = data1.actualDisplay;
+  //document.getElementById("passFail1").innerHTML = data1.passFail;
   document.getElementById("comments1").innerHTML = data1.comments;
   
   document.getElementById("testTitle2").innerHTML = data2.testTitle;
@@ -637,8 +681,8 @@ var jobDetails = {
   document.getElementById("testType2").innerHTML = data2.testType;
   document.getElementById("testRangeStart2").innerHTML = data2.testRangeStart;
   document.getElementById("expectedDisplay2").innerHTML = data2.display;
-  document.getElementById("actualDisplay2").innerHTML = data2.actualDisplay;
-  document.getElementById("passFail2").innerHTML = data2.passFail;
+  // document.getElementById("actualDisplay2").innerHTML = data2.actualDisplay;
+  //document.getElementById("passFail2").innerHTML = data2.passFail;
   document.getElementById("comments2").innerHTML = data2.comments;
   
   document.getElementById("testTitle3").innerHTML = data3.testTitle;
@@ -646,8 +690,8 @@ var jobDetails = {
   document.getElementById("testType3").innerHTML = data3.testType;
   document.getElementById("testRangeStart3").innerHTML = data3.testRangeStart;
   document.getElementById("expectedDisplay3").innerHTML = data3.display;
-  document.getElementById("actualDisplay3").innerHTML = data3.actualDisplay;
-  document.getElementById("passFail3").innerHTML = data3.passFail;
+  // document.getElementById("actualDisplay3").innerHTML = data3.actualDisplay;
+  //document.getElementById("passFail3").innerHTML = data3.passFail;
   document.getElementById("comments3").innerHTML = data3.comments;
 
   document.getElementById("testTitle4").innerHTML = data4.testTitle;
@@ -655,8 +699,8 @@ var jobDetails = {
   document.getElementById("testType4").innerHTML = data4.testType;
   document.getElementById("testRangeStart4").innerHTML = data4.testRangeStart;
   document.getElementById("expectedDisplay4").innerHTML = data4.display;
-  document.getElementById("actualDisplay4").innerHTML = data4.actualDisplay;
-  document.getElementById("passFail4").innerHTML = data4.passFail;
+  // document.getElementById("actualDisplay4").innerHTML = data4.actualDisplay;
+  //document.getElementById("passFail4").innerHTML = data4.passFail;
   document.getElementById("comments4").innerHTML = data4.comments;
 
   document.getElementById("testTitle5").innerHTML = data5.testTitle;
@@ -664,10 +708,11 @@ var jobDetails = {
   document.getElementById("testType5").innerHTML = data5.testType;
   document.getElementById("testRangeStart5").innerHTML = data5.testRangeStart;
   document.getElementById("expectedDisplay5").innerHTML = data5.display;
-  document.getElementById("actualDisplay5").innerHTML = data5.actualDisplay;
-  document.getElementById("passFail5").innerHTML = data5.passFail;
+  // document.getElementById("actualDisplay5").innerHTML = data5.actualDisplay;
+  //document.getElementById("passFail5").innerHTML = data5.passFail;
   document.getElementById("comments5").innerHTML = data5.comments;
 
+<<<<<<< Updated upstream
   document.getElementById("testTitle").innerHTML = data6.testTitle;
   document.getElementById("testStep").innerHTML = data6.testStep;
   document.getElementById("testType").innerHTML = data6.testType;
@@ -706,5 +751,53 @@ var jobDetails = {
    document.getElementById("phone2").innerHTML = "00000 000000";
    document.getElementById("email2").innerHTML = "123Electric@email.com";
 >>>>>>> Stashed changes
+=======
+  document.getElementById("testTitle6").innerHTML = data6.testTitle;
+  document.getElementById("testStep6").innerHTML = data6.testStep;
+  document.getElementById("testType6").innerHTML = data6.testType;
+  document.getElementById("testRangeStart6").innerHTML = data6.testRangeStart;
+  document.getElementById("expectedDisplay6").innerHTML = data6.display;
+  // document.getElementById("actualDisplay6").innerHTML = data6.actualDisplay;
+  //document.getElementById("passFail6").innerHTML = data6.passFail;
+  document.getElementById("comments6").innerHTML = data6.comments;
+>>>>>>> Stashed changes
+
+ }
+
+ function getParts(){
+   
+  var data0 = jobDetails.parts[0];
+  var data1 = jobDetails.parts[1];
+  var data2 = jobDetails.parts[2];
+  var data3 = jobDetails.parts[3];
+
+  document.getElementById("stockNumber0").innerHTML = data0.stockNumber;
+  document.getElementById("category0").innerHTML = data0.category;
+  document.getElementById("part0").innerHTML = data0.part;
+  document.getElementById("qty0").innerHTML = data0.qty;
+  document.getElementById("cost0").innerHTML = data0.cost;
+  document.getElementById("price0").innerHTML = data0.price;
+  // document.getElementById("total0").innerHTML = data0.price;
+
+  document.getElementById("stockNumber1").innerHTML = data1.stockNumber;
+  document.getElementById("category1").innerHTML = data1.category;
+  document.getElementById("part1").innerHTML = data1.part;
+  document.getElementById("qty1").innerHTML = data1.qty;
+  document.getElementById("cost1").innerHTML = data1.cost;
+  document.getElementById("price1").innerHTML = data1.price;
+
+  document.getElementById("stockNumber2").innerHTML = data2.stockNumber;
+  document.getElementById("category2").innerHTML = data2.category;
+  document.getElementById("part2").innerHTML = data2.part;
+  document.getElementById("qty2").innerHTML = data2.qty;
+  document.getElementById("cost2").innerHTML = data2.cost;
+  document.getElementById("price2").innerHTML = data2.price;
+  
+  document.getElementById("stockNumber3").innerHTML = data3.stockNumber;
+  document.getElementById("category3").innerHTML = data3.category;
+  document.getElementById("part3").innerHTML = data3.part;
+  document.getElementById("qty3").innerHTML = data3.qty;
+  document.getElementById("cost3").innerHTML = data3.cost;
+  document.getElementById("price3").innerHTML = data3.price;
 
  }
