@@ -10,4 +10,8 @@ window.addEventListener('DOMContentLoaded', event => {
     if (datatablesSimpleTwo) {
         new simpleDatatables.DataTable(datatablesSimpleTwo);
     }
+    const datatablesSimpleThree = document.getElementById('datatablesSimpleThree');
+    if (datatablesSimpleThree) {
+        new simpleDatatables.DataTable(datatablesSimpleThree);
+    }
 });
