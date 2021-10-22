@@ -716,8 +716,8 @@ var jobDetails = {
   document.getElementById("testType6").innerHTML = data6.testType;
   document.getElementById("testRangeStart6").innerHTML = data6.testRangeStart;
   document.getElementById("expectedDisplay6").innerHTML = data6.display;
-  document.getElementById("actualDisplay6").innerHTML = data6.actualDisplay;
-  document.getElementById("passFail6").innerHTML = data6.passFail;
+  // document.getElementById("actualDisplay6").innerHTML = data6.actualDisplay;
+  // document.getElementById("passFail6").innerHTML = data6.passFail;
   document.getElementById("comments6").innerHTML = data6.comments;
  }
 

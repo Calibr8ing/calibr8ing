@@ -552,7 +552,7 @@
             
 
             function getPartsForCurrentJob() {
-
+                // window.location.href = "job_details_051672_2.html";
                 
                 var data = jobDetails.parts[0];
                 console.log(data);
@@ -560,9 +560,11 @@
                 document.getElementById("stockNumber").innerHTML = data.stockNumber;
                 document.getElementById("category").innerHTML = data.category;
                 document.getElementById("part").innerHTML = data.part;
-                document.getElementById("qty").innerHTML = qty;
-                document.getElementById("cost").innerHTML = cost;
-                document.getElementById("price").innerHTML = price;
+                document.getElementById("qty").innerHTML = document.getElementById("qty0").value;
+                document.getElementById("cost").innerHTML = document.getElementById("cost0").innerHTML;
+                document.getElementById("price").innerHTML = document.getElementById("price0").innerHTML;
+                document.getElementById("totalCost").innerHTML = document.getElementById("totalCost0").innerHTML;
+                document.getElementById("totalPrice").innerHTML = document.getElementById("totalPrice0").innerHTML;
             }
 
             
