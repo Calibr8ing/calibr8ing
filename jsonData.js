@@ -592,7 +592,6 @@ var jobDetails = {
    
  }
 
-<<<<<<< Updated upstream
  //Engineer Dashboard
  function processEngineerMyJobs() {
   var data0 = jobDetails['job'][0];
@@ -712,16 +711,16 @@ var jobDetails = {
   //document.getElementById("passFail5").innerHTML = data5.passFail;
   document.getElementById("comments5").innerHTML = data5.comments;
 
-<<<<<<< Updated upstream
-  document.getElementById("testTitle").innerHTML = data6.testTitle;
-  document.getElementById("testStep").innerHTML = data6.testStep;
-  document.getElementById("testType").innerHTML = data6.testType;
-  document.getElementById("testRangeStart").innerHTML = data6.testRangeStart;
-  document.getElementById("expectedDisplay").innerHTML = data6.display;
-  document.getElementById("actualDisplay").innerHTML = data6.actualDisplay;
-  document.getElementById("passFail").innerHTML = data6.passFail;
-  document.getElementById("comments").innerHTML = data6.comments;
-=======
+  document.getElementById("testTitle6").innerHTML = data6.testTitle;
+  document.getElementById("testStep6").innerHTML = data6.testStep;
+  document.getElementById("testType6").innerHTML = data6.testType;
+  document.getElementById("testRangeStart6").innerHTML = data6.testRangeStart;
+  document.getElementById("expectedDisplay6").innerHTML = data6.display;
+  document.getElementById("actualDisplay6").innerHTML = data6.actualDisplay;
+  document.getElementById("passFail6").innerHTML = data6.passFail;
+  document.getElementById("comments6").innerHTML = data6.comments;
+ }
+
  function processCertificationExpiration() {
      var data0 = jobDetails['job'][0];
      var data1 = jobDetails['job'][1];
@@ -750,17 +749,7 @@ var jobDetails = {
    document.getElementById("price2").innerHTML = data2.procedurePrice;
    document.getElementById("phone2").innerHTML = "00000 000000";
    document.getElementById("email2").innerHTML = "123Electric@email.com";
->>>>>>> Stashed changes
-=======
-  document.getElementById("testTitle6").innerHTML = data6.testTitle;
-  document.getElementById("testStep6").innerHTML = data6.testStep;
-  document.getElementById("testType6").innerHTML = data6.testType;
-  document.getElementById("testRangeStart6").innerHTML = data6.testRangeStart;
-  document.getElementById("expectedDisplay6").innerHTML = data6.display;
-  // document.getElementById("actualDisplay6").innerHTML = data6.actualDisplay;
-  //document.getElementById("passFail6").innerHTML = data6.passFail;
-  document.getElementById("comments6").innerHTML = data6.comments;
->>>>>>> Stashed changes
+ 
 
  }
 
