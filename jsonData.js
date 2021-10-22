@@ -399,29 +399,39 @@ var jobDetails = {
   document.getElementById("summaryJobStatus").innerHTML = "Delivered - at Site";
 
 }
+function getJobSummaryBar5(){
+  var data = jobDetails['job'][0];
+  var man = jobDetails['job'][0].instrumentManufacturer;
+  var model = jobDetails['job'][0].instrumentModelNumber;
+  var category = jobDetails['job'][0].instrumentCategory;
+  document.getElementById("summaryUserName").innerHTML = "Lab";
+  document.getElementById("summaryJobDateReceived").innerHTML = data.dateReceived;
+  document.getElementById("summaryInstrumentManAndModel").innerHTML = man +" "+ model +" "+ category;
+  document.getElementById("summaryInstrumentOwner").innerHTML = data.company;
+  document.getElementById("summaryJobNumber").innerHTML = data.jobNumber;
+  document.getElementById("summaryJobStatus").innerHTML = "Booked In";
+
+}
  function getJobInfo(){
    var data = jobDetails['job'][0];
    // console.log(jobDetails);
-   document.getElementById("infoJobNumber").value = data.jobNumber;
+   document.getElementById("infoJobNumber").value = data.company;
    document.getElementById("infoDateReceived").value = data.dateReceived;
    document.getElementById("infoOrderNumber").value = data.orderNumber;
   //  document.getElementById("infoInvoiceNumber").value = data.invoiceNumber;
-   document.getElementById("infoDispatchDate").value = data.dispatchDate;
+   document.getElementById("infoInvoiceNumber").value = data.invoiceNumber;
    document.getElementById("infoCalibrationDate").value = data.calibrationDate;
    document.getElementById("staticCalibrationDue").value = data.calibrationDue;
    document.getElementById("staticCertificateNum").value = data.certificateNum;
  }
- function getCustomerDetails(){
+ function getCustomerDetails4(){
   var data = jobDetails['job'][0];
   // console.log(jobDetails);
-  document.getElementById("infoJobNumber").value = data.jobNumber;
-  document.getElementById("infoDateReceived").value = data.dateReceived;
-  document.getElementById("infoOrderNumber").value = data.orderNumber;
- //  document.getElementById("infoInvoiceNumber").value = data.invoiceNumber;
-  document.getElementById("infoDispatchDate").value = data.dispatchDate;
-  document.getElementById("infoCalibrationDate").value = data.calibrationDate;
-  document.getElementById("staticCalibrationDue").value = data.calibrationDue;
-  document.getElementById("staticCertificateNum").value = data.certificateNum;
+  document.getElementById("company").value = data.company;
+  document.getElementById("contactName").value = data.contactName;
+  document.getElementById("address").value = "24 Erica Rd";
+  document.getElementById("city").value = "Milton Keynes";
+  document.getElementById("postCode").value = "MK12 6HS";
 }
  function getInstrumentDetails(){
    var data = jobDetails['job'][0];
@@ -896,7 +906,13 @@ function getMyJobs2() {
   getInstrumentDetails();
   getTestDetailsByJobNumber();
   getParts()
-  getCustomerDetails();
+  getCustomerDetails4();
+ }
+
+ function getJobDetailsWithJobNumber5(){
+  getJobSummaryBar5();
+  getJobInfo();
+
  }
 
  function getTestDetailsByJobNumber(){
@@ -909,9 +925,7 @@ function getMyJobs2() {
   var data5 = jobDetails.job[0].testDetails[5];
   var data6 = jobDetails.job[0].testDetails[6];
 
-  console.log(data1);
-  console.log(data2);
- 
+  
   document.getElementById("testTitle0").innerHTML = data0.testTitle;
   document.getElementById("testStep0").innerHTML = data0.testStep;
   document.getElementById("testType0").innerHTML = data0.testType;
@@ -1119,5 +1133,6 @@ function getMyJobs2() {
    getCentralJobs();
    
   }
+
   
       
