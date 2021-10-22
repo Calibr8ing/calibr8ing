@@ -48,66 +48,8 @@
                 <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                     <div class="sb-sidenav-menu">
                         <div class="nav">
-                            <div class="sb-sidenav-menu-heading">Customer Views</div>
-                            <a class="nav-link" href="index.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                Dashboard
-                            </a>
-                            <a class="nav-link collapsed" href="start_new_order.html" >
-                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
-                                Start New Order
-                            </a>
-                           
-                            <a class="nav-link collapsed" href="instruments_page.html" >
-                                <div class="sb-nav-link-icon"><i class="fas fa-wrench"></i></div>
-                                Instruments
-                            </a>
-                            <a class="nav-link collapsed" href="order_history.html" >
-                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
-                                Order History
-                            </a>
-                            <a class="nav-link collapsed" href="manage_users.html" >
-                                <div class="sb-nav-link-icon"><i class="fas fa-user"></i></div>
-                                Manage Users
-                            </a>
-                            <a class="nav-link collapsed" href="settings.html" >
-                                <div class="sb-nav-link-icon"><i class="fas fa-cog"></i></div>
-                                Settings
-                            </a>
-                            <div class="sb-sidenav-menu-heading">Pullman Admin Views</div>
-                            <a class="nav-link" href="admin_dashboard.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                Dashboard
-                            </a>
-                            <a class="nav-link" href="jobs.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                Jobs
-                            </a>
-                            <a class="nav-link" href="search.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                Search
-                            </a>
-                            <a class="nav-link" href="create_customer_order.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                Create Customer Order
-                            </a>
-                            <a class="nav-link" href="certificates_1.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                Certificates
-                            </a>
-                            <a class="nav-link" href="manage_procedures.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                Manage Procedures
-                            </a>
-                            <a class="nav-link" href="manage_instruments.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                Manage Instruments
-                            </a>
-                            <a class="nav-link" href="upcoming_certifications_due.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                Upcoming Certifications Due
-                            </a>
-                            <div class="sb-sidenav-menu-heading">Pullman Engineering Views</div>
+                            
+                            <div class="sb-sidenav-menu-heading">Engineering </div>
                             <a class="nav-link" href="engineer_dashboard.html">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Dashboard
@@ -115,10 +57,6 @@
                             <a class="nav-link" href="engineering_jobs.html">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Jobs
-                            </a>
-                            <a class="nav-link" href="search.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                Search
                             </a>
                             <a class="nav-link" href="engineering_tests.html">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
@@ -140,23 +78,90 @@
                             <li class="breadcrumb-item active">List of Jobs by Site for Engineers - only "booked in" items shown by location</li>
                         </ol>
                          <div class="row">
-                            <!-- <div class="col-xl-3 col-md-6">
-                                <div class="card bg-primary text-white mb-4">
-                                    <div class="card-body">Primary Card</div>
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
-                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+                            <div class="card mb-4">
+                                <div class="card-header">
+                                    <i class="fas fa-table me-1"></i>
+                                    My Jobs
+                                </div>
+                                <div class="row">
+                                    <div class="card-body">
+                                        <table id="datatablesSimple">
+                                            <thead>
+                                                <tr>
+                                                    <th>Order Number</th>
+                                                    <th>Job Number</th>
+                                                    <th>Instrument Name</th>
+                                                    <th>Procedure</th>
+                                                    <th>Status</th>
+                                                    <th>Company</th>
+                                                    <th>Date Received</th>
+    
+                                                    <th>Price</th>
+                                                </tr>
+                                            </thead>
+                                            <tfoot>
+                                                <tr>
+                                                    <th>Order Number</th>
+                                                    <th>Job Number</th>
+                                                    <th>Instrument Name</th>
+                                                    <th>Procedure</th>
+                                                    <th>Status</th>
+                                                    <th>Company</th>
+                                                    <th>Date Received</th>
+                                                   
+                                                    <th>Price</th>
+                                                </tr>
+                                            </tfoot>
+                                            <tbody>
+                                                <tr>
+                                                    <td><span id="jobOrderNumber0"></span></td>
+                                                    <td><a href="job_details_0151672.html"><span id="jobNumber0"></span></a></td>
+                                                    <td><span id="jobInstrument0"></span></td>
+                                                    <td><span id="jobProcedure0"></span></td>
+                                                    <td><span id="jobStatus0"></span></td>
+                                                    <td><span id="jobCompany0"></span></td>
+                                                    <td><span id="jobDateRequested0"></span></td>
+                                                    
+                                                    <td><span id="jobPrice0"></span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span id="jobOrderNumber6"></span></td>
+                                                    <td><a href=""><span id="jobNumber6"></span></a></td>
+                                                    <td><span id="jobInstrument6"></span></td>
+                                                    <td><span id="jobProcedure6"></span></td>
+                                                    <td><span id="jobStatus6"></span></td>
+                                                    <td><span id="jobCompany6"></span></td>
+                                                    <td><span id="jobDateRequested6"></span></td>
+                                                    
+                                                    <td><span id="jobPrice6"></span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span id="jobOrderNumber7"></span></td>
+                                                    <td><a href=""><span id="jobNumber7"></span></a></td>
+                                                    <td><span id="jobInstrument7"></span></td>
+                                                    <td><span id="jobProcedure7"></span></td>
+                                                    <td><span id="jobStatus7"></span></td>
+                                                    <td><span id="jobCompany7"></span></td>
+                                                    <td><span id="jobDateRequested7"></span></td>
+                                                    
+                                                    <td><span id="jobPrice7"></span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span id="jobOrderNumber8"></span></td>
+                                                    <td><a href=""><span id="jobNumber8"></span></a></td>
+                                                    <td><span id="jobInstrument8"></span></td>
+                                                    <td><span id="jobProcedure8"></span></td>
+                                                    <td><span id="jobStatus8"></span></td>
+                                                    <td><span id="jobCompany8"></span></td>
+                                                    <td><span id="jobDateRequested8"></span></td>
+                                                    
+                                                    <td><span id="jobPrice8"></span></td>
+                                                </tr>
+                                        </tbody>
+                                        </table>
                                     </div>
                                 </div>
-                            </div> -->
-                            <!-- <div class="col-sm-3 col-md-6 col-lg-4 col-xl-4">
-                                <div class="card bg-danger text-white mb-4">
-                                    <div class="card-body">Company Alerts</div>
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" >News Promotions, Hours of operation</a>
-                                    </div>
-                                </div>
-                            </div> -->
+                            </div>
                         </div>
                     </div>
                 </main>
