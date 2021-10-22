@@ -655,8 +655,6 @@ function getMyJobs2() {
  }
  function getMyJobsAdmin() {
    var data = jobDetails['job'][0];
-
-
    document.getElementById("jobOrderNumber").innerHTML = data.orderNumber;
    document.getElementById("jobNumber").innerHTML = data.jobNumber;
    document.getElementById("jobInstrument").innerHTML = data.instrumentCategory;
@@ -678,7 +676,7 @@ function getMyJobs2() {
      document.getElementById("jobCompany0").innerHTML = data0.company;
      document.getElementById("jobDateRequested0").innerHTML = data0.dateReceived;
      document.getElementById("jobProcedure0").innerHTML = data0.instrumentProcedureNumber;
-     document.getElementById("status0").innerHTML = data0.status;
+     document.getElementById("status0").innerHTML = "Delivered - at Site";
      document.getElementById("assignedTo0").innerHTML = data0.assignedTo;
      document.getElementById("jobSite0").innerHTML = data0.calibrationLocation;
 
@@ -1074,5 +1072,18 @@ function getMyJobs2() {
       document.getElementById("totalPrice").innerHTML = document.getElementById("totalPrice0").innerHTML;
   }
 
-            
+  function processAdminDashboard4(){
+    //get my job
+    var data = jobDetails['job'][0];
+   document.getElementById("jobOrderNumber").innerHTML = data.orderNumber;
+   document.getElementById("jobNumber").innerHTML = data.jobNumber;
+   document.getElementById("jobInstrument").innerHTML = data.instrumentCategory;
+   document.getElementById("jobCompany").innerHTML = data.company;
+   document.getElementById("jobDateRequested").innerHTML = data.dateReceived;
+   document.getElementById("jobProcedure").innerHTML = data.instrumentProcedureNumber;
+  
+   getCentralJobs();
+   
+  }
+  
       

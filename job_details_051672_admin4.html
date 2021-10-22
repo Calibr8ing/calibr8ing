@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Job Details</title>
+        <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
+        <link href="css/styles.css" rel="stylesheet" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
+        <!-- Added scripts to get bootstrap tabs working -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <script src="jsonData.js"></script>
+    <style>
+        #orderStatusTable {
+            border-spacing: 10px;
+            table-layout: fixed;
+        }
+    </style>
+    </head>
+    <body onload="getJobDetailsWithJobNumber()" class="sb-nav-fixed">
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+            <!-- Navbar Brand-->
+            <!-- <a class="navbar-brand ps-3" href="index.html" ><img src="assets/img/Pullman+dark+background-60w.png"></img></a> -->
+            <!-- Sidebar Toggle-->
+            <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+            <!-- Navbar Search-->
+            <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+                <!-- <div class="input-group">
+                    <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
+                    <button class="btn btn-danger" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
+                </div> -->
+            </form>
+            <!-- Navbar-->
+            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#!">Settings</a></li>
+                        <li><a class="dropdown-item" href="#!">Activity Log</a></li>
+                        <li><hr class="dropdown-divider" /></li>
+                        <li><a class="dropdown-item" href="#!">Logout</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <div id="layoutSidenav">
+            <div id="layoutSidenav_nav">
+                <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                    <div class="sb-sidenav-menu">
+                        <div class="nav">
+                            
+                            <a class="nav-link" href="admin_dashboard.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                Dashboard
+                            </a>
+                            <a class="nav-link" href="jobs.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                Jobs
+                            </a>
+                            <!-- <a class="nav-link" href="search.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                Search
+                            </a> -->
+                            <a class="nav-link" href="create_customer_order.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                Create Customer Order
+                            </a>
+                            <a class="nav-link" href="certificates_1.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                Certificates
+                            </a>
+                            <a class="nav-link" href="manage_procedures.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                Manage Procedures
+                            </a>
+                            <a class="nav-link" href="manage_instruments.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                Manage Instruments
+                            </a>
+                            <a class="nav-link" href="upcoming_certifications_due.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                Upcoming Certifications Due
+                            </a>
+                        </div>
+                    </div>
+                    <div class="sb-sidenav-footer">
+                        <div class="small">Logged in as:</div>
+                        Admin
+                    </div>
+                </nav>
+            </div>
+            <div id="layoutSidenav_content">
+                <main>
+                    <div class="container-fluid px-4">
+                        <h1 class="mt-4">Job Details</h1>  
+                        <div class="row">
+                            <div >
+                                <div class="card mb-4 ">
+                                    <div class="card-body">
+                                        <table class="basicTable">
+                                            <tbody>
+                                                <tr>
+                                                    <td>Job Number: </td>
+                                                    <td><span id="summaryJobNumber"></span></td>
+                                                    <td>Instrument: </td>
+                                                    <td><span id="summaryInstrumentManAndModel"></span></td>
+                                                <tr>
+                                                    <td>Date Received: </span></td>
+                                                    <td><span id="summaryJobDateReceived"></span></td>
+                                                    <td>Instrument Owner: </td>
+                                                    <td><span id="summaryInstrumentOwner"></span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Assigned To: </td>
+                                                    <td><span id="summaryUserName"></span></td>
+                                                    <td>Current Status:</td>
+                                                    <td><span id="summaryJobStatus"></span></td>
+                                                    
+                                                </tr>
+                                                
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                   
+                         <!-- Tabbed Info -->
+                         <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item">
+                              <a class="nav-link active" id="jobDetails-tab" data-toggle="tab" href="#jobDetails" role="tab" aria-controls="jobDetails" aria-selected="true">Job</a>
+                            </li>
+                            <li class="nav-item">
+                              <a class="nav-link" id="instrumentDetails-tab" data-toggle="tab" href="#instrumentDetails" role="tab" aria-controls="instrumentDetails" aria-selected="false">Instrument Details</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="customerDetails-tab" data-toggle="tab" href="#customerDetails" role="tab" aria-controls="customerDetails" aria-selected="false">Customer Details</a>
+                              </li>
+                            <li class="nav-item">
+                              <a class="nav-link" id="testDetails-tab" data-toggle="tab" href="#testDetails" role="tab" aria-controls="testDetails" aria-selected="false">Test Details</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="partsUsed-tab" data-toggle="tab" href="#partsUsed" role="tab" aria-controls="partsUsed" aria-selected="false">Parts Used</a>
+                              </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="certificateDetails-tab" data-toggle="tab" href="#certificateDetails" role="tab" aria-controls="certificateDetails" aria-selected="false">Certificate Details</a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link" id="comments-tab" data-toggle="tab" href="#comments" role="tab" aria-controls="comments" aria-selected="false">Comments</a>
+                              </li>
+                          </ul>
+                          <div class="tab-content" id="myTabContent">
+                              <!-- Job Details Contents-->
+                            <div class="tab-pane fade show active" id="jobDetails" role="tabpanel" >
+                                <div class="card mb-4 ">
+                                    <div class="card-body">
+                                        <form>
+                                            <div class="form-group row">
+                                              <label for="infoJobNumber" class="col-sm-2 col-form-label">Job Number</label>
+                                              <div class="col-sm-3">
+                                                <input type="text" class="form-control" id="infoJobNumber" >
+                                              </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="infoDateReceived" class="col-sm-2 col-form-label">Date Received</label>
+                                                <div class="col-sm-3">
+                                                  <input type="text" class="form-control" id="infoDateReceived" >
+                                                </div>
+                                              </div>
+                                              <div class="form-group row">
+                                                <label for="infoOrderNumber" class="col-sm-2 col-form-label">Order Number</label>
+                                                <div class="col-sm-3">
+                                                  <input type="text" class="form-control" id="infoOrderNumber" >
+                                                </div>
+                                              </div>
+                                              <div class="form-group row">
+                                                <label for="infoInvoiceNumber" class="col-sm-2 col-form-label">Invoice Number</label>
+                                                <div class="col-sm-3">
+                                                    <input type="text" class="form-control" id="infoInvoiceNumber" >
+                                                </div>
+                                              </div>
+                                              <div class="form-group row">
+                                                <label for="infoDispatchDate" class="col-sm-2 col-form-label">Dispatch Date</label>
+                                                <div class="col-sm-3">
+                                                  <input type="text" class="form-control" id="infoDispatchDate" >
+                                                </div>
+                                              </div>
+                                              <div class="form-group row">
+                                                <label for="infoCalibrationDate" class="col-sm-2 col-form-label">Calibration Date</label>
+                                                <div class="col-sm-3">
+                                                  <input type="text" class="form-control" id="infoCalibrationDate" >
+                                                </div>
+                                              </div>
+                                            <div class="form-group row">
+                                                <label for="staticCalibrationDue" class="col-sm-2 col-form-label">Calibration Expiration</label>
+                                                <div class="col-sm-3">
+                                                  <input style="color:red" type="text" readonly class="form-control-plaintext" id="staticCalibrationDue" >
+                                                </div>
+                                              </div>
+                                              <div class="form-group row">
+                                                <label for="staticCertificateNum" class="col-sm-2 col-form-label">Certificate No.</label>
+                                                <div class="col-sm-3">
+                                                  <input style="color:red" type="text" readonly class="form-control-plaintext" id="staticCertificateNum" > 
+                                                </div>
+                                              </div>
+                                          </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Instruments Details Contents-->
+                            <div class="tab-pane fade" id="instrumentDetails" role="tabpanel" aria-labelledby="instrumentDetails-tab">
+                                <div class="card mb-4 ">
+                                    <div class="card-body">
+                                        <form>
+                                            <div class="form-group row">
+                                                <label for="description" class="col-sm-2 col-form-label">Description</label>
+                                                <div class="col-sm-3">
+                                                  <input type="text" class="form-control" id="description" >
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="manufacturer" class="col-sm-2 col-form-label">Manufacturer</label>
+                                                <div class="col-sm-3">
+                                                  <input type="text" class="form-control" id="manufacturer" >
+                                                </div>
+                                            </div>
+                                              <div class="form-group row">
+                                                <label for="modelNumber" class="col-sm-2 col-form-label">Model Number</label>
+                                                <div class="col-sm-3">
+                                                  <input type="text" class="form-control" id="modelNumber" >
+                                                </div>
+                                              </div>
+                                              <div class="form-group row">
+                                                <label for="serialNumber" class="col-sm-2 col-form-label">Serial Number</label>
+                                                <div class="col-sm-3">
+                                                  <input type="text" class="form-control" id="serialNumber" >
+                                                </div>
+                                              </div>
+                                              <div class="form-group row">
+                                                <label for="procedureNum" class="col-sm-2 col-form-label">Procedure No.</label>
+                                                <div class="col-sm-3">
+                                                  <input type="text" class="form-control" id="procedureNum" >
+                                                </div>
+                                              </div>
+                                          </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Customer Details Contents-->
+                            <div class="tab-pane fade" id="customerDetails" role="tabpanel" aria-labelledby="customerDetails-tab">
+                                <div class="card mb-4 ">
+                                    <div class="card-body">
+                                        <form>
+                                            <div class="form-group row">
+                                                <label for="description" class="col-sm-2 col-form-label">Company</label>
+                                                <div class="col-sm-3">
+                                                  <input type="text" class="form-control" id="company" >
+                                                </div>
+                                            </div>
+                                            <div class="form-group row">
+                                                <label for="manufacturer" class="col-sm-2 col-form-label">Contact Name</label>
+                                                <div class="col-sm-3">
+                                                  <input type="text" class="form-control" id="contactName" >
+                                                </div>
+                                            </div>
+                                              <div class="form-group row">
+                                                <label for="modelNumber" class="col-sm-2 col-form-label">Street Address</label>
+                                                <div class="col-sm-3">
+                                                  <input type="text" class="form-control" id="address" >
+                                                </div>
+                                              </div>
+                                              <div class="form-group row">
+                                                <label for="serialNumber" class="col-sm-2 col-form-label">Town/City</label>
+                                                <div class="col-sm-3">
+                                                  <input type="text" class="form-control" id="city" >
+                                                </div>
+                                              </div>
+                                              <div class="form-group row">
+                                                <label for="procedureNum" class="col-sm-2 col-form-label">Postcode</label>
+                                                <div class="col-sm-3">
+                                                  <input type="number" class="form-control" id="postCode" >
+                                                </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                            <div>Use Company Address for the following:</div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" checked>
+                                                <label class="form-check-label" for="flexCheckDefault">
+                                                  Instrument Address
+                                                </label>
+                                              </div>
+                                              <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                                <label class="form-check-label" for="flexCheckChecked">
+                                                  Certificate Address
+                                                </label>
+                                              </div>
+                                              <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="" id="dispatchAddress" checked> 
+                                                <label class="form-check-label" for="flexCheckDefault" >
+                                                  Dispatch Address
+                                                </label>
+                                              </div>
+                                              <!-- Buttons -->
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col-md-2">
+                                                    <button type="button" class="btn btn-danger" style="margin-bottom:30px" onclick="">Book Instrument In</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Test Details Contents-->
+                            <div class="tab-pane fade" id="testDetails" role="tabpanel" aria-labelledby="testDetails-tab">
+                                <!--Test Table-->
+                                <div class="card mb-4">
+                                    <div class="card-header">
+                                        <i class="fas fa-table me-1"></i>
+                                        Tests
+                                    </div>
+                                    <div class="card-body">
+                                        <table id="datatablesSimple">
+                                            <thead>
+                                                <tr>
+                                                    <th>Test Title</th>
+                                                    <th>Test Step</th>
+                                                    <th>Procedure Code</th>
+                                                    <th>Test Range Start</th>
+                                                    <th>Expected Display</th>
+                                                    <th>Actual Display</th>
+                                                    <th>Pass/Fail</th>
+                                                    <th>Comments</th>
+
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td><span id="testTitle0"></span></td>
+                                                    <td><span id="testStep0"></span></td>
+                                                    <td><span id="testType0"></span></td>
+                                                    <td><span id="testRangeStart0"></span></td>
+                                                    <td><span id="expectedDisplay0"></span></td>
+                                                    <td><input type="text" class="form-control" id="actualInput0" value="0"></td>
+                                                    <td><span id="passFail0"></span></td>
+                                                    <td><input type="text" class="form-control" id="comments0"></td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td><span id="testTitle1"></span></td>
+                                                    <td><span id="testStep1"></span></td>
+                                                    <td><span id="testType1"></span></td>
+                                                    <td><span id="testRangeStart1"></span></td>
+                                                    <td><span id="expectedDisplay1"></span></td>
+                                                    <td><input type="text" class="form-control" id="actualInput1" value="0"></td>
+                                                    <td><span id="passFail1"></span></td>
+                                                    <td><input type="text" class="form-control" id="comments1"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span id="testTitle2"></span></td>
+                                                    <td><span id="testStep2"></span></td>
+                                                    <td><span id="testType2"></span></td>
+                                                    <td><span id="testRangeStart2"></span></td>
+                                                    <td><span id="expectedDisplay2"></span></td>
+                                                    <td><input type="text" class="form-control" id="actualInput2" value="0"></td>
+                                                    <td><span id="passFail2"></span></td>
+                                                    <td><input type="text" class="form-control" id="comments2"></td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td><span id="testTitle3"></span></td>
+                                                    <td><span id="testStep3"></span></td>
+                                                    <td><span id="testType3"></span></td>
+                                                    <td><span id="testRangeStart3"></span></td>
+                                                    <td><span id="expectedDisplay3"></span></td>
+                                                    <td><input type="text" class="form-control" id="actualInput3" value="0"></td>
+                                                    <td><span id="passFail3"></span></td>
+                                                    <td><input type="text" class="form-control" id="comments3"></td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td><span id="testTitle4"></span></td>
+                                                    <td><span id="testStep4"></span></td>
+                                                    <td><span id="testType4"></span></td>
+                                                    <td><span id="testRangeStart4"></span></td>
+                                                    <td><span id="expectedDisplay4"></span></td>
+                                                    <td><input type="text" class="form-control" id="actualInput4" value="0"></td>
+                                                    <td><span id="passFail4"></span></td>
+                                                    <td><input type="text" class="form-control" id="comments4"></td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td><span id="testTitle5"></span></td>
+                                                    <td><span id="testStep5"></span></td>
+                                                    <td><span id="testType5"></span></td>
+                                                    <td><span id="testRangeStart5"></span></td>
+                                                    <td><span id="expectedDisplay5"></span></td>
+                                                    <td><input type="text" class="form-control" id="actualInput5" value="0"></td>
+                                                    <td><span id="passFail5"></span></td>
+                                                    <td><input type="text" class="form-control" id="comments5"></td>
+
+                                                </tr>
+                                                <tr>
+                                                    <td><span id="testTitle6"></span></td>
+                                                    <td><span id="testStep6"></span></td>
+                                                    <td><span id="testType6"></span></td>
+                                                    <td><span id="testRangeStart6"></span></td>
+                                                    <td><span id="expectedDisplay6"></span></td>
+                                                    <td><input type="text" class="form-control" id="actualInput6" value="0"></td>
+                                                    <td><span id="passFail6"></span></td>
+                                                    <td><input type="text" class="form-control" id="comments6"></td>
+
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <!-- Buttons -->
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <button type="button" class="btn btn-danger" style="margin-bottom:30px" onclick="myFunction()">Validate Test Pass/Fail</button>
+                                        </div>
+                                        <div class="col-md-6">
+                                        </div>
+                                        <div class="col-md-2">
+                                            <button id="generateInvoice" type="button" class="btn btn-danger" style="margin-bottom:30px" onclick="runAlert()" disabled>Generate Invoice</button>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <button id="requestCertificate" type="button" class="btn btn-danger" style="margin-bottom:30px" onclick="generateCertificate()" disabled>Request Certificate</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        <!-- Parts Used Contents-->
+                        <div class="tab-pane fade" id="partsUsed" role="tabpanel" aria-labelledby="certificateDetails-tab">
+                            <div class="card mb-4">
+                                <div class="card-header">
+                                    <i class="fas fa-table me-1"></i>
+                                    Parts Used In this Job
+                                    </div>
+                            <div class="card-body">
+                                <table id="datatablesSimpleThree">
+                                    <thead>
+                                        <tr>
+                                            <th>Stock Number</th>
+                                            <th>Category</th>
+                                            <th>Part</th>
+                                            <th>Qty</th>
+                                            <th>Cost</th>
+                                            <th>Price</th>
+                                            <th>Total Cost</th>
+                                            <th>Total Price</th>
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                            <th>Stock Number</th>
+                                            <th>Category</th>
+                                            <th>Part</th>
+                                            <th>Qty</th>
+                                            <th>Cost</th>
+                                            <th>Price</th>
+                                            <th>Total Cost</th>
+                                            <th>Total Price</th>
+                                        </tr>
+                                    </tfoot>
+                                    <tbody>
+                                        <tr>
+                                            <td><span id="stockNumber"></span></td>
+                                            <td><span id="category"></span></td>
+                                            <td><span id="part"></span></td>
+                                            <td><span id="qty"></span></td>
+                                            <td><span id="cost"></span></td>
+                                            <td><span id="price"></span></td>
+                                            <td><span id="totalCost"></span></td>
+                                            <td><span id="totalPrice"></span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="card mb-4">
+                                <div class="card-header">
+                                    <i class="fas fa-table me-1"></i>
+                                    Parts Available
+                                    </div>
+                            <div class="card-body">
+                            <table id="datatablesSimpleTwo">
+                                <thead>
+                                    <tr>
+                                        <th>Stock Number</th>
+                                        <th>Category</th>
+                                        <th>Part</th>
+                                        <th>Qty</th>
+                                        <th>Cost</th>
+                                        <th>Price</th>
+                                        <th>Total Cost</th>
+                                        <th>Total Price</th>
+                                    </tr>
+                                </thead>
+                                <tfoot>
+                                    <tr>
+                                        <th>Stock Number</th>
+                                        <th>Category</th>
+                                        <th>Part</th>
+                                        <th>Qty</th>
+                                        <th>Cost</th>
+                                        <th>Price</th>
+                                        <th>Total Cost</th>
+                                        <th>Total Price</th>
+                                    </tr>
+                                </tfoot>
+                                <tbody>
+                                    <tr>
+                                        <td><span id="stockNumber0"></span></td>
+                                        <td><span id="category0"></span></td>
+                                        <td><span id="part0"></span></td>
+                                    <td><input type="number" class="form-control" id="qty0" value=" " onblur="calculateQty0()"></td>
+                                        <td><span id="cost0"></span></td>
+                                        <td><span id="price0"></span></td>
+                                        <td><span id="totalCost0"></span></td>
+                                        <td><span id="totalPrice0"></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span id="stockNumber1"></span></td>
+                                        <td><span id="category1"></span></td>
+                                        <td><span id="part1"></span></td>
+                                        <td><input type="number" class="form-control" id="qty1" value=" "></td>
+                                        <td><span id="cost1"></span></td>
+                                        <td><span id="price1"></span></td>
+                                        <td><span id="totalCost1"></span></td>
+                                        <td><span id="totalPrice1"></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span id="stockNumber2"></span></td>
+                                        <td><span id="category2"></span></td>
+                                        <td><span id="part2"></span></td>
+                                        <td><input type="number" class="form-control" id="qty2" value=" "></td>
+                                        <td><span id="cost2"></span></td>
+                                        <td><span id="price2"></span></td>
+                                        <td><span id="totalCost2"></span></td>
+                                        <td><span id="totalPrice2"></span></td>
+                                    </tr>
+                                    <tr>
+                                        <td><span id="stockNumber3"></span></td>
+                                        <td><span id="category3"></span></td>
+                                        <td><span id="part3"></span></td>
+                                        <td><input type="number" class="form-control" id="qty3" value=" "></td>
+                                        <td><span id="cost3"></span></td>
+                                        <td><span id="price3"></span></td>
+                                        <td><span id="totalCost3"></span></td>
+                                        <td><span id="totalPrice3"></span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <button type="button" class="btn btn-danger" style="margin-bottom:30px" onclick="getPartsForCurrentJob()">Add Parts to Order</button>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Certificate Details Contents-->
+                <div class="tab-pane fade" id="certificateDetails" role="tabpanel" aria-labelledby="certificateDetails-tab">
+
+                </div>
+                <!-- Comments Contents-->
+                <div class="tab-pane fade" id="comments" role="tabpanel" aria-labelledby="comments-tab">
+
+                </div>
+                </div>
+
+                </div>
+                </main>
+                <footer class="py-4 bg-light mt-auto">
+                <div class="container-fluid px-4">
+                <div class="d-flex align-items-center justify-content-between small">
+                <div class="text-muted">Copyright &copy; Your Website 2021</div>
+                <div>
+                    <a href="#">Privacy Policy</a>
+                    &middot;
+                    <a href="#">Terms &amp; Conditions</a>
+                </div>
+                </div>
+                </div>
+                </footer>
+            </div>
+        </div>
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="js/scripts.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+        <script src="assets/demo/chart-area-demo.js"></script>
+        <script src="assets/demo/chart-bar-demo.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
+        <script src="js/datatables-simple-demo.js"></script>
+    </body>
+</html>
