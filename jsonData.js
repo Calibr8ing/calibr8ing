@@ -790,3 +790,66 @@ var jobDetails = {
   document.getElementById("price3").innerHTML = data3.price;
 
  }
+
+
+  function myFunction(){
+      document.getElementById("passFail0").innerHTML = "pass";
+      document.getElementById("passFail0").style.color = "green";
+      document.getElementById("passFail1").innerHTML = "pass";
+      document.getElementById("passFail1").style.color = "green";
+      document.getElementById("passFail2").innerHTML = "pass";
+      document.getElementById("passFail2").style.color = "green";
+      document.getElementById("passFail3").innerHTML = "pass";
+      document.getElementById("passFail3").style.color = "green";
+      document.getElementById("passFail4").innerHTML = "pass";
+      document.getElementById("passFail4").style.color = "green";
+      document.getElementById("passFail5").innerHTML = "pass";
+      document.getElementById("passFail5").style.color = "green";
+      document.getElementById("passFail6").innerHTML = "pass";
+      document.getElementById("passFail6").style.color = "green";
+      
+      document.getElementById("generateInvoice").disabled = false;
+      document.getElementById("requestCertificate").disabled = false;
+
+  }
+
+  function runAlert(){
+      alert("Invoice number 453253 has been generated");
+      //add order number to job tab
+      document.getElementById("infoInvoiceNumber").value = "453253";
+  }
+
+  function generateCertificate(){
+      alert("Certificate request has been sent to Admin");
+      window.location.href = "job_details_051672_2.html";
+  }
+
+  function calculateQty0(){
+                  
+      var qty0 = document.getElementById("qty0").value;
+                      
+      var cost = qty0 *  (document.getElementById('cost0').innerHTML);
+      document.getElementById('totalCost0').innerHTML = cost.toFixed(2);
+      var price = qty0 *  document.getElementById('price0').innerHTML;
+      document.getElementById('totalPrice0').innerHTML = price.toFixed(2);
+  }
+
+
+  function getPartsForCurrentJob() {
+      // window.location.href = "job_details_051672_2.html";
+      
+      var data = jobDetails.parts[0];
+      console.log(data);
+
+      document.getElementById("stockNumber").innerHTML = data.stockNumber;
+      document.getElementById("category").innerHTML = data.category;
+      document.getElementById("part").innerHTML = data.part;
+      document.getElementById("qty").innerHTML = document.getElementById("qty0").value;
+      document.getElementById("cost").innerHTML = document.getElementById("cost0").innerHTML;
+      document.getElementById("price").innerHTML = document.getElementById("price0").innerHTML;
+      document.getElementById("totalCost").innerHTML = document.getElementById("totalCost0").innerHTML;
+      document.getElementById("totalPrice").innerHTML = document.getElementById("totalPrice0").innerHTML;
+  }
+
+            
+      
