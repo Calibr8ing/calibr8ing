@@ -386,6 +386,19 @@ var jobDetails = {
    document.getElementById("summaryJobStatus").innerHTML = data.status;
  
  }
+ function getJobSummaryBar4(){
+  var data = jobDetails['job'][0];
+  var man = jobDetails['job'][0].instrumentManufacturer;
+  var model = jobDetails['job'][0].instrumentModelNumber;
+  var category = jobDetails['job'][0].instrumentCategory;
+  document.getElementById("summaryUserName").innerHTML = data.assignedTo;
+  document.getElementById("summaryJobDateReceived").innerHTML = data.dateReceived;
+  document.getElementById("summaryInstrumentManAndModel").innerHTML = man +" "+ model +" "+ category;
+  document.getElementById("summaryInstrumentOwner").innerHTML = data.company;
+  document.getElementById("summaryJobNumber").innerHTML = data.jobNumber;
+  document.getElementById("summaryJobStatus").innerHTML = "Delivered - at Site";
+
+}
  function getJobInfo(){
    var data = jobDetails['job'][0];
    // console.log(jobDetails);
@@ -398,6 +411,18 @@ var jobDetails = {
    document.getElementById("staticCalibrationDue").value = data.calibrationDue;
    document.getElementById("staticCertificateNum").value = data.certificateNum;
  }
+ function getCustomerDetails(){
+  var data = jobDetails['job'][0];
+  // console.log(jobDetails);
+  document.getElementById("infoJobNumber").value = data.jobNumber;
+  document.getElementById("infoDateReceived").value = data.dateReceived;
+  document.getElementById("infoOrderNumber").value = data.orderNumber;
+ //  document.getElementById("infoInvoiceNumber").value = data.invoiceNumber;
+  document.getElementById("infoDispatchDate").value = data.dispatchDate;
+  document.getElementById("infoCalibrationDate").value = data.calibrationDate;
+  document.getElementById("staticCalibrationDue").value = data.calibrationDue;
+  document.getElementById("staticCertificateNum").value = data.certificateNum;
+}
  function getInstrumentDetails(){
    var data = jobDetails['job'][0];
    document.getElementById("description").value = data.instrumentCategory;
@@ -863,6 +888,15 @@ function getMyJobs2() {
   getInstrumentDetails();
   getTestDetailsByJobNumber();
   getParts()
+ }
+
+ function getJobDetailsWithJobNumber4(){
+  getJobSummaryBar4();
+  getJobInfo();
+  getInstrumentDetails();
+  getTestDetailsByJobNumber();
+  getParts()
+  getCustomerDetails();
  }
 
  function getTestDetailsByJobNumber(){
