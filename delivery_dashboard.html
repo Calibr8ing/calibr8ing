@@ -22,15 +22,15 @@
     <body onload="processDeliveryJobs()" class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <!-- Navbar Brand-->
-            <a class="navbar-brand ps-3" href="index.html" ><img src="assets/img/Pullman+dark+background-60w.png"></img></a>
+            <!-- <a class="navbar-brand ps-3" href="index.html" ><img src="assets/img/Pullman+dark+background-60w.png"></img></a> -->
             <!-- Sidebar Toggle-->
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
             <!-- Navbar Search-->
             <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
-                <div class="input-group">
+                <!-- <div class="input-group">
                     <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
                     <button class="btn btn-danger" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
-                </div>
+                </div> -->
             </form>
             <!-- Navbar-->
             <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
@@ -50,92 +50,19 @@
                 <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                     <div class="sb-sidenav-menu">
                         <div class="nav">
-                            <div class="sb-sidenav-menu-heading">Customer Views</div>
-                            <a class="nav-link" href="index.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                Dashboard
-                            </a>
-                            <a class="nav-link collapsed" href="start_new_order.html" >
-                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
-                                Start New Order
-                            </a>
-                           
-                            <a class="nav-link collapsed" href="instruments_page.html" >
-                                <div class="sb-nav-link-icon"><i class="fas fa-wrench"></i></div>
-                                Instruments
-                            </a>
-                            <a class="nav-link collapsed" href="order_history.html" >
-                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
-                                Order History
-                            </a>
-                            <a class="nav-link collapsed" href="manage_users.html" >
-                                <div class="sb-nav-link-icon"><i class="fas fa-user"></i></div>
-                                Manage Users
-                            </a>
-                            <a class="nav-link collapsed" href="settings.html" >
-                                <div class="sb-nav-link-icon"><i class="fas fa-cog"></i></div>
-                                Settings
-                            </a>
-                            <div class="sb-sidenav-menu-heading">Pullman Admin Views</div>
-                            <a class="nav-link" href="admin_dashboard.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                Dashboard
-                            </a>
-                            <a class="nav-link" href="jobs.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                Jobs
-                            </a>
-                            <a class="nav-link" href="search.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                Search
-                            </a>
-                            <a class="nav-link" href="create_customer_order.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                Create Customer Order
-                            </a>
-                            <a class="nav-link" href="certificates_1.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                Certificates
-                            </a>
-                            <a class="nav-link" href="manage_procedures.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                Manage Procedures
-                            </a>
-                            <a class="nav-link" href="manage_instruments.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                Manage Instruments
-                            </a>
-                            <a class="nav-link" href="upcoming_certifications_due.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                Upcoming Certifications Due
-                            </a>
-                            <div class="sb-sidenav-menu-heading">Pullman Engineering Views</div>
-                            <a class="nav-link" href="engineer_dashboard.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                Dashboard
-                            </a>
-                            <a class="nav-link" href="engineering_jobs.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                Jobs
-                            </a>
-                            <a class="nav-link" href="search.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                Search
-                            </a>
-                            <a class="nav-link" href="engineering_tests.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                Tests
-                            </a>
-                            <div class="sb-sidenav-menu-heading">Pullman Delivery Login Views</div>
+                            
+                            <!-- <div class="sb-sidenav-menu-heading">Pullman Delivery Login Views</div> -->
+                            <div class="sb-sidenav-menu-heading"></div>
                             <a class="nav-link" href="delivery_dashboard.html">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Dashboard
                             </a>
+                            
                         </div>
                     </div>
                     <div class="sb-sidenav-footer">
                         <div class="small">Logged in as:</div>
-                        Pullman Admin
+                        Delivery Driver
                     </div>
                 </nav>
             </div>
@@ -161,7 +88,7 @@
                                 <table id="datatablesSimple">
                                     <thead>
                                         <tr>
-                                            <th>Select</th>
+                                            <!-- <th>Select</th> -->
                                             <th>Status</th>
                                             <th>Company</th>
                                             <th>Address</th>
@@ -173,7 +100,7 @@
                                     </thead>
                                     <tfoot>
                                         <tr>
-                                            <th>Select</th>
+                                            <!-- <th>Select</th> -->
                                             <th>Status</th>
                                             <th>Company</th>
                                             <th>Address</th>
@@ -186,10 +113,9 @@
                                     </tfoot>
                                     <tbody>
                                         <tr>
-                                            <td><input type="checkbox" name="select_all" value="1" id="example-select-all"></td>
+                                            <!-- <td><input type="checkbox" name="select_all" value="1" id="example-select-all"></td> -->
                                             <td><select name="status" id="noStatus">
-
-                                                <option value="scheduled" selected>Scheduled</option>
+                                                <option value="scheduled" selected>Scheduled Pickup</option>
                                                 <option value="inTransit">In Transit</option>
                                                 <option value="delivered">Delivered</option>
                                                 <option value=""></option>
@@ -244,6 +170,7 @@
                                     </thead>
                                     <tbody>
                                         <tr>
+                                            <td><span id="myStatus"></span></td>
                                             <td><span id="myJobCompany"></span></td>
                                             <td><span id="myJobCompanyAddress"></span></td>
                                             <td><span id="myJobOrderNumber"></span></td>
@@ -251,6 +178,34 @@
                                             <td><span id="myJobInstrument"></span></td>
                                             <td><span id="myJobDateRequested"></span></td>
                                         </tr>
+                                        <tr>
+                                            <td><span id="jobStatus6"></span></td>
+                                            <td><span id="jobCompany6"></span></td>
+                                            <td><span id="jobCompanyAddress6"></span></td>
+                                            <td><span id="jobOrderNumber6"></span></td>
+                                            <td><span id="jobNumber6"></span></td>
+                                            <td><span id="jobInstrument6"></span></td>
+                                            <td><span id="jobDateRequested6"></span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span id="jobStatus7"></span></td>
+                                            <td><span id="jobCompany7"></span></td>
+                                            <td><span id="jobCompanyAddress7"></span></td>
+                                            <td><span id="jobOrderNumber7"></span></td>
+                                            <td><span id="jobNumber7"></span></td>
+                                            <td><span id="jobInstrument7"></span></td>
+                                            <td><span id="jobDateRequested7"></span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><span id="jobStatus8"></span></td>
+                                            <td><span id="jobCompany8"></span></td>
+                                            <td><span id="jobCompanyAddress8"></span></td>
+                                            <td><span id="jobOrderNumber8"></span></td>
+                                            <td><span id="jobNumber8"></span></td>
+                                            <td><span id="jobInstrument8"></span></td>
+                                            <td><span id="jobDateRequested8"></span></td>
+                                        </tr>
+                                        
                                    </tbody>
                                 </table>
                             </div>

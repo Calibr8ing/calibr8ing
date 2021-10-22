@@ -269,7 +269,7 @@ var jobDetails = {
       "procedurePrice": "89.50",
       "contactName": "Robert Bailey",
       "company": "XYZ Electric",
-      "address": "",
+      "address": "48 Warner Close, Hatton, SY6 8XS, UK ",
       "calibrationLocation": "Central"
     },
     {
@@ -293,7 +293,7 @@ var jobDetails = {
       "procedurePrice": "29.50",
       "contactName": "Robert Bailey",
       "company": "XYZ Electric",
-      "address": "",
+      "address": "48 Warner Close, Hatton, SY6 8XS, UK ",
       "calibrationLocation": "Central"
     },
     {
@@ -317,9 +317,10 @@ var jobDetails = {
       "procedurePrice": "29.50",
       "contactName": "Robert Bailey",
       "company": "XYZ Electric",
-      "address": "",
+      "address": "48 Warner Close, Hatton, SY6 8XS, UK ",
       "calibrationLocation": "Central"
-    }
+    },
+    
    ],
    "parts":[
      {
@@ -361,6 +362,7 @@ var jobDetails = {
       "total": ""
     }
    ]
+   
  }
  
  //Job Details
@@ -432,39 +434,212 @@ var jobDetails = {
  //Delivery Dashboard
  function getPickupsToday() {
    var data = jobDetails['job'][0];
-
    var man = jobDetails['job'][0].instrumentManufacturer;
    var model = jobDetails['job'][0].instrumentModelNumber;
    var category = jobDetails['job'][0].instrumentCategory;
 
+   document.getElementById("jobCompany").innerHTML = data.company;
+   document.getElementById("jobCompanyAddress").innerHTML = data.address;
    document.getElementById("jobOrderNumber").innerHTML = data.orderNumber;
    document.getElementById("jobNumber").innerHTML = data.jobNumber;
-   document.getElementById("jobInstrument").innerHTML = data.man +" "+ model +" "+ category;
-   document.getElementById("jobCompany").innerHTML = data.company;
+   document.getElementById("jobInstrument").innerHTML = man +" "+ model +" "+ category;
    document.getElementById("jobDateRequested").innerHTML = data.dateReceived;
-   document.getElementById("jobCompanyAddress").innerHTML = data.address;
+
+   
  }
- 
- function getMyJobs() {
-    var data = jobDetails['job'][0];
+ function getPickupsToday2() {
+  var data = jobDetails['job'][0];
+  console.log(data);
+  var man = jobDetails['job'][0].instrumentManufacturer;
+  var model = jobDetails['job'][0].instrumentModelNumber;
+  var category = jobDetails['job'][0].instrumentCategory;
+
+  document.getElementById("jobCompany").innerHTML = data.company;
+  document.getElementById("jobCompanyAddress").innerHTML = data.address;
+  document.getElementById("jobOrderNumber").innerHTML = data.orderNumber;
+  document.getElementById("jobNumber").innerHTML = data.jobNumber;
+  document.getElementById("jobInstrument").innerHTML = man +" "+ model +" "+ category;
+  document.getElementById("jobDateRequested").innerHTML = data.dateReceived;
+
+  
+}
+function getMyJobs2() {
+  var data = jobDetails['job'][0];
+  var data6 = jobDetails['job'][6];
+  var data7 = jobDetails['job'][7];
+  var data8 = jobDetails['job'][8];
 
     var man = jobDetails['job'][0].instrumentManufacturer;
     var model = jobDetails['job'][0].instrumentModelNumber;
     var category = jobDetails['job'][0].instrumentCategory;
 
+
+   var man6 = jobDetails['job'][6].instrumentManufacturer;
+   var model6 = jobDetails['job'][6].instrumentModelNumber;
+   var category6 = jobDetails['job'][6].instrumentCategory;
+
+   var man7 = jobDetails['job'][7].instrumentManufacturer;
+   var model7 = jobDetails['job'][7].instrumentModelNumber;
+   var category7 = jobDetails['job'][7].instrumentCategory;
+
+   var man8 = jobDetails['job'][8].instrumentManufacturer;
+   var model8 = jobDetails['job'][8].instrumentModelNumber;
+   var category8 = jobDetails['job'][8].instrumentCategory;
+
+   document.getElementById("myStatus").innerHTML = "In Transit";
    document.getElementById("myJobOrderNumber").innerHTML = data.orderNumber;
    document.getElementById("myJobNumber").innerHTML = data.jobNumber;
-   document.getElementById("myJobInstrument").innerHTML = data.man +" "+ model +" "+ category;
+   document.getElementById("myJobInstrument").innerHTML = man +" "+ model +" "+ category;
    document.getElementById("myJobCompany").innerHTML = data.company;
    document.getElementById("myJobDateRequested").innerHTML = data.dateReceived;
    document.getElementById("myJobCompanyAddress").innerHTML = data.address;
+   
+   document.getElementById("jobStatus6").innerHTML = "Scheduled Pickup";
+   document.getElementById("jobOrderNumber6").innerHTML = data6.orderNumber;
+   document.getElementById("jobNumber6").innerHTML = data6.jobNumber;
+   document.getElementById("jobInstrument6").innerHTML = man +" "+ model +" "+ category;
+   document.getElementById("jobCompany6").innerHTML = data6.company;
+   document.getElementById("jobDateRequested6").innerHTML = data6.dateReceived;
+   document.getElementById("jobCompanyAddress6").innerHTML = data6.address;
+
+   document.getElementById("jobStatus7").innerHTML = "Scheduled Pickup";
+   document.getElementById("jobOrderNumber7").innerHTML = data7.orderNumber;
+   document.getElementById("jobNumber7").innerHTML = data7.jobNumber;
+   document.getElementById("jobInstrument7").innerHTML = man +" "+ model +" "+ category;
+   document.getElementById("jobCompany7").innerHTML = data7.company;
+   document.getElementById("jobDateRequested7").innerHTML = data7.dateReceived;
+   document.getElementById("jobCompanyAddress7").innerHTML = data7.address;
+
+   document.getElementById("jobStatus8").innerHTML = "Scheduled Pickup";
+   document.getElementById("jobOrderNumber8").innerHTML = data8.orderNumber;
+   document.getElementById("jobNumber8").innerHTML = data8.jobNumber;
+   document.getElementById("jobInstrument8").innerHTML = man +" "+ model +" "+ category;
+   document.getElementById("jobCompany8").innerHTML = data8.company;
+   document.getElementById("jobDateRequested8").innerHTML = data8.dateReceived;
+   document.getElementById("jobCompanyAddress8").innerHTML = data8.address;
+ }
  
+ function getMyJobs() {
+  var data = jobDetails['job'][0];
+  var data6 = jobDetails['job'][6];
+  var data7 = jobDetails['job'][7];
+  var data8 = jobDetails['job'][8];
+
+    var man = jobDetails['job'][0].instrumentManufacturer;
+    var model = jobDetails['job'][0].instrumentModelNumber;
+    var category = jobDetails['job'][0].instrumentCategory;
+
+
+   var man6 = jobDetails['job'][6].instrumentManufacturer;
+   var model6 = jobDetails['job'][6].instrumentModelNumber;
+   var category6 = jobDetails['job'][6].instrumentCategory;
+
+   var man7 = jobDetails['job'][7].instrumentManufacturer;
+   var model7 = jobDetails['job'][7].instrumentModelNumber;
+   var category7 = jobDetails['job'][7].instrumentCategory;
+
+   var man8 = jobDetails['job'][8].instrumentManufacturer;
+   var model8 = jobDetails['job'][8].instrumentModelNumber;
+   var category8 = jobDetails['job'][8].instrumentCategory;
+
+   document.getElementById("myStatus").innerHTML = "Scheduled Pickup";
+   document.getElementById("myJobOrderNumber").innerHTML = data.orderNumber;
+   document.getElementById("myJobNumber").innerHTML = data.jobNumber;
+   document.getElementById("myJobInstrument").innerHTML = man +" "+ model +" "+ category;
+   document.getElementById("myJobCompany").innerHTML = data.company;
+   document.getElementById("myJobDateRequested").innerHTML = data.dateReceived;
+   document.getElementById("myJobCompanyAddress").innerHTML = data.address;
+   
+   document.getElementById("jobStatus6").innerHTML = "Scheduled Pickup";
+   document.getElementById("jobOrderNumber6").innerHTML = data6.orderNumber;
+   document.getElementById("jobNumber6").innerHTML = data6.jobNumber;
+   document.getElementById("jobInstrument6").innerHTML = man6 +" "+ model6 +" "+ category6;
+   document.getElementById("jobCompany6").innerHTML = data6.company;
+   document.getElementById("jobDateRequested6").innerHTML = data6.dateReceived;
+   document.getElementById("jobCompanyAddress6").innerHTML = data6.address;
+
+   document.getElementById("jobStatus7").innerHTML = "Scheduled Pickup";
+   document.getElementById("jobOrderNumber7").innerHTML = data7.orderNumber;
+   document.getElementById("jobNumber7").innerHTML = data7.jobNumber;
+   document.getElementById("jobInstrument7").innerHTML = man7 +" "+ model7 +" "+ category7;
+   document.getElementById("jobCompany7").innerHTML = data7.company;
+   document.getElementById("jobDateRequested7").innerHTML = data7.dateReceived;
+   document.getElementById("jobCompanyAddress7").innerHTML = data7.address;
+
+   document.getElementById("jobStatus8").innerHTML = "Scheduled Pickup";
+   document.getElementById("jobOrderNumber8").innerHTML = data8.orderNumber;
+   document.getElementById("jobNumber8").innerHTML = data8.jobNumber;
+   document.getElementById("jobInstrument8").innerHTML = man8 +" "+ model8 +" "+ category8;
+   document.getElementById("jobCompany8").innerHTML = data8.company;
+   document.getElementById("jobDateRequested8").innerHTML = data8.dateReceived;
+   document.getElementById("jobCompanyAddress8").innerHTML = data8.address;
+ }
+ function changeDeliveryStatus(){
+  var data = jobDetails['job'][0];
+
+  var man = jobDetails['job'][0].instrumentManufacturer;
+  var model = jobDetails['job'][0].instrumentModelNumber;
+  var category = jobDetails['job'][0].instrumentCategory;
+
+ document.getElementById("myStatus").innerHTML = "In Transit";
+ document.getElementById("myJobOrderNumber").innerHTML = data.orderNumber;
+ document.getElementById("myJobNumber").innerHTML = data.jobNumber;
+ document.getElementById("myJobInstrument").innerHTML = man +" "+ model +" "+ category;
+ document.getElementById("myJobCompany").innerHTML = data.company;
+ document.getElementById("myJobDateRequested").innerHTML = data.dateReceived;
+ document.getElementById("myJobCompanyAddress").innerHTML = data.address;
  }
  function processDeliveryJobs() {
    getPickupsToday();
    getMyJobs();
  }
+ function processDeliveryJobs2(){
+  getPickupsToday2();
+  getMyJobs2();
+ }
+ function processDeliveryJobs3(){
  
+  var data6 = jobDetails['job'][6];
+  var data7 = jobDetails['job'][7];
+  var data8 = jobDetails['job'][8];
+
+
+   var man6 = jobDetails['job'][6].instrumentManufacturer;
+   var model6 = jobDetails['job'][6].instrumentModelNumber;
+   var category6 = jobDetails['job'][6].instrumentCategory;
+
+   var man7 = jobDetails['job'][7].instrumentManufacturer;
+   var model7 = jobDetails['job'][7].instrumentModelNumber;
+   var category7 = jobDetails['job'][7].instrumentCategory;
+
+   var man8 = jobDetails['job'][8].instrumentManufacturer;
+   var model8 = jobDetails['job'][8].instrumentModelNumber;
+   var category8 = jobDetails['job'][8].instrumentCategory;
+   
+   document.getElementById("jobStatus6").innerHTML = "Scheduled Pickup";
+   document.getElementById("jobOrderNumber6").innerHTML = data6.orderNumber;
+   document.getElementById("jobNumber6").innerHTML = data6.jobNumber;
+   document.getElementById("jobInstrument6").innerHTML = man6 +" "+ model6 +" "+ category6;
+   document.getElementById("jobCompany6").innerHTML = data6.company;
+   document.getElementById("jobDateRequested6").innerHTML = data6.dateReceived;
+   document.getElementById("jobCompanyAddress6").innerHTML = data6.address;
+
+   document.getElementById("jobStatus7").innerHTML = "Scheduled Pickup";
+   document.getElementById("jobOrderNumber7").innerHTML = data7.orderNumber;
+   document.getElementById("jobNumber7").innerHTML = data7.jobNumber;
+   document.getElementById("jobInstrument7").innerHTML = man7 +" "+ model7 +" "+ category7;
+   document.getElementById("jobCompany7").innerHTML = data7.company;
+   document.getElementById("jobDateRequested7").innerHTML = data7.dateReceived;
+   document.getElementById("jobCompanyAddress7").innerHTML = data7.address;
+
+   document.getElementById("jobStatus8").innerHTML = "Scheduled Pickup";
+   document.getElementById("jobOrderNumber8").innerHTML = data8.orderNumber;
+   document.getElementById("jobNumber8").innerHTML = data8.jobNumber;
+   document.getElementById("jobInstrument8").innerHTML = man8 +" "+ model8 +" "+ category8;
+   document.getElementById("jobCompany8").innerHTML = data8.company;
+   document.getElementById("jobDateRequested8").innerHTML = data8.dateReceived;
+   document.getElementById("jobCompanyAddress8").innerHTML = data8.address;
+ }
  //Admin Dashboard - Pullman
 
  function processAdminDashboard(){
