@@ -475,6 +475,9 @@ var jobDetails = {
 
     getCurrentJobs();
  }
+ function processAdminDashboard3(){
+   getCentralJobs();
+ }
  function getMyJobsAdmin() {
    var data = jobDetails['job'][0];
 
@@ -487,6 +490,53 @@ var jobDetails = {
    document.getElementById("jobProcedure").innerHTML = data.instrumentProcedureNumber;
 
   }
+
+  function getCentralJobs(){
+    var data0 = jobDetails['job'][0];
+    var data6 = jobDetails['job'][6];
+    var data7 = jobDetails['job'][7];
+    var data8 = jobDetails['job'][8];
+      console.log(data6);
+     document.getElementById("jobOrderNumber0").innerHTML = data0.orderNumber;
+     document.getElementById("jobNumber0").innerHTML = data0.jobNumber;
+     document.getElementById("jobInstrument0").innerHTML = data0.instrumentCategory;
+     document.getElementById("jobCompany0").innerHTML = data0.company;
+     document.getElementById("jobDateRequested0").innerHTML = data0.dateReceived;
+     document.getElementById("jobProcedure0").innerHTML = data0.instrumentProcedureNumber;
+     document.getElementById("status0").innerHTML = data0.status;
+     document.getElementById("assignedTo0").innerHTML = data0.assignedTo;
+     document.getElementById("jobSite0").innerHTML = data0.calibrationLocation;
+
+     document.getElementById("jobOrderNumber6").innerHTML = data6.orderNumber;
+     document.getElementById("jobNumber6").innerHTML = data6.jobNumber;
+     document.getElementById("jobInstrument6").innerHTML = data6.instrumentCategory;
+     document.getElementById("jobCompany6").innerHTML = data6.company;
+     document.getElementById("jobDateRequested6").innerHTML = data6.dateReceived;
+     document.getElementById("jobProcedure6").innerHTML = data6.instrumentProcedureNumber;
+     document.getElementById("status6").innerHTML = data6.status;
+     document.getElementById("assignedTo6").innerHTML = data6.assignedTo;
+     document.getElementById("jobSite6").innerHTML = data6.calibrationLocation;
+
+     document.getElementById("jobOrderNumber7").innerHTML = data7.orderNumber;
+     document.getElementById("jobNumber7").innerHTML = data7.jobNumber;
+     document.getElementById("jobInstrument7").innerHTML = data7.instrumentCategory;
+     document.getElementById("jobCompany7").innerHTML = data7.company;
+     document.getElementById("jobDateRequested7").innerHTML = data7.dateReceived;
+     document.getElementById("jobProcedure7").innerHTML = data7.instrumentProcedureNumber;
+     document.getElementById("status7").innerHTML = data7.status;
+     document.getElementById("assignedTo7").innerHTML = data7.assignedTo;
+     document.getElementById("jobSite7").innerHTML = data7.calibrationLocation;
+
+     document.getElementById("jobOrderNumber8").innerHTML = data8.orderNumber;
+     document.getElementById("jobNumber8").innerHTML = data8.jobNumber;
+     document.getElementById("jobInstrument8").innerHTML = data8.instrumentCategory;
+     document.getElementById("jobCompany8").innerHTML = data8.company;
+     document.getElementById("jobDateRequested8").innerHTML = data8.dateReceived;
+     document.getElementById("jobProcedure8").innerHTML = data8.instrumentProcedureNumber;
+     document.getElementById("status8").innerHTML = data8.status;
+     document.getElementById("assignedTo8").innerHTML = data8.assignedTo;
+     document.getElementById("jobSite8").innerHTML = data8.calibrationLocation;
+  }
  function getCurrentJobs(){
   var data0 = jobDetails['job'][0];
   var data1 = jobDetails['job'][1];
@@ -495,8 +545,6 @@ var jobDetails = {
   var data4 = jobDetails['job'][4];
   var data5 = jobDetails['job'][5];
    
-  console.log(data0);
-
    document.getElementById("jobOrderNumber0").innerHTML = data0.orderNumber;
    document.getElementById("jobNumber0").innerHTML = data0.jobNumber;
    document.getElementById("jobInstrument0").innerHTML = data0.instrumentCategory;

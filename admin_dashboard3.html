@@ -20,18 +20,18 @@
         }
     </style> <!--testing  -->
     </head>
-    <body onload="processAdminDashboard2()" class="sb-nav-fixed">
+    <body onload="processAdminDashboard3()" class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <!-- Navbar Brand-->
-            <a class="navbar-brand ps-3" href="index.html" ><img src="assets/img/Pullman+dark+background-60w.png"></img></a>
+            <!-- <a class="navbar-brand ps-3" href="index.html" ><img src="assets/img/Pullman+dark+background-60w.png"></img></a> -->
             <!-- Sidebar Toggle-->
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
             <!-- Navbar Search-->
             <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
-                <div class="input-group">
+                <!-- <div class="input-group">
                     <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
                     <button class="btn btn-danger" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
-                </div>
+                </div> -->
             </form>
             <!-- Navbar-->
             <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
@@ -51,33 +51,7 @@
                 <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                     <div class="sb-sidenav-menu">
                         <div class="nav">
-                            <div class="sb-sidenav-menu-heading">Customer Views</div>
-                            <a class="nav-link" href="index.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                Dashboard
-                            </a>
-                            <a class="nav-link collapsed" href="start_new_order.html" >
-                                <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
-                                Start New Order
-                            </a>
-                           
-                            <a class="nav-link collapsed" href="instruments_page.html" >
-                                <div class="sb-nav-link-icon"><i class="fas fa-wrench"></i></div>
-                                Instruments
-                            </a>
-                            <a class="nav-link collapsed" href="order_history.html" >
-                                <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
-                                Order History
-                            </a>
-                            <a class="nav-link collapsed" href="manage_users.html" >
-                                <div class="sb-nav-link-icon"><i class="fas fa-user"></i></div>
-                                Manage Users
-                            </a>
-                            <a class="nav-link collapsed" href="settings.html" >
-                                <div class="sb-nav-link-icon"><i class="fas fa-cog"></i></div>
-                                Settings
-                            </a>
-                            <div class="sb-sidenav-menu-heading">Pullman Admin Views</div>
+                            
                             <a class="nav-link" href="admin_dashboard.html">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Dashboard
@@ -86,10 +60,10 @@
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Jobs
                             </a>
-                            <a class="nav-link" href="search.html">
+                            <!-- <a class="nav-link" href="search.html">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Search
-                            </a>
+                            </a> -->
                             <a class="nav-link" href="create_customer_order.html">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Create Customer Order
@@ -110,29 +84,12 @@
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Upcoming Certifications Due
                             </a>
-                            <div class="sb-sidenav-menu-heading">Pullman Engineering Views</div>
-                            <a class="nav-link" href="engineer_dashboard.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                Dashboard
-                            </a>
-                            <a class="nav-link" href="engineering_jobs.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                Jobs
-                            </a>
-                            <a class="nav-link" href="search.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                Search
-                            </a>
-                            <a class="nav-link" href="engineering_tests.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                Tests
-                            </a>
                             
                         </div>
                     </div>
                     <div class="sb-sidenav-footer">
                         <div class="small">Logged in as:</div>
-                        Pullman Admin
+                        Admin
                     </div>
                 </nav>
             </div>
@@ -205,11 +162,11 @@
                         </div>
                          <!--Current Orders Table-->
                         <div class="card mb-4 col-m-4 col-xl-4">
-                            <label for="orders">Choose Orders to View:</label>
+                            <label for="orders">Select Location:</label>
 
-                            <select name="customers" id="customers">
+                            <select onchange = "location = this.options[this.selectedIndex].value" name="customers" id="customers">
                             <option value="all">All</option>
-                            <option value="Central" selected>Central </option>
+                            <option value="admin_dashboard3.html">Central </option>
                             <option value="Harigate">Harigate </option>
                             <option value="Wigan">Wigan </option>
                             <option value="Weston-super-Mare">Weston-super-Mare </option>
@@ -266,8 +223,42 @@
                                             <td><span id="jobDateRequested0"></span></td>
                                             <td><span id="jobSite0"></span></td>
                                         </tr>
-
-
+                                        <tr>
+                                            <!-- <td><span id="jobOrderNumber0"></span></td> -->
+                                            <td><span id="status6"></span></td>
+                                            <td><span id="assignedTo6"></span></td>
+                                            <td><span id="jobOrderNumber6"></span></td>
+                                            <td><span id="jobNumber6"></span></td>
+                                            <td><span id="jobInstrument6"></span></td>
+                                            <td><span id="jobProcedure6"></span></td>
+                                            <td><span id="jobCompany6"></span></td>
+                                            <td><span id="jobDateRequested6"></span></td>
+                                            <td><span id="jobSite6"></span></td>
+                                        </tr>
+                                        <tr>
+                                            <!-- <td><span id="jobOrderNumber0"></span></td> -->
+                                            <td><span id="status7"></span></td>
+                                            <td><span id="assignedTo7"></span></td>
+                                            <td><span id="jobOrderNumber7"></span></td>
+                                            <td><span id="jobNumber7"></span></td>
+                                            <td><span id="jobInstrument7"></span></td>
+                                            <td><span id="jobProcedure7"></span></td>
+                                            <td><span id="jobCompany7"></span></td>
+                                            <td><span id="jobDateRequested7"></span></td>
+                                            <td><span id="jobSite7"></span></td>
+                                        </tr>
+                                        <tr>
+                                            <!-- <td><span id="jobOrderNumber0"></span></td> -->
+                                            <td><span id="status8"></span></td>
+                                            <td><span id="assignedTo8"></span></td>
+                                            <td><span id="jobOrderNumber8"></span></td>
+                                            <td><span id="jobNumber8"></span></td>
+                                            <td><span id="jobInstrument8"></span></td>
+                                            <td><span id="jobProcedure8"></span></td>
+                                            <td><span id="jobCompany8"></span></td>
+                                            <td><span id="jobDateRequested8"></span></td>
+                                            <td><span id="jobSite8"></span></td>
+                                        </tr>
                                    </tbody>
                                 </table>
                             </div>
