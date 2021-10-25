@@ -6,10 +6,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Create Order</title>
+        <title>Certificates</title>
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
         <link href="css/styles.css" rel="stylesheet" />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" type="text/javascript"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>\
+        <script src="jsonData.js"></script>
     <style>
         #orderStatusTable {
             border-spacing: 10px;
@@ -17,7 +19,7 @@
         }
     </style>
     </head>
-    <body class="sb-nav-fixed">
+    <body onload="processCertificates()" class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <!-- Navbar Brand-->
             <a class="navbar-brand ps-3" href="index.html" ><img src="assets/img/Pullman+dark+background-60w.png"></img></a>
@@ -56,17 +58,13 @@
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Invoices
                             </a>
-                            <!-- <a class="nav-link" href="search.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                Search
-                            </a> -->
-                            <a class="nav-link" href="create_customer_order.html">
-                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                                Create Customer Order
-                            </a>
                             <a class="nav-link" href="certificates.html">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Certificates
+                            </a>
+                            <a class="nav-link" href="create_customer_order.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                Create Customer Order
                             </a>
                             <a class="nav-link" href="manage_procedures.html">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
@@ -91,30 +89,81 @@
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">Create Order</h1>
-                        <ol class="breadcrumb mb-4">
-                            <li class="breadcrumb-item active">Use this page to create an order when a customer calls in</li>
-                        </ol>
-                         <div class="row">
-                            <!-- <div class="col-xl-3 col-md-6">
-                                <div class="card bg-primary text-white mb-4">
-                                    <div class="card-body">Primary Card</div>
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="#">View Details</a>
-                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                                    </div>
-                                </div>
-                            </div> -->
-                            <!-- <div class="col-sm-3 col-md-6 col-lg-4 col-xl-4">
-                                <div class="card bg-danger text-white mb-4">
-                                    <div class="card-body">Company Alerts</div>
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" >News Promotions, Hours of operation</a>
-                                    </div>
-                                </div>
-                            </div> -->
+                        <h1 class="mt-4">Certificates</h1>
+                         <!--Current Orders Table-->
+                        <div class="card mb-4 col-m-4 col-xl-4">
+                            <label for="sites">Orders by Location:</label>
+
+                            <select name="sites" id="sites">
+                            <option value="all">All</option>
+                            <option value="central">Central </option>
+                            <option value="glenrothes">GlenRothes</option>
+                            <option value="harrogate">Harrogate</option>
+                            <option value="weston">Weston-super-Mare</option>
+                            <option value="wigan">Wigan</option>
+                            </select>
+                        </div>
+                        
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <i class="fas fa-table me-1"></i>
+                                Current Certificates
+                            </div>
+
+                            <div class="card-body">
+                                <table id="datatablesSimple">
+                                    <thead>
+                                        <tr>
+                                            <th>Order Number</th>
+                                            <th>Job Number</th>
+                                            <th>Certificate Number</th>
+                                            <th>Manufacturer</th>
+                                            <th>Instrument</th>
+                                            <th>Company</th>
+                                            <th>Date requested</th>
+                                            <th>Job Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tfoot>
+                                        <tr>
+                                            <th>Order Number</th>
+                                            <th>Job Number</th>
+                                            <th>Certificate Number</th>
+                                            <th>Manufacturer</th>
+                                            <th>Instrument</th>
+                                            <th>Company</th>
+                                            <th>Date requested</th>
+                                            <th>Job Status</th>
+                                        </tr>
+                                    </tfoot>
+                                    <tbody>
+
+                                        <tr>
+                                            <td><span id="jobOrderNumber"></span></td>
+                                            <td><span id="jobNumber"></span></td>
+                                            <td><a href = "certificates_1.html"><span id="certificateNum"></span></a></td>
+                                            <td><span id="instrumentManufacturer"></span></td>
+                                            <td><span id="jobInstrument"></span></td>
+                                            <td><span id="jobCompany"></span></td>
+                                            <td><span id="jobDateRequested"></span></td>
+                                            <td><span id="status"></span></td>
+                                        </tr>
+
+                                   </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
+                    <div class="container">
+                            <div class="row">
+                                <div class="col-sm-9 col-md-8 col-lg-10 col-xl-10"></div>
+                                <div class="col-sm-3 col-md-4 col-lg-2 col-xl-2 text-right">
+                                    <a href = "invoices2.html">
+                                        <button  type="button" class="btn btn-danger" style="margin-bottom:30px">Update Jobs</button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                 </main>
                 <footer class="py-4 bg-light mt-auto">
                     <div class="container-fluid px-4">

@@ -364,6 +364,24 @@ var jobDetails = {
    ]
    
  }
+
+ //certificates
+function processCertificates(){
+    getCertificates();
+}
+function getCertificates(){
+     var data = jobDetails['job'][0];
+
+
+   document.getElementById("jobOrderNumber").innerHTML = data.orderNumber;
+   document.getElementById("jobNumber").innerHTML = data.jobNumber;
+   document.getElementById("certificateNum").innerHTML = data.certificateNum;
+   document.getElementById("instrumentManufacturer").innerHTML = data.instrumentManufacturer;
+   document.getElementById("jobInstrument").innerHTML = data.instrumentCategory;
+   document.getElementById("jobCompany").innerHTML = data.company;
+   document.getElementById("jobDateRequested").innerHTML = data.dateReceived;
+   document.getElementById("status").innerHTML = "Awaiting Certification";
+}
  //Index
   function processCustomerInstrumentList() {
         getCustomerInstruments();
