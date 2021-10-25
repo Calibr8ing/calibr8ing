@@ -364,7 +364,36 @@ var jobDetails = {
    ]
    
  }
- 
+ //Index
+  function processCustomerInstrumentList() {
+        getCustomerInstruments();
+        getCustomerInvoice();
+
+ }
+ function getCustomerInstruments(){
+    var data = jobDetails['job'][0];
+
+    document.getElementById("instrumentCategory").innerHTML = data.instrumentCategory;
+    // document.getElementById("instrument0Type").innerHTML = instrument0['type'];
+    // document.getElementById("instrument0Manufacturer").innerHTML = instrument0['manufacturer'];
+    document.getElementById("instrumentModelNumber").innerHTML = data.instrumentModelNumber;
+    document.getElementById("instrumentSerialNumber").innerHTML = data.instrumentSerialNumber;
+    document.getElementById("calibrationDate").innerHTML = "No Calibration Date Listed";
+    document.getElementById("instrument0Certificate").innerHTML = "No Previous Certificate     ";
+
+ }
+ function getCustomerInvoice(){
+    var data = jobDetails['job'][0];
+
+
+   document.getElementById("jobOrderNumber").innerHTML = data.orderNumber;
+   document.getElementById("jobNumber").innerHTML = data.jobNumber;
+   document.getElementById("invoiceNumber").innerHTML = data.invoiceNumber;
+   document.getElementById("instrumentManufacturer").innerHTML = data.instrumentManufacturer;
+   document.getElementById("jobInstrument").innerHTML = data.instrumentCategory;
+   document.getElementById("jobDateRequested").innerHTML = data.dateReceived;
+   document.getElementById("paymentStatus").innerHTML = "Awaiting Payment";
+ }
  //Job Details
 
  function getJobDetails(){
@@ -675,6 +704,24 @@ function getMyJobs2() {
    document.getElementById("jobDateRequested8").innerHTML = data8.dateReceived;
    document.getElementById("jobCompanyAddress8").innerHTML = data8.address;
  }
+ // Invoices page
+ function processInvoices(){
+    getInvoices();
+ }
+ function getInvoices() {
+   var data = jobDetails['job'][0];
+
+
+   document.getElementById("jobOrderNumber").innerHTML = data.orderNumber;
+   document.getElementById("jobNumber").innerHTML = data.jobNumber;
+   document.getElementById("invoiceNumber").innerHTML = data.invoiceNumber;
+   document.getElementById("instrumentManufacturer").innerHTML = data.instrumentManufacturer;
+   document.getElementById("jobInstrument").innerHTML = data.instrumentCategory;
+   document.getElementById("jobCompany").innerHTML = data.company;
+   document.getElementById("jobDateRequested").innerHTML = data.dateReceived;
+   document.getElementById("status").innerHTML = "Awaiting Payment";
+
+  }
  //Admin Dashboard - Pullman
 
  function processAdminDashboard(){
@@ -833,20 +880,7 @@ function getMyJobs2() {
    document.getElementById("jobDateRequested").innerHTML = "";
  }
  
- // Customer Dashboard
- 
- function processCustomerInstrumentList() {
-   var instrument = jobDetails['job'][0];
-   
-   document.getElementById("instrument0Name").innerHTML = data.instrumentCategory;
-   // document.getElementById("instrument0Type").innerHTML = instrument0['type'];
-   // document.getElementById("instrument0Manufacturer").innerHTML = instrument0['manufacturer'];
-   document.getElementById("instrument0Model").innerHTML = data.instrumentModelNumber;
-   document.getElementById("instrument0Serial").innerHTML = data.instrumentSerialNumber;
-   document.getElementById("instrument0DateCertified").innerHTML = data.calibrationDate;
-   document.getElementById("instrument0Certificate").innerHTML = data.certificateNum;
-   
- }
+
 
  //Engineer Dashboard
  function processEngineerMyJobs() {
