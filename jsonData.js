@@ -501,7 +501,7 @@ function getJobSummaryBar5(){
    document.getElementById("infoDateReceived").value = data.dateReceived;
    document.getElementById("infoOrderNumber").value = data.orderNumber;
   //  document.getElementById("infoInvoiceNumber").value = data.invoiceNumber;
-   document.getElementById("infoInvoiceNumber").value = data.invoiceNumber;
+  //  document.getElementById("infoInvoiceNumber").value = data.invoiceNumber;
    document.getElementById("infoCalibrationDate").value = data.calibrationDate;
    document.getElementById("staticCalibrationDue").value = data.calibrationDue;
    document.getElementById("staticCertificateNum").value = data.certificateNum;
