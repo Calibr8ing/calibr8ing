@@ -406,7 +406,7 @@ function processCustomerInstrumentList2() {
   var data = jobDetails['job'][0];
   //get current orders
   document.getElementById("orderNumber").innerHTML = data.orderNumber;
-  document.getElementById("status").innerHTML = "Order Submitted";
+  document.getElementById("status").innerHTML = "Certificate Pending";
   document.getElementById("orderDate").innerHTML = data.dateReceived;
 
   //getExpiringSoon
