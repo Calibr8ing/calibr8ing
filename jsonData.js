@@ -431,7 +431,7 @@ function processCustomerInstrumentList2() {
     // document.getElementById("instrument0Manufacturer").innerHTML = instrument0['manufacturer'];
     document.getElementById("instrumentModelNumber").innerHTML = data.instrumentModelNumber;
     document.getElementById("instrumentSerialNumber").innerHTML = data.instrumentSerialNumber;
-    document.getElementById("calibrationDate").innerHTML = data.calibrationDue;
+    document.getElementById("calibrationDate").innerHTML = data.calibrationDate;
     document.getElementById("instrument0Certificate").innerHTML = " ";
 
  }
