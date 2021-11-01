@@ -10,19 +10,20 @@
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
         <link href="css/styles.css" rel="stylesheet" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
+        <script src="jsonData.js"></script>
     </head>
-    <body class="sb-nav-fixed">
+    <body onload="instrumentLoad()" class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <!-- Navbar Brand-->
-            <a class="navbar-brand ps-3" href="index.html"><img src="assets/img/Pullman+dark+background-60w.png"></a>
+            <!-- <a class="navbar-brand ps-3" href="index.html"><img src="assets/img/Pullman+dark+background-60w.png"></a> -->
             <!-- Sidebar Toggle-->
             <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
             <!-- Navbar Search-->
             <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
-                <div class="input-group">
+                <!-- <div class="input-group">
                     <input class="form-control" type="text" placeholder="Search for..." aria-label="Search for..." aria-describedby="btnNavbarSearch" />
                     <button class="btn btn-danger" id="btnNavbarSearch" type="button"><i class="fas fa-search"></i></button>
-                </div>
+                </div> -->
             </form>
             <!-- Navbar-->
             <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
@@ -42,7 +43,7 @@
                 <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                     <div class="sb-sidenav-menu">
                         <div class="nav">
-                            <div class="sb-sidenav-menu-heading">Customer Views</div>
+                            <!-- <div class="sb-sidenav-menu-heading">Customer Views</div> -->
                             <a class="nav-link" href="index.html">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Dashboard
@@ -72,7 +73,7 @@
                     </div>
                     <div class="sb-sidenav-footer">
                         <div class="small">Logged in as:</div>
-                        Pullman Customer
+                        Customer
                     </div>
                 </nav>
             </div>
@@ -121,48 +122,57 @@
                                     <tbody>
                                         <tr>
                                             <td><input type="checkbox" name="select_all" value="1" id="example-select-all"></td>
-                                            <td><a href="instrument_detail.html">Haas_CNC_1</a></td>
+                                            <td><span id="instrumentName"></span></td>
+                                            <td><span id="instrumentModel"></span></td>
+                                            <td><a href="instrument_detail.html" ><span id="serialNumber"></span></a></td>
+                                            <td><span id="certificationDate"></span></td>
+                                            <td><i class="fas fa-file-pdf"></i></td>
+                                            <td><span id="certificationLocation"></span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><input type="checkbox" name="select_all" value="1" id="example-select-all"></td>
+                                            <td>Haas_CNC_1</td>
                                             <td>VF-1</td>
-                                            <td>100658</td>
-                                            <td>Sept 23 2021</td>
-                                            <td>Certificate_Haas_CNC_1.PNG</td>
-                                            <td>Site_A</td>
+                                            <td><a href="instrument_detail.html" >100658</a></td>
+                                            <td>9/23/2021</td>
+                                            <td><i class="fas fa-file-pdf"></i></td>
+                                            <td>Central</td>
                                         </tr>
                                         <tr>
                                             <td><input type="checkbox" name="select_all" value="1" id="example-select-all"></td>
                                             <td>Haas_CNC_2</td>
                                             <td>VF-1</td>
-                                            <td>101255</td>
-                                            <td>Sept 23 2021</td>
-                                            <td>Certificate_Haas_CNC_2.PNG</td>
-                                            <td>Site_A</td>
+                                            <td><a href="instrument_detail.html" >101255</a></td>
+                                            <td>9/23/2021</td>
+                                            <td><i class="fas fa-file-pdf"></i></td>
+                                            <td>Central</td>
                                         </tr>
                                         <tr>
                                             <td><input type="checkbox" name="select_all" value="1" id="example-select-all"></td>
                                             <td>Haas_lathe_1</td>
                                             <td>ST-28</td>
-                                            <td>103548</td>
-                                            <td>In progress</td>
-                                            <td>Certificate_Haas_lathe_1.PNG</td>
-                                            <td>Site_B</td>
+                                            <td><a href="instrument_detail.html" >103548</a></td>
+                                            <td>10/20/2020</td>
+                                            <td><i class="fas fa-file-pdf"></i></td>
+                                            <td>Central</td>
                                         </tr>
                                         <tr>
                                             <td><input type="checkbox" name="select_all" value="1" id="example-select-all"></td>
-                                            <td>Halter_robot_arm_CNC_1</td>
+                                            <td><a href="instrument_detail.html"></a>Halter_robot_arm_CNC_1</td>
                                             <td>UNIVERSAL_COMPACT_12</td>
-                                            <td>100254</td>
-                                            <td>Sept 23 2021</td>
-                                            <td>Certificate_Halter_robot_arm_1.PNG</td>
-                                            <td>Site_A</td>
+                                            <td><a href="instrument_detail.html" >100254</a></td>
+                                            <td>3/1/2021</td>
+                                            <td><i class="fas fa-file-pdf"></i></td>
+                                            <td>Central</td>
                                         </tr>
                                         <tr>
                                             <td><input type="checkbox" name="select_all" value="1" id="example-select-all"></td>
-                                            <td>Halter_robot_arm_lathe_1</td>
+                                            <td><a href="instrument_detail.html"></a>Halter_robot_arm_lathe_1</td>
                                             <td>TURNSTACKER_PREMIUM_20/35</td>
-                                            <td>100102</td>
-                                            <td>In progress</td>
-                                            <td>Certificate_Halter_robot_arm_lathe_1.PNG</td>
-                                            <td>Site_B</td>
+                                            <td><a href="instrument_detail.html" >100102</a></td>
+                                            <td>3/1/2021</td>
+                                            <td><i class="fas fa-file-pdf"></i></td>
+                                            <td>Central</td>
                                         </tr>
 
                                     </tbody>

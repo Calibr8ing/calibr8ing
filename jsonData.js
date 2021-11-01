@@ -365,6 +365,26 @@ var jobDetails = {
    
  }
 
+ function instrumentLoad(){
+  var data = jobDetails['job'][0];
+  var man = jobDetails['job'][0].instrumentManufacturer;
+   var category = jobDetails['job'][0].instrumentCategory;
+
+   document.getElementById("instrumentName").innerHTML = man + " " + category;
+   document.getElementById("instrumentModel").innerHTML = data.instrumentModelNumber;
+   document.getElementById("serialNumber").innerHTML = data.instrumentSerialNumber;
+   document.getElementById("certificationDate").innerHTML = data.calibrationDate;
+   document.getElementById("certificationLocation").innerHTML = data.calibrationLocation;
+   
+ }
+ function getCustomerAddress(){
+  var data = jobDetails['job'][0];
+  
+  document.getElementById("street").innerHTML = "24 Erica Rd";
+   document.getElementById("town").innerHTML = "Stacey Bushes, Milton Keynes";
+   document.getElementById("postcode").innerHTML = "MK12 6HS";
+   document.getElementById("country").innerHTML = "UK";
+ }
  //certificates
 function processCertificates(){
     getCertificates();
@@ -382,6 +402,21 @@ function getCertificates(){
    document.getElementById("jobDateRequested").innerHTML = data.dateReceived;
    document.getElementById("status").innerHTML = "Awaiting Certification";
 }
+function processCustomerInstrumentList2() {
+  var data = jobDetails['job'][0];
+  //get current orders
+  document.getElementById("orderNumber").innerHTML = data.orderNumber;
+  document.getElementById("status").innerHTML = "Order Submitted";
+  document.getElementById("orderDate").innerHTML = data.dateReceived;
+
+  //getExpiringSoon
+  document.getElementById("instrumentCategory").innerHTML = data.instrumentCategory;
+  document.getElementById("instrumentModelNumber").innerHTML = data.instrumentModelNumber;
+  document.getElementById("instrumentSerialNumber").innerHTML = data.instrumentSerialNumber;
+  document.getElementById("calibrationDate").innerHTML = data.calibrationDue;
+  document.getElementById("instrument0Certificate").innerHTML = " ";
+
+}
  //Index
   function processCustomerInstrumentList() {
         getCustomerInstruments();
@@ -396,8 +431,8 @@ function getCertificates(){
     // document.getElementById("instrument0Manufacturer").innerHTML = instrument0['manufacturer'];
     document.getElementById("instrumentModelNumber").innerHTML = data.instrumentModelNumber;
     document.getElementById("instrumentSerialNumber").innerHTML = data.instrumentSerialNumber;
-    document.getElementById("calibrationDate").innerHTML = "No Calibration Date Listed";
-    document.getElementById("instrument0Certificate").innerHTML = "No Previous Certificate     ";
+    document.getElementById("calibrationDate").innerHTML = data.calibrationDue;
+    document.getElementById("instrument0Certificate").innerHTML = " ";
 
  }
  function getCustomerInvoice(){
@@ -466,7 +501,7 @@ function getJobSummaryBar5(){
    document.getElementById("infoDateReceived").value = data.dateReceived;
    document.getElementById("infoOrderNumber").value = data.orderNumber;
   //  document.getElementById("infoInvoiceNumber").value = data.invoiceNumber;
-   document.getElementById("infoInvoiceNumber").value = data.invoiceNumber;
+  //  document.getElementById("infoInvoiceNumber").value = data.invoiceNumber;
    document.getElementById("infoCalibrationDate").value = data.calibrationDate;
    document.getElementById("staticCalibrationDue").value = data.calibrationDue;
    document.getElementById("staticCertificateNum").value = data.certificateNum;
