@@ -1299,5 +1299,10 @@ function getMyJobs2() {
    
   }
 
+  function processAdminDashboard5(){
+   getCentralJobs();
+   
+  }
+
   
       
