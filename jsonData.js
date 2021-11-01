@@ -491,7 +491,7 @@ function getJobSummaryBar5(){
   document.getElementById("summaryInstrumentManAndModel").innerHTML = man +" "+ model +" "+ category;
   document.getElementById("summaryInstrumentOwner").innerHTML = data.company;
   document.getElementById("summaryJobNumber").innerHTML = data.jobNumber;
-  document.getElementById("summaryJobStatus").innerHTML = "Booked In";
+  document.getElementById("summaryJobStatus").innerHTML = "Certificate Requested";
 
 }
  function getJobInfo(){
@@ -999,9 +999,87 @@ function getMyJobs2() {
  function getJobDetailsWithJobNumber5(){
   getJobSummaryBar5();
   getJobInfo();
+  getInstrumentDetails();
+  getTestDetailsByJobNumber5();
+  getCustomerDetails4();
+  getParts5()
+  
 
  }
+ function getTestDetailsByJobNumber5(){
+   
+  var data0 = jobDetails.job[0].testDetails[0];
+  var data1 = jobDetails.job[0].testDetails[1];
+  var data2 = jobDetails.job[0].testDetails[2];
+  var data3 = jobDetails.job[0].testDetails[3];
+  var data4 = jobDetails.job[0].testDetails[4];
+  var data5 = jobDetails.job[0].testDetails[5];
+  var data6 = jobDetails.job[0].testDetails[6];
 
+  
+  document.getElementById("testTitle0").innerHTML = data0.testTitle;
+  document.getElementById("testStep0").innerHTML = data0.testStep;
+  document.getElementById("testType0").innerHTML = data0.testType;
+  document.getElementById("testRangeStart0").innerHTML = data0.testRangeStart;
+  document.getElementById("expectedDisplay0").innerHTML = data0.display;
+  // document.getElementById("actualDisplay0").value = "00.1";
+  document.getElementById("passFail0").innerHTML = "pass";
+  document.getElementById("comments0").innerHTML = data0.comments;
+
+  document.getElementById("testTitle1").innerHTML = data1.testTitle;
+  document.getElementById("testStep1").innerHTML = data1.testStep;
+  document.getElementById("testType1").innerHTML = data1.testType;
+  document.getElementById("testRangeStart1").innerHTML = data1.testRangeStart;
+  document.getElementById("expectedDisplay1").innerHTML = data1.display;
+  // document.getElementById("actualDisplay1").innerHTML = "0.001";
+  document.getElementById("passFail1").innerHTML = data1.passFail;
+  document.getElementById("comments1").innerHTML = data1.comments;
+  
+  document.getElementById("testTitle2").innerHTML = data2.testTitle;
+  document.getElementById("testStep2").innerHTML = data2.testStep;
+  document.getElementById("testType2").innerHTML = data2.testType;
+  document.getElementById("testRangeStart2").innerHTML = data2.testRangeStart;
+  document.getElementById("expectedDisplay2").innerHTML = data2.display;
+  // document.getElementById("actualDisplay2").innerHTML = "1.000";
+  document.getElementById("passFail2").innerHTML = data2.passFail;
+  document.getElementById("comments2").innerHTML = data2.comments;
+  
+  document.getElementById("testTitle3").innerHTML = data3.testTitle;
+  document.getElementById("testStep3").innerHTML = data3.testStep;
+  document.getElementById("testType3").innerHTML = data3.testType;
+  document.getElementById("testRangeStart3").innerHTML = data3.testRangeStart;
+  document.getElementById("expectedDisplay3").innerHTML = data3.display;
+  // document.getElementById("actualDisplay3").innerHTML = "10.00";
+  document.getElementById("passFail3").innerHTML = "pass";
+  document.getElementById("comments3").innerHTML = data3.comments;
+
+  document.getElementById("testTitle4").innerHTML = data4.testTitle;
+  document.getElementById("testStep4").innerHTML = data4.testStep;
+  document.getElementById("testType4").innerHTML = data4.testType;
+  document.getElementById("testRangeStart4").innerHTML = data4.testRangeStart;
+  document.getElementById("expectedDisplay4").innerHTML = data4.display;
+  // document.getElementById("actualDisplay4").innerHTML = "100.00";
+  document.getElementById("passFail4").innerHTML = "pass";
+  document.getElementById("comments4").innerHTML = data4.comments;
+
+  document.getElementById("testTitle5").innerHTML = data5.testTitle;
+  document.getElementById("testStep5").innerHTML = data5.testStep;
+  document.getElementById("testType5").innerHTML = data5.testType;
+  document.getElementById("testRangeStart5").innerHTML = data5.testRangeStart;
+  document.getElementById("expectedDisplay5").innerHTML = data5.display;
+  // document.getElementById("actualDisplay5").innerHTML = "1000";
+  document.getElementById("passFail5").innerHTML = "pass";
+  document.getElementById("comments5").innerHTML = data5.comments;
+
+  document.getElementById("testTitle6").innerHTML = data6.testTitle;
+  document.getElementById("testStep6").innerHTML = data6.testStep;
+  document.getElementById("testType6").innerHTML = data6.testType;
+  document.getElementById("testRangeStart6").innerHTML = data6.testRangeStart;
+  document.getElementById("expectedDisplay6").innerHTML = data6.display;
+  // document.getElementById("actualDisplay6").innerHTML = ".10";
+  document.getElementById("passFail6").innerHTML = "pass";
+  document.getElementById("comments6").innerHTML = data6.comments;
+ }
  function getTestDetailsByJobNumber(){
    
   var data0 = jobDetails.job[0].testDetails[0];

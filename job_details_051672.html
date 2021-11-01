@@ -133,9 +133,9 @@
                               <li class="nav-item">
                                 <a class="nav-link" id="comments-tab" data-toggle="tab" href="#comments" role="tab" aria-controls="comments" aria-selected="false">Comments</a>
                               </li>
-                          </ul>
-                          <div class="tab-content" id="myTabContent">
-                              <!-- Job Details Contents-->
+                        </ul>
+                        <div class="tab-content" id="myTabContent">
+                            <!-- Job Details Contents-->
                             <div class="tab-pane fade show active" id="jobDetails" role="tabpanel" >
                                 <div class="card mb-4 ">
                                     <div class="card-body">
@@ -231,6 +231,8 @@
                                     </div>
                                 </div>
                             </div>
+                            <!-- Customer Details Contents-->
+                            <div class="tab-pane fade" id="customerDetails" role="tabpanel" aria-labelledby="customerDetails-tab"></div>
                             <!-- Test Details Contents-->
                             <div class="tab-pane fade" id="testDetails" role="tabpanel" aria-labelledby="testDetails-tab">
                                 <!--Test Table-->
@@ -352,149 +354,149 @@
                                     </div>
                                 </div>
                             </div>
-                        <!-- Parts Used Contents-->
-                        <div class="tab-pane fade" id="partsUsed" role="tabpanel" aria-labelledby="certificateDetails-tab">
-                            <div class="card mb-4">
-                                <div class="card-header">
-                                    <i class="fas fa-table me-1"></i>
-                                    Parts Used In this Job
+                            <!-- Parts Used Contents-->
+                            <div class="tab-pane fade" id="partsUsed" role="tabpanel" aria-labelledby="certificateDetails-tab">
+                                <div class="card mb-4">
+                                    <div class="card-header">
+                                        <i class="fas fa-table me-1"></i>
+                                        Parts Used In this Job
                                     </div>
-                            <div class="card-body">
-                                <table id="datatablesSimpleThree">
-                                    <thead>
-                                        <tr>
-                                            <th>Stock Number</th>
-                                            <th>Category</th>
-                                            <th>Part</th>
-                                            <th>Qty</th>
-                                            <th>Cost</th>
-                                            <th>Price</th>
-                                            <th>Total Cost</th>
-                                            <th>Total Price</th>
-                                        </tr>
-                                    </thead>
-                                    <tfoot>
-                                        <tr>
-                                            <th>Stock Number</th>
-                                            <th>Category</th>
-                                            <th>Part</th>
-                                            <th>Qty</th>
-                                            <th>Cost</th>
-                                            <th>Price</th>
-                                            <th>Total Cost</th>
-                                            <th>Total Price</th>
-                                        </tr>
-                                    </tfoot>
-                                    <tbody>
-                                        <tr>
-                                            <td><span id="stockNumber"></span></td>
-                                            <td><span id="category"></span></td>
-                                            <td><span id="part"></span></td>
-                                            <td><span id="qty"></span></td>
-                                            <td><span id="cost"></span></td>
-                                            <td><span id="price"></span></td>
-                                            <td><span id="totalCost"></span></td>
-                                            <td><span id="totalPrice"></span></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <div class="card mb-4">
-                                <div class="card-header">
-                                    <i class="fas fa-table me-1"></i>
-                                    Parts Available
+                                    <div class="card-body">
+                                        <table id="datatablesSimpleThree">
+                                            <thead>
+                                                <tr>
+                                                    <th>Stock Number</th>
+                                                    <th>Category</th>
+                                                    <th>Part</th>
+                                                    <th>Qty</th>
+                                                    <th>Cost</th>
+                                                    <th>Price</th>
+                                                    <th>Total Cost</th>
+                                                    <th>Total Price</th>
+                                                </tr>
+                                            </thead>
+                                            <tfoot>
+                                                <tr>
+                                                    <th>Stock Number</th>
+                                                    <th>Category</th>
+                                                    <th>Part</th>
+                                                    <th>Qty</th>
+                                                    <th>Cost</th>
+                                                    <th>Price</th>
+                                                    <th>Total Cost</th>
+                                                    <th>Total Price</th>
+                                                </tr>
+                                            </tfoot>
+                                            <tbody>
+                                                <tr>
+                                                    <td><span id="stockNumber"></span></td>
+                                                    <td><span id="category"></span></td>
+                                                    <td><span id="part"></span></td>
+                                                    <td><span id="qty"></span></td>
+                                                    <td><span id="cost"></span></td>
+                                                    <td><span id="price"></span></td>
+                                                    <td><span id="totalCost"></span></td>
+                                                    <td><span id="totalPrice"></span></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </div>
-                            <div class="card-body">
-                            <table id="datatablesSimpleTwo">
-                                <thead>
-                                    <tr>
-                                        <th>Stock Number</th>
-                                        <th>Category</th>
-                                        <th>Part</th>
-                                        <th>Qty</th>
-                                        <th>Cost</th>
-                                        <th>Price</th>
-                                        <th>Total Cost</th>
-                                        <th>Total Price</th>
-                                    </tr>
-                                </thead>
-                                <tfoot>
-                                    <tr>
-                                        <th>Stock Number</th>
-                                        <th>Category</th>
-                                        <th>Part</th>
-                                        <th>Qty</th>
-                                        <th>Cost</th>
-                                        <th>Price</th>
-                                        <th>Total Cost</th>
-                                        <th>Total Price</th>
-                                    </tr>
-                                </tfoot>
-                                <tbody>
-                                    <tr>
-                                        <td><span id="stockNumber0"></span></td>
-                                        <td><span id="category0"></span></td>
-                                        <td><span id="part0"></span></td>
-                                    <td><input type="number" class="form-control" id="qty0" value=" " onblur="calculateQty0()"></td>
-                                        <td><span id="cost0"></span></td>
-                                        <td><span id="price0"></span></td>
-                                        <td><span id="totalCost0"></span></td>
-                                        <td><span id="totalPrice0"></span></td>
-                                    </tr>
-                                    <tr>
-                                        <td><span id="stockNumber1"></span></td>
-                                        <td><span id="category1"></span></td>
-                                        <td><span id="part1"></span></td>
-                                        <td><input type="number" class="form-control" id="qty1" value=" "></td>
-                                        <td><span id="cost1"></span></td>
-                                        <td><span id="price1"></span></td>
-                                        <td><span id="totalCost1"></span></td>
-                                        <td><span id="totalPrice1"></span></td>
-                                    </tr>
-                                    <tr>
-                                        <td><span id="stockNumber2"></span></td>
-                                        <td><span id="category2"></span></td>
-                                        <td><span id="part2"></span></td>
-                                        <td><input type="number" class="form-control" id="qty2" value=" "></td>
-                                        <td><span id="cost2"></span></td>
-                                        <td><span id="price2"></span></td>
-                                        <td><span id="totalCost2"></span></td>
-                                        <td><span id="totalPrice2"></span></td>
-                                    </tr>
-                                    <tr>
-                                        <td><span id="stockNumber3"></span></td>
-                                        <td><span id="category3"></span></td>
-                                        <td><span id="part3"></span></td>
-                                        <td><input type="number" class="form-control" id="qty3" value=" "></td>
-                                        <td><span id="cost3"></span></td>
-                                        <td><span id="price3"></span></td>
-                                        <td><span id="totalCost3"></span></td>
-                                        <td><span id="totalPrice3"></span></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-2">
-                                    <button type="button" class="btn btn-danger" style="margin-bottom:30px" onclick="getPartsForCurrentJob()">Add Parts to Order</button>
                                 </div>
-                                
+                                <div class="card mb-4">
+                                    <div class="card-header">
+                                        <i class="fas fa-table me-1"></i>
+                                        Parts Available
+                                    </div>
+                                    <div class="card-body">
+                                        <table id="datatablesSimpleTwo">
+                                            <thead>
+                                                <tr>
+                                                    <th>Stock Number</th>
+                                                    <th>Category</th>
+                                                    <th>Part</th>
+                                                    <th>Qty</th>
+                                                    <th>Cost</th>
+                                                    <th>Price</th>
+                                                    <th>Total Cost</th>
+                                                    <th>Total Price</th>
+                                                </tr>
+                                            </thead>
+                                            <tfoot>
+                                                <tr>
+                                                    <th>Stock Number</th>
+                                                    <th>Category</th>
+                                                    <th>Part</th>
+                                                    <th>Qty</th>
+                                                    <th>Cost</th>
+                                                    <th>Price</th>
+                                                    <th>Total Cost</th>
+                                                    <th>Total Price</th>
+                                                </tr>
+                                            </tfoot>
+                                            <tbody>
+                                                <tr>
+                                                    <td><span id="stockNumber0"></span></td>
+                                                    <td><span id="category0"></span></td>
+                                                    <td><span id="part0"></span></td>
+                                                <td><input type="number" class="form-control" id="qty0" value=" " onblur="calculateQty0()"></td>
+                                                    <td><span id="cost0"></span></td>
+                                                    <td><span id="price0"></span></td>
+                                                    <td><span id="totalCost0"></span></td>
+                                                    <td><span id="totalPrice0"></span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span id="stockNumber1"></span></td>
+                                                    <td><span id="category1"></span></td>
+                                                    <td><span id="part1"></span></td>
+                                                    <td><input type="number" class="form-control" id="qty1" value=" "></td>
+                                                    <td><span id="cost1"></span></td>
+                                                    <td><span id="price1"></span></td>
+                                                    <td><span id="totalCost1"></span></td>
+                                                    <td><span id="totalPrice1"></span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span id="stockNumber2"></span></td>
+                                                    <td><span id="category2"></span></td>
+                                                    <td><span id="part2"></span></td>
+                                                    <td><input type="number" class="form-control" id="qty2" value=" "></td>
+                                                    <td><span id="cost2"></span></td>
+                                                    <td><span id="price2"></span></td>
+                                                    <td><span id="totalCost2"></span></td>
+                                                    <td><span id="totalPrice2"></span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span id="stockNumber3"></span></td>
+                                                    <td><span id="category3"></span></td>
+                                                    <td><span id="part3"></span></td>
+                                                    <td><input type="number" class="form-control" id="qty3" value=" "></td>
+                                                    <td><span id="cost3"></span></td>
+                                                    <td><span id="price3"></span></td>
+                                                    <td><span id="totalCost3"></span></td>
+                                                    <td><span id="totalPrice3"></span></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <button type="button" class="btn btn-danger" style="margin-bottom:30px" onclick="getPartsForCurrentJob()">Add Parts to Order</button>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Certificate Details Contents-->
+                            <div class="tab-pane fade" id="certificateDetails" role="tabpanel" aria-labelledby="certificateDetails-tab">
+                            </div>
+                            <!-- Comments Contents-->
+                            <div class="tab-pane fade" id="comments" role="tabpanel" aria-labelledby="comments-tab">
+                                <p>Comments: </p>
+                                <textarea id="w3review" name="w3review" rows="10" cols="50"></textarea>
                             </div>
                         </div>
                     </div>
-                </div>
-                <!-- Certificate Details Contents-->
-                <div class="tab-pane fade" id="certificateDetails" role="tabpanel" aria-labelledby="certificateDetails-tab">
-
-                </div>
-                <!-- Comments Contents-->
-                <div class="tab-pane fade" id="comments" role="tabpanel" aria-labelledby="comments-tab">
-                    <textarea id="w3review" name="w3review" rows="10" cols="50"></textarea>
-                </div>
-                </div>
-
-                </div>
                 </main>
                 <footer class="py-4 bg-light mt-auto">
                 <div class="container-fluid px-4">

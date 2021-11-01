@@ -97,7 +97,10 @@
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">Job Details</h1>  
+                        <h1 class="mt-4 col-md-4">Job Details</h1> 
+                        <div class="col-md-4">
+                            <button type="button" class="btn btn-danger" style="margin-bottom:30px" >Sign Certificate</button>
+                        </div>
                         <div class="row">
                             <div >
                                 <div class="card mb-4 ">
@@ -152,62 +155,62 @@
                               <li class="nav-item">
                                 <a class="nav-link" id="comments-tab" data-toggle="tab" href="#comments" role="tab" aria-controls="comments" aria-selected="false">Comments</a>
                               </li>
-                          </ul>
-                          <div class="tab-content" id="myTabContent">
-                              <!-- Job Details Contents-->
+                        </ul>
+                        <div class="tab-content" id="myTabContent">
+                            <!-- Job Details Contents-->
                             <div class="tab-pane fade show active" id="jobDetails" role="tabpanel" >
                                 <div class="card mb-4 ">
                                     <div class="card-body">
                                         <form>
                                             <div class="form-group row">
-                                              <label for="infoJobNumber" class="col-sm-2 col-form-label">Job Number</label>
-                                              <div class="col-sm-3">
+                                            <label for="infoJobNumber" class="col-sm-2 col-form-label">Job Number</label>
+                                            <div class="col-sm-3">
                                                 <input type="text" class="form-control" id="infoJobNumber" >
-                                              </div>
+                                            </div>
                                             </div>
                                             <div class="form-group row">
                                                 <label for="infoDateReceived" class="col-sm-2 col-form-label">Date Received</label>
                                                 <div class="col-sm-3">
-                                                  <input type="text" class="form-control" id="infoDateReceived" >
+                                                <input type="text" class="form-control" id="infoDateReceived" >
                                                 </div>
-                                              </div>
-                                              <div class="form-group row">
+                                            </div>
+                                            <div class="form-group row">
                                                 <label for="infoOrderNumber" class="col-sm-2 col-form-label">Order Number</label>
                                                 <div class="col-sm-3">
-                                                  <input type="text" class="form-control" id="infoOrderNumber" >
+                                                <input type="text" class="form-control" id="infoOrderNumber" >
                                                 </div>
-                                              </div>
-                                              <div class="form-group row">
+                                            </div>
+                                            <div class="form-group row">
                                                 <label for="infoInvoiceNumber" class="col-sm-2 col-form-label">Invoice Number</label>
                                                 <div class="col-sm-3">
                                                     <input type="text" class="form-control" id="infoInvoiceNumber" >
                                                 </div>
-                                              </div>
-                                              <div class="form-group row">
+                                            </div>
+                                            <div class="form-group row">
                                                 <label for="infoDispatchDate" class="col-sm-2 col-form-label">Dispatch Date</label>
                                                 <div class="col-sm-3">
-                                                  <input type="text" class="form-control" id="infoDispatchDate" >
+                                                <input type="text" class="form-control" id="infoDispatchDate" >
                                                 </div>
-                                              </div>
-                                              <div class="form-group row">
+                                            </div>
+                                            <div class="form-group row">
                                                 <label for="infoCalibrationDate" class="col-sm-2 col-form-label">Calibration Date</label>
                                                 <div class="col-sm-3">
-                                                  <input type="text" class="form-control" id="infoCalibrationDate" >
+                                                <input type="text" class="form-control" id="infoCalibrationDate" >
                                                 </div>
-                                              </div>
+                                            </div>
                                             <div class="form-group row">
                                                 <label for="staticCalibrationDue" class="col-sm-2 col-form-label">Calibration Expiration</label>
                                                 <div class="col-sm-3">
-                                                  <input style="color:red" type="text" readonly class="form-control-plaintext" id="staticCalibrationDue" >
+                                                <input style="color:red" type="text" readonly class="form-control-plaintext" id="staticCalibrationDue" >
                                                 </div>
-                                              </div>
-                                              <div class="form-group row">
+                                            </div>
+                                            <div class="form-group row">
                                                 <label for="staticCertificateNum" class="col-sm-2 col-form-label">Certificate No.</label>
                                                 <div class="col-sm-3">
-                                                  <input style="color:red" type="text" readonly class="form-control-plaintext" id="staticCertificateNum" > 
+                                                <input style="color:red" type="text" readonly class="form-control-plaintext" id="staticCertificateNum" > 
                                                 </div>
-                                              </div>
-                                          </form>
+                                            </div>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
@@ -219,34 +222,34 @@
                                             <div class="form-group row">
                                                 <label for="description" class="col-sm-2 col-form-label">Description</label>
                                                 <div class="col-sm-3">
-                                                  <input type="text" class="form-control" id="description" >
+                                                <input type="text" class="form-control" id="description" >
                                                 </div>
                                             </div>
                                             <div class="form-group row">
                                                 <label for="manufacturer" class="col-sm-2 col-form-label">Manufacturer</label>
                                                 <div class="col-sm-3">
-                                                  <input type="text" class="form-control" id="manufacturer" >
+                                                <input type="text" class="form-control" id="manufacturer" >
                                                 </div>
                                             </div>
-                                              <div class="form-group row">
+                                            <div class="form-group row">
                                                 <label for="modelNumber" class="col-sm-2 col-form-label">Model Number</label>
                                                 <div class="col-sm-3">
-                                                  <input type="text" class="form-control" id="modelNumber" >
+                                                <input type="text" class="form-control" id="modelNumber" >
                                                 </div>
-                                              </div>
-                                              <div class="form-group row">
+                                            </div>
+                                            <div class="form-group row">
                                                 <label for="serialNumber" class="col-sm-2 col-form-label">Serial Number</label>
                                                 <div class="col-sm-3">
-                                                  <input type="text" class="form-control" id="serialNumber" >
+                                                <input type="text" class="form-control" id="serialNumber" >
                                                 </div>
-                                              </div>
-                                              <div class="form-group row">
+                                            </div>
+                                            <div class="form-group row">
                                                 <label for="procedureNum" class="col-sm-2 col-form-label">Procedure No.</label>
                                                 <div class="col-sm-3">
-                                                  <input type="text" class="form-control" id="procedureNum" >
+                                                <input type="text" class="form-control" id="procedureNum" >
                                                 </div>
-                                              </div>
-                                          </form>
+                                            </div>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
@@ -258,31 +261,31 @@
                                             <div class="form-group row">
                                                 <label for="description" class="col-sm-2 col-form-label">Company</label>
                                                 <div class="col-sm-3">
-                                                  <input type="text" class="form-control" id="company" >
+                                                <input type="text" class="form-control" id="company" >
                                                 </div>
                                             </div>
                                             <div class="form-group row">
                                                 <label for="manufacturer" class="col-sm-2 col-form-label">Contact Name</label>
                                                 <div class="col-sm-3">
-                                                  <input type="text" class="form-control" id="contactName" >
+                                                <input type="text" class="form-control" id="contactName" >
                                                 </div>
                                             </div>
-                                              <div class="form-group row">
+                                            <div class="form-group row">
                                                 <label for="modelNumber" class="col-sm-2 col-form-label">Street Address</label>
                                                 <div class="col-sm-3">
-                                                  <input type="text" class="form-control" id="address" >
+                                                <input type="text" class="form-control" id="address" >
                                                 </div>
-                                              </div>
-                                              <div class="form-group row">
+                                            </div>
+                                            <div class="form-group row">
                                                 <label for="serialNumber" class="col-sm-2 col-form-label">Town/City</label>
                                                 <div class="col-sm-3">
-                                                  <input type="text" class="form-control" id="city" >
+                                                <input type="text" class="form-control" id="city" >
                                                 </div>
-                                              </div>
-                                              <div class="form-group row">
+                                            </div>
+                                            <div class="form-group row">
                                                 <label for="procedureNum" class="col-sm-2 col-form-label">Postcode</label>
                                                 <div class="col-sm-3">
-                                                  <input type="text" class="form-control" id="postCode" >
+                                                <input type="text" class="form-control" id="postCode" >
                                                 </div>
                                                 </div>
                                             </div>
@@ -291,33 +294,31 @@
                                             <div class="form-check">
                                                 <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" checked>
                                                 <label class="form-check-label" for="flexCheckDefault">
-                                                  Instrument Address
+                                                Instrument Address
                                                 </label>
-                                              </div>
-                                              <div class="form-check">
+                                            </div>
+                                            <div class="form-check">
                                                 <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
                                                 <label class="form-check-label" for="flexCheckChecked">
-                                                  Certificate Address
+                                                Certificate Address
                                                 </label>
-                                              </div>
-                                              <div class="form-check">
+                                            </div>
+                                            <div class="form-check">
                                                 <input class="form-check-input" type="checkbox" value="" id="dispatchAddress" checked> 
                                                 <label class="form-check-label" for="flexCheckDefault" >
-                                                  Dispatch Address
+                                                Dispatch Address
                                                 </label>
-                                              </div>
                                             </div>
-                                              <!-- Buttons -->
-                                        <div class="container">
-                                            <div class="row">
-                                                <div class="col-md-2">
-                                                    <a href="job_details_051672_admin5.html">
-                                                    <button type="button" class="btn btn-danger" style="margin-bottom:30px" >Book Instrument In</button>
-                                                    </a>
-                                                </div>
-                                            </div>
+                                </div>
+                                <!-- Buttons -->
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <a href="job_details_051672_admin5.html">
+                                            <button type="button" class="btn btn-danger" style="margin-bottom:30px" disabled>Book Instrument In</button>
+                                            </a>
                                         </div>
-                                    
+                                    </div>
                                 </div>
                             </div>
                             <!-- Test Details Contents-->
@@ -350,8 +351,8 @@
                                                     <td><span id="testType0"></span></td>
                                                     <td><span id="testRangeStart0"></span></td>
                                                     <td><span id="expectedDisplay0"></span></td>
-                                                    <td><input type="text" class="form-control" id="actualInput0" value="0"></td>
-                                                    <td><span id="passFail0"></span></td>
+                                                    <td><input type="text" class="form-control" id="actualInput0" value="00.1"></td>
+                                                    <td><span style="color:green" id="passFail0"></span></td>
                                                     <td><input type="text" class="form-control" id="comments0"></td>
 
                                                 </tr>
@@ -361,8 +362,8 @@
                                                     <td><span id="testType1"></span></td>
                                                     <td><span id="testRangeStart1"></span></td>
                                                     <td><span id="expectedDisplay1"></span></td>
-                                                    <td><input type="text" class="form-control" id="actualInput1" value="0"></td>
-                                                    <td><span id="passFail1"></span></td>
+                                                    <td><input type="text" class="form-control" id="actualInput1" value=".01"></td>
+                                                    <td><span style="color:green" id="passFail1"></span></td>
                                                     <td><input type="text" class="form-control" id="comments1"></td>
                                                 </tr>
                                                 <tr>
@@ -371,8 +372,8 @@
                                                     <td><span id="testType2"></span></td>
                                                     <td><span id="testRangeStart2"></span></td>
                                                     <td><span id="expectedDisplay2"></span></td>
-                                                    <td><input type="text" class="form-control" id="actualInput2" value="0"></td>
-                                                    <td><span id="passFail2"></span></td>
+                                                    <td><input type="text" class="form-control" id="actualInput2" value="1.000"></td>
+                                                    <td><span style="color:green" id="passFail2"></span></td>
                                                     <td><input type="text" class="form-control" id="comments2"></td>
 
                                                 </tr>
@@ -382,8 +383,8 @@
                                                     <td><span id="testType3"></span></td>
                                                     <td><span id="testRangeStart3"></span></td>
                                                     <td><span id="expectedDisplay3"></span></td>
-                                                    <td><input type="text" class="form-control" id="actualInput3" value="0"></td>
-                                                    <td><span id="passFail3"></span></td>
+                                                    <td><input type="text" class="form-control" id="actualInput3" value="10.000"></td>
+                                                    <td><span style="color:green" id="passFail3"></span></td>
                                                     <td><input type="text" class="form-control" id="comments3"></td>
 
                                                 </tr>
@@ -393,8 +394,8 @@
                                                     <td><span id="testType4"></span></td>
                                                     <td><span id="testRangeStart4"></span></td>
                                                     <td><span id="expectedDisplay4"></span></td>
-                                                    <td><input type="text" class="form-control" id="actualInput4" value="0"></td>
-                                                    <td><span id="passFail4"></span></td>
+                                                    <td><input type="text" class="form-control" id="actualInput4" value="100.00"></td>
+                                                    <td><span style="color:green" id="passFail4"></span></td>
                                                     <td><input type="text" class="form-control" id="comments4"></td>
 
                                                 </tr>
@@ -404,8 +405,8 @@
                                                     <td><span id="testType5"></span></td>
                                                     <td><span id="testRangeStart5"></span></td>
                                                     <td><span id="expectedDisplay5"></span></td>
-                                                    <td><input type="text" class="form-control" id="actualInput5" value="0"></td>
-                                                    <td><span id="passFail5"></span></td>
+                                                    <td><input type="text" class="form-control" id="actualInput5" value="1000"></td>
+                                                    <td><span style="color:green" id="passFail5"></span></td>
                                                     <td><input type="text" class="form-control" id="comments5"></td>
 
                                                 </tr>
@@ -415,8 +416,8 @@
                                                     <td><span id="testType6"></span></td>
                                                     <td><span id="testRangeStart6"></span></td>
                                                     <td><span id="expectedDisplay6"></span></td>
-                                                    <td><input type="text" class="form-control" id="actualInput6" value="0"></td>
-                                                    <td><span id="passFail6"></span></td>
+                                                    <td><input type="text" class="form-control" id="actualInput6" value="0.10"></td>
+                                                    <td><span style="color:green" id="passFail6"></span></td>
                                                     <td><input type="text" class="form-control" id="comments6"></td>
 
                                                 </tr>
@@ -428,7 +429,7 @@
                                 <div class="container">
                                     <div class="row">
                                         <div class="col-md-2">
-                                            <button type="button" class="btn btn-danger" style="margin-bottom:30px" onclick="myFunction()">Validate Test Pass/Fail</button>
+                                            <button type="button" class="btn btn-danger" style="margin-bottom:30px" onclick="myFunction()" disabled>Validate Test Pass/Fail</button>
                                         </div>
                                         <div class="col-md-6">
                                         </div>
@@ -441,149 +442,146 @@
                                     </div>
                                 </div>
                             </div>
-                        <!-- Parts Used Contents-->
-                        <div class="tab-pane fade" id="partsUsed" role="tabpanel" aria-labelledby="certificateDetails-tab">
-                            <div class="card mb-4">
-                                <div class="card-header">
-                                    <i class="fas fa-table me-1"></i>
-                                    Parts Used In this Job
+                            <!-- Parts Used Contents-->
+                            <div class="tab-pane fade" id="partsUsed" role="tabpanel" aria-labelledby="certificateDetails-tab">
+                                <div class="card mb-4">
+                                    <div class="card-header">
+                                        <i class="fas fa-table me-1"></i>
+                                        Parts Used In this Job
                                     </div>
-                            <div class="card-body">
-                                <table id="datatablesSimpleThree">
-                                    <thead>
-                                        <tr>
-                                            <th>Stock Number</th>
-                                            <th>Category</th>
-                                            <th>Part</th>
-                                            <th>Qty</th>
-                                            <th>Cost</th>
-                                            <th>Price</th>
-                                            <th>Total Cost</th>
-                                            <th>Total Price</th>
-                                        </tr>
-                                    </thead>
-                                    <tfoot>
-                                        <tr>
-                                            <th>Stock Number</th>
-                                            <th>Category</th>
-                                            <th>Part</th>
-                                            <th>Qty</th>
-                                            <th>Cost</th>
-                                            <th>Price</th>
-                                            <th>Total Cost</th>
-                                            <th>Total Price</th>
-                                        </tr>
-                                    </tfoot>
-                                    <tbody>
-                                        <tr>
-                                            <td><span id="stockNumber"></span></td>
-                                            <td><span id="category"></span></td>
-                                            <td><span id="part"></span></td>
-                                            <td><span id="qty"></span></td>
-                                            <td><span id="cost"></span></td>
-                                            <td><span id="price"></span></td>
-                                            <td><span id="totalCost"></span></td>
-                                            <td><span id="totalPrice"></span></td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <div class="card mb-4">
-                                <div class="card-header">
-                                    <i class="fas fa-table me-1"></i>
-                                    Parts Available
+                                    <div class="card-body">
+                                        <table id="datatablesSimpleThree">
+                                            <thead>
+                                                <tr>
+                                                    <th>Stock Number</th>
+                                                    <th>Category</th>
+                                                    <th>Part</th>
+                                                    <th>Qty</th>
+                                                    <th>Cost</th>
+                                                    <th>Price</th>
+                                                    <th>Total Cost</th>
+                                                    <th>Total Price</th>
+                                                </tr>
+                                            </thead>
+                                            <tfoot>
+                                                <tr>
+                                                    <th>Stock Number</th>
+                                                    <th>Category</th>
+                                                    <th>Part</th>
+                                                    <th>Qty</th>
+                                                    <th>Cost</th>
+                                                    <th>Price</th>
+                                                    <th>Total Cost</th>
+                                                    <th>Total Price</th>
+                                                </tr>
+                                            </tfoot>
+                                            <tbody>
+                                                <tr>
+                                                    <td><span id="stockNumber"></span></td>
+                                                    <td><span id="category"></span></td>
+                                                    <td><span id="part"></span></td>
+                                                    <td><span id="qty"></span></td>
+                                                    <td><span id="cost"></span></td>
+                                                    <td><span id="price"></span></td>
+                                                    <td><span id="totalCost"></span></td>
+                                                    <td><span id="totalPrice"></span></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
                                     </div>
-                            <div class="card-body">
-                            <table id="datatablesSimpleTwo">
-                                <thead>
-                                    <tr>
-                                        <th>Stock Number</th>
-                                        <th>Category</th>
-                                        <th>Part</th>
-                                        <th>Qty</th>
-                                        <th>Cost</th>
-                                        <th>Price</th>
-                                        <th>Total Cost</th>
-                                        <th>Total Price</th>
-                                    </tr>
-                                </thead>
-                                <tfoot>
-                                    <tr>
-                                        <th>Stock Number</th>
-                                        <th>Category</th>
-                                        <th>Part</th>
-                                        <th>Qty</th>
-                                        <th>Cost</th>
-                                        <th>Price</th>
-                                        <th>Total Cost</th>
-                                        <th>Total Price</th>
-                                    </tr>
-                                </tfoot>
-                                <tbody>
-                                    <tr>
-                                        <td><span id="stockNumber0"></span></td>
-                                        <td><span id="category0"></span></td>
-                                        <td><span id="part0"></span></td>
-                                    <td><input type="number" class="form-control" id="qty0" value=" " onblur="calculateQty0()"></td>
-                                        <td><span id="cost0"></span></td>
-                                        <td><span id="price0"></span></td>
-                                        <td><span id="totalCost0"></span></td>
-                                        <td><span id="totalPrice0"></span></td>
-                                    </tr>
-                                    <tr>
-                                        <td><span id="stockNumber1"></span></td>
-                                        <td><span id="category1"></span></td>
-                                        <td><span id="part1"></span></td>
-                                        <td><input type="number" class="form-control" id="qty1" value=" "></td>
-                                        <td><span id="cost1"></span></td>
-                                        <td><span id="price1"></span></td>
-                                        <td><span id="totalCost1"></span></td>
-                                        <td><span id="totalPrice1"></span></td>
-                                    </tr>
-                                    <tr>
-                                        <td><span id="stockNumber2"></span></td>
-                                        <td><span id="category2"></span></td>
-                                        <td><span id="part2"></span></td>
-                                        <td><input type="number" class="form-control" id="qty2" value=" "></td>
-                                        <td><span id="cost2"></span></td>
-                                        <td><span id="price2"></span></td>
-                                        <td><span id="totalCost2"></span></td>
-                                        <td><span id="totalPrice2"></span></td>
-                                    </tr>
-                                    <tr>
-                                        <td><span id="stockNumber3"></span></td>
-                                        <td><span id="category3"></span></td>
-                                        <td><span id="part3"></span></td>
-                                        <td><input type="number" class="form-control" id="qty3" value=" "></td>
-                                        <td><span id="cost3"></span></td>
-                                        <td><span id="price3"></span></td>
-                                        <td><span id="totalCost3"></span></td>
-                                        <td><span id="totalPrice3"></span></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-md-2">
-                                    <button type="button" class="btn btn-danger" style="margin-bottom:30px" onclick="getPartsForCurrentJob()">Add Parts to Order</button>
                                 </div>
-                                
+                                <div class="card mb-4">
+                                    <div class="card-header">
+                                        <i class="fas fa-table me-1"></i>
+                                        Parts Available
+                                    </div>
+                                    <div class="card-body">
+                                        <table id="datatablesSimpleTwo">
+                                            <thead>
+                                                <tr>
+                                                    <th>Stock Number</th>
+                                                    <th>Category</th>
+                                                    <th>Part</th>
+                                                    <th>Qty</th>
+                                                    <th>Cost</th>
+                                                    <th>Price</th>
+                                                    <th>Total Cost</th>
+                                                    <th>Total Price</th>
+                                                </tr>
+                                            </thead>
+                                            <tfoot>
+                                                <tr>
+                                                    <th>Stock Number</th>
+                                                    <th>Category</th>
+                                                    <th>Part</th>
+                                                    <th>Qty</th>
+                                                    <th>Cost</th>
+                                                    <th>Price</th>
+                                                    <th>Total Cost</th>
+                                                    <th>Total Price</th>
+                                                </tr>
+                                            </tfoot>
+                                            <tbody>
+                                                <tr>
+                                                    <td><span id="stockNumber0"></span></td>
+                                                    <td><span id="category0"></span></td>
+                                                    <td><span id="part0"></span></td>
+                                                <td><input type="number" class="form-control" id="qty0" value=" " onblur="calculateQty0()"></td>
+                                                    <td><span id="cost0"></span></td>
+                                                    <td><span id="price0"></span></td>
+                                                    <td><span id="totalCost0"></span></td>
+                                                    <td><span id="totalPrice0"></span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span id="stockNumber1"></span></td>
+                                                    <td><span id="category1"></span></td>
+                                                    <td><span id="part1"></span></td>
+                                                    <td><input type="number" class="form-control" id="qty1" value=" "></td>
+                                                    <td><span id="cost1"></span></td>
+                                                    <td><span id="price1"></span></td>
+                                                    <td><span id="totalCost1"></span></td>
+                                                    <td><span id="totalPrice1"></span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span id="stockNumber2"></span></td>
+                                                    <td><span id="category2"></span></td>
+                                                    <td><span id="part2"></span></td>
+                                                    <td><input type="number" class="form-control" id="qty2" value=" "></td>
+                                                    <td><span id="cost2"></span></td>
+                                                    <td><span id="price2"></span></td>
+                                                    <td><span id="totalCost2"></span></td>
+                                                    <td><span id="totalPrice2"></span></td>
+                                                </tr>
+                                                <tr>
+                                                    <td><span id="stockNumber3"></span></td>
+                                                    <td><span id="category3"></span></td>
+                                                    <td><span id="part3"></span></td>
+                                                    <td><input type="number" class="form-control" id="qty3" value=" "></td>
+                                                    <td><span id="cost3"></span></td>
+                                                    <td><span id="price3"></span></td>
+                                                    <td><span id="totalCost3"></span></td>
+                                                    <td><span id="totalPrice3"></span></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <button type="button" class="btn btn-danger" style="margin-bottom:30px" onclick="getPartsForCurrentJob()">Add Parts to Order</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Certificate Details Contents-->
+                            <div class="tab-pane fade" id="certificateDetails" role="tabpanel" aria-labelledby="certificateDetails-tab">
+                            </div>
+                            <!-- Comments Contents-->
+                            <div class="tab-pane fade" id="comments" role="tabpanel" aria-labelledby="comments-tab">
                             </div>
                         </div>
                     </div>
-                </div>
-                <!-- Certificate Details Contents-->
-                <div class="tab-pane fade" id="certificateDetails" role="tabpanel" aria-labelledby="certificateDetails-tab">
-
-                </div>
-                <!-- Comments Contents-->
-                <div class="tab-pane fade" id="comments" role="tabpanel" aria-labelledby="comments-tab">
-
-                </div>
-                </div>
-
-                </div>
                 </main>
                 <footer class="py-4 bg-light mt-auto">
                 <div class="container-fluid px-4">
