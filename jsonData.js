@@ -149,7 +149,7 @@ var jobDetails = {
        "contactName": "Jeff Anderson",
        "company": "Harigate Electric",
        "address": "",
-       "calibrationLocation": "Harigate"
+       "calibrationLocation": "Harrogate"
      },
      {
        //#2
@@ -173,7 +173,7 @@ var jobDetails = {
        "contactName": "Jeff Anderson",
        "company": "Harigate Electric",
        "address": "",
-       "calibrationLocation": "Harigate"
+       "calibrationLocation": "Harrogate"
      },
      {
        //#3
@@ -417,6 +417,21 @@ function processCustomerInstrumentList2() {
   document.getElementById("instrument0Certificate").innerHTML = " ";
 
 }
+function processCustomerInstrumentList3() {
+  var data = jobDetails['job'][0];
+  //get current orders
+  document.getElementById("orderNumber").innerHTML = data.orderNumber;
+  document.getElementById("status").innerHTML = "Order Submitted";
+  document.getElementById("orderDate").innerHTML = data.dateReceived;
+
+  //getExpiringSoon
+  document.getElementById("instrumentCategory").innerHTML = data.instrumentCategory;
+  document.getElementById("instrumentModelNumber").innerHTML = data.instrumentModelNumber;
+  document.getElementById("instrumentSerialNumber").innerHTML = data.instrumentSerialNumber;
+  document.getElementById("calibrationDate").innerHTML = data.calibrationDue;
+  document.getElementById("instrument0Certificate").innerHTML = " ";
+
+}
  //Index
   function processCustomerInstrumentList() {
         getCustomerInstruments();
@@ -455,6 +470,19 @@ function processCustomerInstrumentList2() {
    getInstrumentDetails();
    
  }
+ function getJobSummaryBar1(){
+  var data = jobDetails['job'][0];
+  var man = jobDetails['job'][0].instrumentManufacturer;
+  var model = jobDetails['job'][0].instrumentModelNumber;
+  var category = jobDetails['job'][0].instrumentCategory;
+  document.getElementById("summaryUserName").innerHTML = "Lab Tech";
+  document.getElementById("summaryJobDateReceived").innerHTML = data.dateReceived;
+  document.getElementById("summaryInstrumentManAndModel").innerHTML = man +" "+ model +" "+ category;
+  document.getElementById("summaryInstrumentOwner").innerHTML = data.company;
+  document.getElementById("summaryJobNumber").innerHTML = data.jobNumber;
+  document.getElementById("summaryJobStatus").innerHTML = data.status;
+
+}
  function getJobSummaryBar(){
    var data = jobDetails['job'][0];
    var man = jobDetails['job'][0].instrumentManufacturer;
@@ -468,6 +496,19 @@ function processCustomerInstrumentList2() {
    document.getElementById("summaryJobStatus").innerHTML = data.status;
  
  }
+ function getJobSummaryBar2(){
+  var data = jobDetails['job'][0];
+  var man = jobDetails['job'][0].instrumentManufacturer;
+  var model = jobDetails['job'][0].instrumentModelNumber;
+  var category = jobDetails['job'][0].instrumentCategory;
+  document.getElementById("summaryUserName").innerHTML = data.assignedTo;
+  document.getElementById("summaryJobDateReceived").innerHTML = data.dateReceived;
+  document.getElementById("summaryInstrumentManAndModel").innerHTML = man +" "+ model +" "+ category;
+  document.getElementById("summaryInstrumentOwner").innerHTML = data.company;
+  document.getElementById("summaryJobNumber").innerHTML = data.jobNumber;
+  document.getElementById("summaryJobStatus").innerHTML = "Certificate Requested";
+
+}
  function getJobSummaryBar4(){
   var data = jobDetails['job'][0];
   var man = jobDetails['job'][0].instrumentManufacturer;
@@ -503,7 +544,7 @@ function getJobSummaryBar5(){
   //  document.getElementById("infoInvoiceNumber").value = data.invoiceNumber;
   //  document.getElementById("infoInvoiceNumber").value = data.invoiceNumber;
    document.getElementById("infoCalibrationDate").value = data.calibrationDate;
-   document.getElementById("staticCalibrationDue").value = data.calibrationDue;
+   document.getElementById("staticCalibrationDue").value = data.calibrationDate;
    document.getElementById("staticCertificateNum").value = data.certificateNum;
  }
  function getCustomerDetails4(){
@@ -978,9 +1019,22 @@ function getMyJobs2() {
   document.getElementById("jobDateRequested8").innerHTML = data8.dateReceived;
   document.getElementById("jobPrice8").innerHTML = data8.procedurePrice;
  }
- 
+ function getJobDetailsWithJobNumber2(){
+  getJobSummaryBar2();
+  getJobInfo();
+  getInstrumentDetails();
+  getTestDetailsByJobNumber();
+  getParts()
+ }
  function getJobDetailsWithJobNumber(){
   getJobSummaryBar();
+  getJobInfo();
+  getInstrumentDetails();
+  getTestDetailsByJobNumber();
+  getParts()
+ }
+ function getJobDetailsWithJobNumber1(){
+  getJobSummaryBar1();
   getJobInfo();
   getInstrumentDetails();
   getTestDetailsByJobNumber();

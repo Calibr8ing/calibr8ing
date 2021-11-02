@@ -12,7 +12,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
         <script src="jsonData.js"></script>
     </head>
-    <body onload="processCustomerInstrumentList()"class="sb-nav-fixed">
+    <body onload="processCustomerInstrumentList3()"class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <!-- Navbar Brand-->
             <!-- <a class="navbar-brand ps-3" href="index.html"><img src="assets/img/Pullman+dark+background-60w.png"></a> -->
@@ -52,7 +52,17 @@
                                 <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                                 Start New Order
                             </a>
-                           
+                            <a class="nav-link" href="certificates.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                Certificates
+                                
+                            </a>
+                            <a class="nav-link" href="invoices.html">
+                                <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                Invoices
+                                
+                            </a>
+                            
                             <a class="nav-link collapsed" href="instruments_page.html" >
                                 <div class="sb-nav-link-icon"><i class="fas fa-wrench"></i></div>
                                 Instruments
@@ -85,18 +95,7 @@
                             <li class="breadcrumb-item active"></li>
                         </ol>
                         <div class="row">
-                            <!-- <div class="col-sm-3 col-md-6 col-lg-4 col-xl-4">
-                                <div class="card bg-danger text-white mb-4 h-90 overflow-auto">
-                                    <div class="card-body">A Note For Our Customers</div>
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <p>Due to COVID restrictions, scheduling for services are 3 to 4 wks out.
-                                            <br>
-                                            <br>
-                                            Thank you for your patience
-                                        </p>
-                                    </div>
-                                </div>
-                            </div> -->
+                           
                             <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
                                 <div class="card mb-4 h-90 overflow-auto">
                                     <div class="card-header">Current Order Status</div>
@@ -111,10 +110,11 @@
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td></td>
-                                                    <td >No Current Orders</td>
-                                                    <td></td>
+                                                    <td><span id="orderNumber"></span></td>
+                                                    <td style="color:darkgreen"><span id="status"></td>
+                                                    <td><span id="orderDate"></td>
                                                 </tr>
+                                                
                                             </tbody>
                                         </table>
                                         
@@ -135,8 +135,8 @@
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                    <td><span id="orderNumber"></span></td>
-                                                    <td >No Current Invoices<span id="status"></td>
+                                                    <td><a href="invoiceImages_3.html"></span></td>
+                                                    <td ><span id="Invoice Pending">No Current Invoices</td>
                                                     <td><span id="orderDate"></td>
                                                 </tr>
                                                   <!-- <td><span id="jobOrderNumber"></span></td>
@@ -214,7 +214,6 @@
                             </div>
                         </div>
                     </div>
-
                 </main>
                 <footer class="py-4 bg-light mt-auto">
                     <div class="container-fluid px-4">
