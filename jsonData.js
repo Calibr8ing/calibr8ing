@@ -43,7 +43,7 @@ var jobDetails = {
        "instrumentSerialNumber": "26500991",
        "instrumentProcedureNumber": "123-abc",
        "procedurePrice": "49.50",
-       "contactName": "Shaun Smith",
+       "contactName": "Kyle Hansen",
        "company": "ABC Electric Co",
        "address": "24 Erica Rd, Stacey Bushes, Milton Keynes MK12 6HS, UK",
        "calibrationLocation": "Central",
@@ -388,6 +388,22 @@ var jobDetails = {
  //certificates
 function processCertificates(){
     getCertificates();
+}
+function processCertificates1(){
+  getCertificates1();
+}
+function getCertificates1(){
+  var data = jobDetails['job'][0];
+
+
+document.getElementById("jobOrderNumber").innerHTML = data.orderNumber;
+document.getElementById("jobNumber").innerHTML = data.jobNumber;
+document.getElementById("certificateNum").innerHTML = data.certificateNum;
+document.getElementById("instrumentManufacturer").innerHTML = data.instrumentManufacturer;
+document.getElementById("jobInstrument").innerHTML = data.instrumentCategory;
+document.getElementById("jobCompany").innerHTML = data.company;
+document.getElementById("jobDateRequested").innerHTML = data.dateReceived;
+document.getElementById("status").innerHTML = "Certificate Complete";
 }
 function getCertificates(){
      var data = jobDetails['job'][0];

@@ -9,9 +9,7 @@
         <title>Certificates</title>
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
         <link href="css/styles.css" rel="stylesheet" />
-        <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" type="text/javascript"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>\
-        <script src="jsonData.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
     <style>
         #orderStatusTable {
             border-spacing: 10px;
@@ -19,7 +17,7 @@
         }
     </style>
     </head>
-    <body onload="processCertificates1()" class="sb-nav-fixed">
+    <body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <!-- Navbar Brand-->
             <!-- <a class="navbar-brand ps-3" href="index.html" ><img src="assets/img/Pullman+dark+background-60w.png"></img></a> -->
@@ -61,7 +59,7 @@
                             <a class="nav-link" href="certificates_3.html">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                                 Certificates
-                                
+                            
                             </a>
                             <a class="nav-link" href="invoices.html">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
@@ -88,7 +86,7 @@
                     </div>
                     <div class="sb-sidenav-footer">
                         <div class="small">Logged in as:</div>
-                        Customer
+                         Customer
                     </div>
                 </nav>
             </div>
@@ -96,80 +94,30 @@
                 <main>
                     <div class="container-fluid px-4">
                         <h1 class="mt-4">Certificates</h1>
-                         <!--Current Orders Table-->
-                        <!-- <div class="card mb-4 col-m-4 col-xl-4">
-                            <label for="sites">Orders by Location:</label>
-
-                            <select name="sites" id="sites">
-                            <option value="all">All</option>
-                            <option value="central">Central </option>
-                            <option value="glenrothes">GlenRothes</option>
-                            <option value="harrogate">Harrogate</option>
-                            <option value="weston">Weston-super-Mare</option>
-                            <option value="wigan">Wigan</option>
-                            </select>
-                        </div> -->
-                        
-                        <div class="card mb-4">
-                            <div class="card-header">
-                                <i class="fas fa-table me-1"></i>
-                                Current Certificates
+                        <ol class="breadcrumb mb-4">
+                            <li class="breadcrumb-item active">View/Generate Certificate</li>
+                        </ol>
+                        <div class="row">
+                            <div class="card m-4" style="width: 18rem;" >
+                                <img src="certificatePNG" class="card-img-top card-body" alt="picture of a certificate">
+                                <div class="card-body text-center">
+                                    <a href = "certificates_2.html">
+                                        <p class="card-text ">new certificate 11/15/21</p>
+                                    </a>
+                                    <button class="btn-danger mt-4">Print Certificate</button>
+                                </div>
                             </div>
-
-                            <div class="card-body">
-                                <table id="datatablesSimple">
-                                    <thead>
-                                        <tr>
-                                            <th>Order Number</th>
-                                            <th>Job Number</th>
-                                            <th>Certificate Number</th>
-                                            <th>Manufacturer</th>
-                                            <th>Instrument</th>
-                                            <th>Company</th>
-                                            <th>Date requested</th>
-                                            <th>Job Status</th>
-                                        </tr>
-                                    </thead>
-                                    <tfoot>
-                                        <tr>
-                                            <th>Order Number</th>
-                                            <th>Job Number</th>
-                                            <th>Certificate Number</th>
-                                            <th>Manufacturer</th>
-                                            <th>Instrument</th>
-                                            <th>Company</th>
-                                            <th>Date requested</th>
-                                            <th>Job Status</th>
-                                        </tr>
-                                    </tfoot>
-                                    <tbody>
-
-                                        <tr>
-                                            <td><span id="jobOrderNumber"></span></td>
-                                            <td><a href = "job_details_051672_admin5.html"><span id="jobNumber"></a></span></td>
-                                            <td><a href = "certificates_4.html"><span id="certificateNum"></span></a></td>
-                                            <td><span id="instrumentManufacturer"></span></td>
-                                            <td><span id="jobInstrument"></span></td>
-                                            <td><span id="jobCompany"></span></td>
-                                            <td><span id="jobDateRequested"></span></td>
-                                            <td><span id="status"></span></td>
-                                        </tr>
-
-                                   </tbody>
-                                </table>
+                            <div class="card m-4 " style="width: 18rem;">
+                                <img src="certificatePNG" class="card-img-top card-body" alt="picture of a certificate">
+                                <div class="card-body text-center">
+                                    <a href = "certificates_2.html">
+                                        <p class="card-text ">certificate 11/15/20</p>
+                                    </a>
+                                    <button class="btn-danger mt-4">Print Certificate</button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <!-- <div class="container">
-                            <div class="row">
-                                <div class="col-sm-9 col-md-8 col-lg-10 col-xl-10"></div>
-                                <div class="col-sm-3 col-md-4 col-lg-2 col-xl-2 text-right">
-                                    <a href = "invoices2.html">
-                                        <button  type="button" class="btn btn-danger" style="margin-bottom:30px">Update Jobs</button>
-                                    </a>
-                                </div>
-                            </div>
-                        </div> -->
                 </main>
                 <footer class="py-4 bg-light mt-auto">
                     <div class="container-fluid px-4">
